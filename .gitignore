@@ -5,6 +5,7 @@ var/*
 logs/*
 etc/*
 ssl/*
+myadmin/*
 
 access-logs
 www
