@@ -5,4 +5,8 @@ var/*
 logs/*
 etc/*
 ssl/*
+
+access-logs
+www
+
 !/.gitignore
