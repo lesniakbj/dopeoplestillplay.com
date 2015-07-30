@@ -2,6 +2,10 @@
 	Home Specific Styling
 */
 
+form.construction-email {
+	margin-top: 8rem;
+}
+
 .email-input {
 	width: 60%;
   	margin-left: 20%;
