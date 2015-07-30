@@ -63,4 +63,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 //$route['test'] = 'welcome/test';
 //$route['test/(:any)'] = 'welcome/test';
+$route['forms/submit'] = 'Form_Handler/email_form';
 $route['(:any)'] = 'welcome';

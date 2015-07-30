@@ -7,7 +7,7 @@
 	<h5 class="title">We are currently under construction! Find out if people are still playing your favorite games, after we launch!</h5>
 </section>
 		      	
-<form name="user-email-info" class="construction-email" action="/forms/info_email" method="post">
+<form name="user-email-info" class="construction-email" action="/forms/submit" method="post">
 	<div class="row">
    		<div class="one-third columns">
    			<p class="flavor-text"><?php echo $rsString::$homeStrings['CONSTRUCTION_TEXT'];?></p>
