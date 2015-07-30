@@ -19,7 +19,7 @@ class Welcome extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
+	{		
 		$page = 'home';
 		if ( ! file_exists(APPPATH.'/views/statics/'.$page.'.php'))
 		{
