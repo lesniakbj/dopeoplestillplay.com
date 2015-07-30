@@ -6,7 +6,7 @@ class ResourceStrings {
 	);
 	
 	public static $homeStrings = array(
-			"CONSTRUCTION_TEXT" => "Enter your email address below to get updates on release, ask any questions related to the project, or to volunteer to help on the project. We are working hard and excited to help you determine if people are still playing your favorite games!"
+			"CONSTRUCTION_TEXT" => "Enter your email address below to get updates on the site's progress, ask any questions related to the project, or to volunteer some time to the project. We are working hard and are excited to help you determine if people are still playing your favorite games!"
 	);
 }
 ?>
