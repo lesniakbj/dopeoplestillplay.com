@@ -10,6 +10,7 @@ etc/*
 ssl/*
 myadmin/*
 logs/*
+mail/*
 
 access-logs
 www
