@@ -28,6 +28,7 @@ class Welcome extends CI_Controller {
 		}
 
 		$data['title'] = ucfirst($page); // Capitalize the first letter
+		$data['css'] = 'statics/'.$page.'.css';
 	
 		$this->load->view('templates/header', $data);
 		$this->load->view('statics/'.$page, $data);

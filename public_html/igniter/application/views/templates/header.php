@@ -12,7 +12,7 @@
 	                echo link_tag('css/libs/skeleton.css');
 			echo link_tag('css/master.css');
 			
-			//echo link_tag($css);
+			echo link_tag('css/'.$css);
                 ?>
         </head>
         <body>
