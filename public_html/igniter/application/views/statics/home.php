@@ -1,5 +1,5 @@
-<?php 
-	include('resources/Strings.php'); 
+<?
+	include_once('resources/Strings.php'); 
 	$rsString = new ResourceStrings();
 ?>
 <section class="header">
