@@ -1,4 +1,6 @@
 .*
+!/.gitignore
+
 www/*
 tmp/*
 var/*
@@ -10,5 +12,3 @@ logs/*
 
 access-logs
 www
-
-!/.gitignore
