@@ -11,7 +11,7 @@
 	<div class="row">
    		<div class="one-third columns">
    			<p class="flavor-text"><?php echo $rsString::$homeStrings['CONSTRUCTION_TEXT'];?></p>
-			<input class="email-input" name="user-email" type="email" placeholder="youremail@address.com" id="construction-email">
+			<input class="email-input" name="user-email" type="email" placeholder="youremail@address.com">
 			<?php echo br(1); ?>
 			<input class="button-primary email-button" type="submit" value="Submit">
 		</div>
