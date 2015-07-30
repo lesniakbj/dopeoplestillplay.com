@@ -63,5 +63,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 //$route['test'] = 'welcome/test';
 //$route['test/(:any)'] = 'welcome/test';
-$route['(:any)'] = 'welcome'
+$route['(:any)'] = 'welcome';
 
