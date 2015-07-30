@@ -1,7 +1,7 @@
 			<div class="row">
-				<div class="one-third column">&nbsp;</div>
-				<em class="one-third column footer-text">Created By: Brendan Lesniak &copy; 2015</em>
-				<div class="one-third column">&nbsp;</div>
+				<div class="three columns">&nbsp;</div>
+				<em class="six columns footer-text">Created By: Brendan Lesniak &copy; <?php echo date("F d Y H:i:s", getlastmod()); ?></em>
+				<div class="three columns">&nbsp;</div>
 			</div>
 		</div>
         </body>
