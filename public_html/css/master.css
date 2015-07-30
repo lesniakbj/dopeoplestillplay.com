@@ -19,8 +19,12 @@ body {
 	color: #AAAAAA;
 }
 
+.footer-text {
+	text-align: center;
+}
+
 @media (min-width: 550px) {
 	.header {
-		margin-top: 18rem;
+		margin-top: 12rem;
 	}
 }
