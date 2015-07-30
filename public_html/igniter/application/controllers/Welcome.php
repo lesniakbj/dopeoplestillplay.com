@@ -34,9 +34,4 @@ class Welcome extends CI_Controller {
 		$this->load->view('statics/'.$page, $data);
 		$this->load->view('templates/footer', $data);
 	}
-	
-	public function test()
-	{
-		$this->load->view('test');
-	}
 }
