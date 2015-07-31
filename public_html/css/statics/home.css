@@ -23,6 +23,12 @@ form.construction-email {
 	text-align: center;
 }
 
+@media (min-width: 550px) {
+	.game-images {
+		margin-bottom: 7rem;
+	}
+}
+
 .game-images {
     margin-top: 4rem;
 	margin-bottom: 4rem;
@@ -32,21 +38,16 @@ form.construction-email {
 	margin-top: 1rem;
 }
 
+@media (min-width: 550px) {
+	.game-img {
+		margin-bottom: 1rem;
+	}
+}
+
 .game-img {
 	display: block;
 	text-align: center;
 	margin: 2.5rem auto 0;
 	height: 120px;
 	width: 192px;
-}
-
-@media (min-width: 550px) {
-	.game-images {
-		margin-top: 9rem;
-		margin-bottom: 7rem;
-	}
-	
-	.game-img {
-		margin-bottom: 1rem;
-	}
 }
