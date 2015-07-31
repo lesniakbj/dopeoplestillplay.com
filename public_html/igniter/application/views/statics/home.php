@@ -3,7 +3,7 @@
 	$rsString = new ResourceStrings();
 ?>
 <section class="header">
-	<h2 class="title">Do People Still Play..?</h2>
+	<h1 class="title">Do People Still Play..?</h1>
 	<h5 class="title">We are currently under construction! Find out if people are still playing your favorite games, after we launch!</h5>
 </section>
 		      	
