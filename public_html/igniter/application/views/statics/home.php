@@ -20,6 +20,6 @@
 
 <div class="game-images row">
 	<div class="four columns center-text game-image"><img class="game-img" src="images/game-eve-bg.jpg">Wondering if your favorite games are still being played by other players?</div>
-	<div class="four columns center-text game-image"><img class="game-img" src="images/feather.svg"></div>
-	<div class="four columns center-text game-image"><img class="game-img" src="images/feather.svg"></div>
+	<div class="four columns center-text game-image"><img class="game-img" src="images/game-csgo-bg.jpg">Get statistics on games, servers, and the amount of players!</div>
+	<div class="four columns center-text game-image"><img class="game-img" src="images/game-gtav-bg.jpg">Chat with other players and plan game nights!</div>
 </div>
