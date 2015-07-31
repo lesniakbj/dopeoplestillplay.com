@@ -40,12 +40,6 @@ form.construction-email {
     width: 192px;
 }
 
-@media (min-width: 740px) {
-	.game-img {
-		width: 30%;
-	}
-}
-
 @media (min-width: 550px) {
 	.game-images {
 		margin-top: 9rem;
@@ -54,5 +48,11 @@ form.construction-email {
 	
 	.game-img {
 		margin-bottom: 1rem;
+	}
+}
+
+@media (min-width: 740px) {
+	.game-img {
+		width: 30%;
 	}
 }
