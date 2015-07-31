@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
         <head>
-        	<?php
-        		$this->load->helper('html');
-        		include_once('resources/Strings.php'); 
+		<?php
+			$this->load->helper('html');
+			include_once('resources/Strings.php'); 
 			$rsString = new ResourceStrings();
         		
-        		// Echo all of the meta tags needed by the page, get the data from the controller. 
-        		$meta = array(
-			        array('name' => 'robots', 'content' => 'no-cache'),
-			        array('name' => 'description', 'content' => $rsString::$metaStrings['DESCRIPTION']),
-			        array('name' => 'keywords', 'content' => $rsString::$metaStrings['KEYWORDS']),
-			        array('name' => 'robots', 'content' => 'no-cache'),
-			        array('name' => 'Content-type', 'content' => 'text/html; charset=utf-8', 'type' => 'equiv')
+			// Echo all of the meta tags needed by the page, get the data from the controller. 
+			$meta = array(
+				array('name' => 'robots', 'content' => 'no-cache'),
+				array('name' => 'description', 'content' => $rsString::$metaStrings['DESCRIPTION']),
+				array('name' => 'keywords', 'content' => $rsString::$metaStrings['KEYWORDS']),
+				array('name' => 'robots', 'content' => 'no-cache'),
+				array('name' => 'Content-type', 'content' => 'text/html; charset=utf-8', 'type' => 'equiv')
 			);
 			
 			echo meta($meta); 
-        	?>
+		?>
 			
 		<title><?php if(!is_null($title)){echo $title;} ?> - Do People Still Play..?</title>
                 
