@@ -17,3 +17,16 @@
 		</div>
 	</div>
 </form>
+
+<div class="game-images row">
+	<div class="four columns game-image">
+		<img class="game-img" src="images/feather.svg">
+		Wondering if your favorite games are still being played by other players?
+	</div>
+	<div class="four columns game-image">
+		<img class="game-img" src="images/feather.svg">
+	</div>
+	<div class="four columns game-image">
+		<img class="game-img" src="images/feather.svg">
+	</div>
+</div>
