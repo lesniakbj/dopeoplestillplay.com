@@ -36,6 +36,8 @@ form.construction-email {
 	display: block;
 	text-align: center;
 	margin: 2.5rem auto 0;
+	height: 130px;
+    width: 70px;
 }
 
 @media (min-width: 550px) {
