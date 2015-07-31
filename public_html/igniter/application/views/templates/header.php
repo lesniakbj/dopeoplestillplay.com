@@ -17,7 +17,7 @@
 
 			echo meta($meta); 
         	?>
-                <title><?php echo $title ?> - Do People Still Play..?</title>
+                <title><?php if(!is_null($title)){echo $title;} ?> - Do People Still Play..?</title>
                 
                 <?php
 	                // Echo the CSS tags that are used for the reset, normalization, framework, and master styles. 
@@ -27,7 +27,9 @@
 			echo link_tag('css/master.css');
 			
 			// Echo page specific tags here
-			echo link_tag('css/'.$css);
+			if(isset($css)){
+				echo link_tag('css/'.$css);
+			}
 			
 			// Echo the jQuery Hosted library tags
 			echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>'
