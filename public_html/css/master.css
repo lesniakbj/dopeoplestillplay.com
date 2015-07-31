@@ -23,32 +23,12 @@ body {
 	text-align: center;
 }
 
-.game-images {
-    margin-top: 4rem;
-	margin-bottom: 4rem;
-}
-
-.game-image {
-	margin-top: 1rem;
-}
-
-.game-img {
-  display: block;
-  text-align: center;
-  margin: 2.5rem auto 0;
+.center-text {
+	text-align: center;
 }
 
 @media (min-width: 550px) {
 	.header {
 		margin-top: 12rem;
-	}
-	
-	.game-images {
-		margin-top: 9rem;
-		margin-bottom: 7rem;
-	}
-	
-	.game-img {
-		margin-bottom: 1rem;
 	}
 }
