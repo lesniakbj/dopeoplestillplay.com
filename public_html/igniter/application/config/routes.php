@@ -56,6 +56,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		'controller/method'
 |
 |		$route['route/wanted'] = 'controller/method'
+|
+|
+|	Passing parameters to a method:
+|		Pass 'form_name' to 'Form_Handler':
+|			$route['forms/handle/form_name'] = 'Form_Handler/handle/$1'
+|			$1 = form_name
+|
+|		Handle all forms with 1 controller:
+|			$route['forms/handle/(:any)'] = 'Form_Handler/handle/$1';
+|			In handle($formName) = check form submitted
+|
 */
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
@@ -63,5 +74,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 //$route['test'] = 'welcome/test';
 //$route['test/(:any)'] = 'welcome/test';
-$route['forms/submit'] = 'Form_Handler/email_form';
+$route['forms/handle/(:any)'] = 'FormHandler/handle/$1';
 $route['(:any)'] = 'welcome';
