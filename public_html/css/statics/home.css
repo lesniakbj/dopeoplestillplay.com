@@ -32,16 +32,6 @@ form.construction-email {
 	margin-top: 1rem;
 }
 
-@media (min-width: 750px) {
-	.game-img {
-		display: block;
-		text-align: center;
-		margin: 2.5rem auto 0;
-		height: 108px;
-		width: 192px;
-	}
-}
-
 .game-img {
 	display: block;
 	text-align: center;
