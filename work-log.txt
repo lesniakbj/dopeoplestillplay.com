@@ -1,3 +1,10 @@
+Database:
+	- Add game genres
+	- Add game sub genres
+	- Create a user_user table = id, username, hash, hashed_pw, last_visit
+	- Create game_game table = id, game_name, year_released, description
+	- Add some seed data to the table
+
 On home:
 	- Cycle through "flavor text" under the images; create flavor text to cycle through
 	- Add more images to cycle through for the bottom images
