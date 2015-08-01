@@ -3,6 +3,7 @@
         <head>
 		<?php
 			$this->load->helper('html');
+			// Use an abosulute path here, due to some issues with loading. 
 			include_once('/home/dopelsha/public_html/resources/Strings.php'); 
 			$rsString = new ResourceStrings();
         		
