@@ -72,7 +72,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 switch ( $_SERVER['HTTP_HOST'] ) {
 	case 'admin.dopeoplestillplay.com':
 		$route['default_controller'] = "AdminHome";
+		$route['404_override'] = '';
+		$route['translate_uri_dashes'] = FALSE;
+		
 		$route['admin/login'] = 'AdminHome/login';
+		$route['(:any)'] = 'AdminHome';
 		break;
 	case 'm.dopeoplestillplay.com':
 		$route['default_controller'] = "MobileHome";
@@ -83,6 +87,6 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		$route['translate_uri_dashes'] = FALSE;
 		
 		$route['forms/handle/(:any)'] = 'FormHandler/handle/$1';
-		$route['(:any)'] = 'welcome';
+		$route['(:any)'] = 'Home';
 	break;
 }

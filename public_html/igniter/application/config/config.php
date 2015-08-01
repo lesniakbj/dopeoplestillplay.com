@@ -17,7 +17,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'https://www.dopeoplestillplay.com/';
+switch ( $_SERVER['HTTP_HOST'] ) {
+	case 'admin.dopeoplestillplay.com':
+		$config['base_url'] = 'http://admin.dopeoplestillplay.com/';
+		break;
+	default:
+		$config['base_url'] = 'https://dopeoplestillplay.com/';
+		break;
+}
 
 /*
 |--------------------------------------------------------------------------
