@@ -12,3 +12,7 @@ Images:
 Forum:
 	- Overclock.net style news section with most recently commented topics
 	- forum.dopeoplestillplay.com
+	
+Rewrites:
+	- Figure out how to force http:// to https:// while not breaking image/resource paths
+	
