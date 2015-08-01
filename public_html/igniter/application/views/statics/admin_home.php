@@ -17,5 +17,5 @@
 		<div class="four columns">&nbsp;</div>
 	</div>
 	<?php echo br(1); ?>
-	<input class="button-primary email-button" type="submit" value="Submit Email">
+	<input class="button-primary email-button" type="submit" value="admin-login">
 </form>
