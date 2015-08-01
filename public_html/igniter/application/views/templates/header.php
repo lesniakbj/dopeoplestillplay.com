@@ -3,7 +3,7 @@
         <head>
 		<?php
 			$this->load->helper('html');
-			include_once('resources/Strings.php'); 
+			include_once('/resources/Strings.php'); 
 			$rsString = new ResourceStrings();
         		
 			// Echo all of the meta tags needed by the page, get the data from the controller. 
