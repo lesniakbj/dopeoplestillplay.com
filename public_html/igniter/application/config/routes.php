@@ -68,11 +68,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |			In handle($formName) = check form submitted
 |
 */
-$route['default_controller'] = 'home';
-$route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
-
-//$route['test'] = 'welcome/test';
-//$route['test/(:any)'] = 'welcome/test';
-$route['forms/handle/(:any)'] = 'FormHandler/handle/$1';
-$route['(:any)'] = 'welcome';
+// Acommidate mobile subdomain routing.
+switch ( $_SERVER['HTTP_HOST'] ) {
+	case 'admin.dopeoplestillplay.com':
+		$route['default_controller'] = "AdminHome";
+		break;
+	case 'm.dopeoplestillplay.com':
+		$route['default_controller'] = "MobileHome";
+		break;
+	default:
+		$route['default_controller'] = 'Home';
+		$route['404_override'] = '';
+		$route['translate_uri_dashes'] = FALSE;
+		
+		$route['forms/handle/(:any)'] = 'FormHandler/handle/$1';
+		$route['(:any)'] = 'welcome';
+	break;
+}
