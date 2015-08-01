@@ -2,6 +2,15 @@
 	Admin Home Specific Styling
 */
 
+.form-group:first-of-type {
+	margin-top: 4rem;
+}
+
 .form-group {
-	margin-top: 2rem;
+	margin-top: -1rem;
+}
+
+.email-button {
+	width: 40%;
+	margin-left: 28.5%;
 }
