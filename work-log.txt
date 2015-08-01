@@ -15,6 +15,12 @@ On home:
 	- Controller receives data from GameModel with text and images from the model
 	- Model loops through 3 received images and text and displays them in place
 	
+	- Controller:
+		- Add a new method (new-home?) to serve the actual home page.
+	
+	- Begin construction on the look & feel of the actual home page.
+
+	
 Images:
 	- game-banner instead of game-images
 	- game-slot instead of game-image
