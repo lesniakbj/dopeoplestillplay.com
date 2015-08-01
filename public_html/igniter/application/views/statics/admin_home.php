@@ -1,4 +1,4 @@
-<form name="admin-login" class="" action="AdminHome/login" method="post">
+<form name="admin-login" class="" action="/login" method="post">
 	<div class="row form-group">
 		<div class="four columns">&nbsp;</div>
 		<div class="four columns">
