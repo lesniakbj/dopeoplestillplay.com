@@ -1,0 +1,14 @@
+On home:
+	- Cycle through "flavor text" under the images; create flavor text to cycle through
+	- Add more images to cycle through for the bottom images
+	- Controller receives data from GameModel with text and images from the model
+	- Model loops through 3 received images and text and displays them in place
+	
+Images:
+	- game-banner instead of game-images
+	- game-slot instead of game-image
+	- game-img -> game-img
+	
+Forum:
+	- Overclock.net style news section with most recently commented topics
+	- forum.dopeoplestillplay.com
