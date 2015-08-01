@@ -20,6 +20,10 @@ On home:
 	
 	- Begin construction on the look & feel of the actual home page.
 
+Admin:
+	- Create login for admin
+	- Display entered data
+	- Enter new data
 	
 Images:
 	- game-banner instead of game-images
