@@ -12,7 +12,7 @@ class FormHandler extends CI_Controller {
 		// Check which form was submitted:
 		if($formName = 'Submit Email') {	
 			// Get the user input from the GET or POST request.
-			$this->handleEmailRequest($this->input->get_post('user-email', TRUE));
+			$this->handleEmailRequest($this->input->post('user-email', TRUE));
 		}
 	}
 	

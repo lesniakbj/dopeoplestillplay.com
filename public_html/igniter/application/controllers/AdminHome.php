@@ -10,4 +10,14 @@ class AdminHome extends CI_Controller {
 		$this->load->view('statics/admin_home', $data);
 		$this->load->view('templates/footer', $data);
 	}
+	
+	public function login() {
+		$loginData = $this->input->post('admin-login');
+		
+		if($loginData['admin-username'] = 'lesniakbj' && $loginData['admin-password'] = 'Fgoal1313_') {
+			$this->load->view('templates/header', $data);
+			//$this->load->view('statics/admin_home', $data);
+			$this->load->view('templates/footer', $data);
+		}
+	}
 }
