@@ -72,6 +72,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 switch ( $_SERVER['HTTP_HOST'] ) {
 	case 'admin.dopeoplestillplay.com':
 		$route['default_controller'] = "AdminHome";
+		$route['admin/login'] = 'AdminHome/login';
 		break;
 	case 'm.dopeoplestillplay.com':
 		$route['default_controller'] = "MobileHome";
