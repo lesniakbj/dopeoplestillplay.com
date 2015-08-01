@@ -1,7 +1,7 @@
 Database:
 	- Add game genres
 	- Add game sub genres
-	- Create a user_user table = id, username, hash, hashed_pw, last_visit
+	- Create a user_user table = id, username, salt, hashed_pw, last_visit
 	- Create game_game table = id, game_name, year_released, description
 	- Add some seed data to the table
 
@@ -20,6 +20,12 @@ Forum:
 	- Overclock.net style news section with most recently commented topics
 	- forum.dopeoplestillplay.com
 	
+Login:
+	- Handle login sessions
+	- Handle user input
+		- On input, check if user exists, if not generate a salt and hash salt + password
+		- If exists, grab the salt, hash and check against hashed_pw
+	- If no user, state can't find user/email/password combination.
 Rewrites:
 	- Figure out how to force http:// to https:// while not breaking image/resource paths
 	
