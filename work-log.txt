@@ -55,3 +55,8 @@ Stats:
 	- Every hr? Every 1/2 hr? ()
 	- API: https://www.mashape.com/lesniakbj/applications/do-people-still-play
 	
+.htaccess:
+	- Current root .htaccess no longer redirects to subdomains when the index.php .htaccess is present
+	  within the root of the subdomain; fix this.
+	  
+	
