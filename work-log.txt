@@ -8,6 +8,7 @@ Database:
 	
 	- [Added data to game_genre and game_sub_genre]
 	- [Added a user to user_user]
+	- [Added column to user_email_list, date_added]
 
 On home:
 	- Cycle through "flavor text" under the images; create flavor text to cycle through
@@ -52,4 +53,5 @@ Rewrites:
 Stats:
 	- Scrape data from steam website on game stats
 	- Every hr? Every 1/2 hr? ()
+	- API: https://www.mashape.com/lesniakbj/applications/do-people-still-play
 	
