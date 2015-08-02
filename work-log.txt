@@ -8,6 +8,7 @@ Database:
 	
 	- [Added data to game_genre and game_sub_genre]
 	- [Added a user to user_user]
+	- [Added column to user_email_list, date_added]
 
 On home:
 	- Cycle through "flavor text" under the images; create flavor text to cycle through
@@ -24,6 +25,11 @@ Admin:
 	- Create login for admin
 	- Display entered data
 	- Enter new data
+	- Left side nav with following items:
+		- View list of all database tables - click to view data on the table
+		- Create new tables
+		- Add data to existing tables. 
+		- Remove data from the system (add an is_delted flag to the base data)
 	
 Images:
 	- game-banner instead of game-images
@@ -40,6 +46,12 @@ Login:
 		- On input, check if user exists, if not generate a salt and hash salt + password
 		- If exists, grab the salt, hash and check against hashed_pw
 	- If no user, state can't find user/email/password combination.
+	
 Rewrites:
 	- Figure out how to force http:// to https:// while not breaking image/resource paths
+	
+Stats:
+	- Scrape data from steam website on game stats
+	- Every hr? Every 1/2 hr? ()
+	- API: https://www.mashape.com/lesniakbj/applications/do-people-still-play
 	
