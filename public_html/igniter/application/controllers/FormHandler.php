@@ -35,7 +35,7 @@ class FormHandler extends CI_Controller {
 		
 		// After showing the confirmation/failure page, redirect back the home page.
 		$this->load->helper('url');
-		$this->output->set_header('refresh:8;url=/');
+		$this->output->set_header('refresh:5;url=/');
 	}
 	
 	private function sendUserEmail($emailAddress) {
