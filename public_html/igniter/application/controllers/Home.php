@@ -7,7 +7,7 @@ class Home extends CI_Controller {
 		$data['css'] = 'statics/home.css';
 	
 		$this->load->view('templates/header', $data);
-		$this->load->view('statics/'.$page, $data);
+		$this->load->view('statics/home', $data);
 		$this->load->view('templates/footer', $data);
 	}
 }
