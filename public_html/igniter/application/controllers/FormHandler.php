@@ -5,7 +5,7 @@ class FormHandler extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
-		$this->load->model('email/Email_model');
+		$this->load->model('email/email_model');
 	}
 
 	public function handle($formName) {
