@@ -42,11 +42,13 @@ class Game_model extends CI_Model {
 		if(! isset($orderBy)) {
 			$orderBy = 'title DESC';
 		}
-		$sql = "SELECT * FROM game_game ORDER BY".$this->db->escape($orderBy);
-		$query = $this->db->query($sql);
 		
-		if( $query->num_rows() > 0) {
-			return $query->results();
+		// Setup and run the query, results get put into $queryResults
+		$this->db->select('*')->from('game_game')->order_by($this->db->escape($orderBy));
+		$queryResults = $this->db->query();
+		
+		if( $queryResults->num_rows() > 0) {
+			return $queryResults->results();
 		}
 		
 		return "Query Failed - No game data!";
