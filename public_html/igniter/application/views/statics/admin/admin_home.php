@@ -1,11 +1,15 @@
 <?
+	// Loads the form helper class to generate forms
 	$this->load->helper('form');
+	// Displays any validation errors on the forms.
+	echo validation_errors(); 
 	
 	$formAttrs = array(
 		'action' => 'https://www.admin.dopeoplestillplay.com/admin/login',
 		'class'  => '', 
 		'id' 	 => 'admin-login', 
-		'name'	 => 'admin-login', 
+		'name'	 => 'admin-login',
+		'value'  => set_value('admin-login'),
 		'method' => 'post'
 	);
 	echo form_open('admin/login', $formAttrs);
@@ -17,7 +21,7 @@
 	$userAttrs = array(
               'name'        => 'admin-username',
               'id'          => 'admin-username',
-              'value'       => 'admin-username',
+              'value'       => set_value('admin-username'),
               'maxlength'   => '100',
             );
 	echo form_input($userAttrs);
@@ -33,7 +37,7 @@
 	$pwAttrs = array(
               'name'        => 'admin-password',
               'id'          => 'admin-password',
-              'value'       => 'admin-password',
+              'value'       => set_value('admin-password'),
               'maxlength'   => '100',
             );
 	echo form_password($pwAttrs);
