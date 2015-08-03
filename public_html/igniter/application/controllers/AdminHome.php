@@ -54,7 +54,7 @@ class AdminHome extends CI_Controller {
 		// Date autofilled by DB (Column Default)
 		$logIP = $this->input->ip_address();
 		$Admin_model->logAttemptToDB($uname, $pw, $logIP, $result);
-		return 
+		return $result;
 	}
 	
 	private function displayLoginPage($message = NULL) {
