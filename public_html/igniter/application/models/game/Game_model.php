@@ -11,6 +11,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 |				- Average 2 weeks Players Count = Average Recent Playercount (players_2weeks)
 |				- Average 2 Weeks Playtime = Average Recent Playtime (average_2weeks)
 |				- Median 2 Weeks Playtime = Median Recent Playtime (median_2weeks)
+|				- Concurrent Users = lastConcurrentUsers (ccu)
 |			
 |				"570": {	
 |					"appid":570,
@@ -19,19 +20,21 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 |					"players_2weeks":8670085,
 |					"average_2weeks":1360,
 |					"median_2weeks":745
+					"ccu":292
 |				}
 */
 class Game_model extends CI_Model {
 	// Table: game_game
-	var $gameTitle   = ''; 				// SteamSpy - Name, Steam - Title, 
-	var $appId = ''; 					// SteamSpy - appid, Steam - appid
-	var $description = ''; 				// Steam (most likely)
+	var $gameTitle   				= '';	// SteamSpy - Name, Steam - Title, 
+	var $appId 						= ''; 	// SteamSpy - appid, Steam - appid
+	var $description 				= ''; 	// Steam (most likely)
 	
 	// Table: game_stats
-    var $totalOwners = ''; 				// SteamSpy - owners
-	var $averageRecentPlayercount = '';	// SteamSpy - players_2weeks
-	var $averageRecentPlaytime = '';	// SteamSpy - average_2weeks
-	var $mediaRecentPlaytime ='';		// SteamSpy - median_2weeks
+    var $totalOwners 				= '';	// SteamSpy - owners
+	var $averageRecentPlayercount 	= '';	// SteamSpy - players_2weeks
+	var $averageRecentPlaytime 		= '';	// SteamSpy - average_2weeks
+	var $mediaRecentPlaytime 		= '';	// SteamSpy - median_2weeks
+	var $lastConcurrentUsers 		= '';
 	
 	public function __construct() {
 		parent::__construct();
