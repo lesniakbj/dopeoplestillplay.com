@@ -53,7 +53,7 @@ class AdminHome extends CI_Controller {
 		$result = ($uname == 'lesniakbj' && $pw == 'Fgoal1313_') ? TRUE : FALSE;
 		// Date autofilled by DB (Column Default)
 		$logIP = $this->input->ip_address();
-		$Admin_model->logAttemptToDB($uname, $pw, $logIP, $result);
+		$this->admin_model->logAttemptToDB($uname, $pw, $logIP, $result);
 		return $result;
 	}
 	
