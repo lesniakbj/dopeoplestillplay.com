@@ -44,7 +44,12 @@ class Game_model extends CI_Model {
 		}
 		
 		// Setup and run the query, results get put into $queryResults
-		$this->db->select('*')->from('game_game')->order_by($orderBy);
+		$this
+		->db
+		->select('*')
+		->from('game_game')
+		->order_by($orderBy);
+		
 		$queryResults = $this->db->query();
 		
 		if( $queryResults->num_rows() > 0) {
