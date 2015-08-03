@@ -2,7 +2,7 @@
 	// Loads the form helper class to generate forms
 	$this->load->helper('form');
 	// Displays any validation errors on the forms.
-	echo validation_errors(); 
+	echo '<div class="form-error">'.validation_errors().'</div>';
 	
 	$formAttrs = array(
 		'action' => 'https://www.admin.dopeoplestillplay.com/admin/login',

@@ -24,22 +24,45 @@ class AdminHome extends CI_Controller {
 		$this->form_validation->set_rules('admin-password', 'Password', 'trim|required');
 		
 		if ($this->form_validation->run() == FALSE) {
-			$data['title'] = 'Login - Administration Home';
-			$data['css'] = 'statics/admin_home.css';
-		
-			$this->load->view('templates/header', $data);
-			$this->load->view('statics/admin/admin_home', $data);
-			$this->load->view('templates/footer', $data);
+			$this->displayLoginPage();
 		}
 		else {
 			// The form passed validation, get the data from the form, and then check to 
 			// see if the credentials are correct.
-			$data['title'] = 'Welcome - Administration Home';
-			$data['css'] = 'statics/admin/admin_home.css';
-			
-			$this->load->view('templates/header', $data);
-			$this->load->view('templates/footer', $data);
-			
+			$isAdmin = $this->checkAdminStatus($this->input->post('admin-login'));
+			if($isAdmin) {
+				// Start a session and check that session on home page view
+				$this->displayAdminHome();
+			} else {
+				$this->displayLoginPage();
+			}
 		}
+	}
+	
+	private function checkAdminStatus($postData) {
+		$uname = $postData['admin-username'];
+		$pw = $postData['admin-password'];
+		
+		// To Do: Add AdminLogin_model and log login attempts
+		// 		  this will require expanding out to an IF statement 
+		//		  OR caching the result.
+		return ($uname == 'lesniakbj' && $pw == 'Fgoal1313_') ? TRUE : FALSE;
+	}
+	
+	private function displayLoginPage() {
+		$data['title'] = 'Login - Administration Home';
+		$data['css'] = 'statics/admin_home.css';
+	
+		$this->load->view('templates/header', $data);
+		$this->load->view('statics/admin/admin_home', $data);
+		$this->load->view('templates/footer', $data);
+	}
+	
+	private function displayAdminHome() {
+		$data['title'] = 'Welcome - Administration Home';
+		$data['css'] = 'statics/admin/admin_home.css';
+		
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/footer', $data);
 	}
 }
