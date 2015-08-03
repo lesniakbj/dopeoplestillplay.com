@@ -6,6 +6,10 @@ Database:
 	- Add some seed data to the table XX
 	- Come up with a process for backing up the email list each night, or at least throw away useless emails.
 	
+	- Schedule a job to run each night to do the following:
+		- Scrape data from the various data_providers
+		- Email the contact@dopeoplestillplay.com with an updated list of emails added that day.
+	
 	- [Added data to game_genre and game_sub_genre]
 	- [Added a user to user_user]
 	- [Added column to user_email_list, date_added]
