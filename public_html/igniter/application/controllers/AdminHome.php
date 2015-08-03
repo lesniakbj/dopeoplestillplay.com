@@ -4,9 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class AdminHome extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
+		
 		$this->load->helper('form');
+		
 		$this->load->library('form_validation');
 		$this->load->library('session');	
+		
+		$this->load->model('admin/Admin_model');
 	}
 	
 	public function index() {		
@@ -46,7 +50,11 @@ class AdminHome extends CI_Controller {
 		// To Do: Add AdminLogin_model and log login attempts
 		// 		  this will require expanding out to an IF statement 
 		//		  OR caching the result.
-		return ($uname == 'lesniakbj' && $pw == 'Fgoal1313_') ? TRUE : FALSE;
+		$result = ($uname == 'lesniakbj' && $pw == 'Fgoal1313_') ? TRUE : FALSE;
+		// Date autofilled by DB (Column Default)
+		$logIP = $this->input->ip_address();
+		$Admin_model->logAttemptToDB($uname, $pw, $logIP, $result);
+		return 
 	}
 	
 	private function displayLoginPage($message = NULL) {
