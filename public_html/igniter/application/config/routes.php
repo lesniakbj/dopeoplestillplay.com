@@ -87,7 +87,6 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		$route['translate_uri_dashes'] = FALSE;
 		
 		$route['forms/handle/(:any)'] = 'FormHandler/handle/$1';
-		$route['admin'] = 'admin.dopeoplestillplay.com';
 		$route['(:any)'] = 'Home';
 	break;
 }
