@@ -40,6 +40,7 @@ class AdminHome extends CI_Controller {
 	}
 	
 	private function checkAdminStatus($postData) {
+		print_r($postData);
 		$uname = $postData['admin-username'];
 		$pw = $postData['admin-password'];
 		
