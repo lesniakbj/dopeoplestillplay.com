@@ -12,7 +12,6 @@ class Email_model extends CI_Model {
 		);	
 		$querySuccess = $this->db->insert('user_email_list', $emailData);
 		
-		echo($querySuccess);
-		return $querySuccess;
+		return ($querySuccess  == 1) ? TRUE : FALSE;
 	}
 }
