@@ -30,7 +30,7 @@ class AdminHome extends CI_Controller {
 			// The form passed validation, get the data from the form, and then check to 
 			// see if the credentials are correct.
 			$isAdmin = $this->checkAdminStatus($this->input->post('admin-login'));
-			if($isAdmin) {
+			if($isAdmin == TRUE) {
 				// Start a session and check that session on home page view
 				$this->displayAdminHome();
 			} else {
