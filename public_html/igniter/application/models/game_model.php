@@ -13,6 +13,20 @@ class Game_model extends CI_Model {
 		parent::__construct();
 		$this->load->database();
 	}
+	
+	public function selectAllGameData($orderBy) {
+		if(! isset($orderBy)) {
+			$orderBy = 'title DESC';
+		}
+		$sql = "SELECT * FROM game_game ORDER BY".$this->db->escape($orderBy);
+		$query = $this->db->query($sql);
+		
+		if( $query->num_rows() > 0) {
+			return $query->results();
+		}
+		
+		return "Query Failed - No game data!";
+	}
 }
 /*
 	URL = steamspy.com/api.php?request=all
