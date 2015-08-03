@@ -20,8 +20,8 @@ class AdminHome extends CI_Controller {
 	
 	public function login() {
 		// Before getting the POST values, check the form to ensure that it is valid
-		$this->form_validation->set_rules('admin-username', 'Username', 'trim|required|xss_clean');
-		$this->form_validation->set_rules('admin-password', 'Password', 'trim|required|xss_clean');
+		$this->form_validation->set_rules('admin-username', 'Username', 'trim|required');
+		$this->form_validation->set_rules('admin-password', 'Password', 'trim|required');
 		
 		if ($this->form_validation->run() == FALSE) {
 			$data['title'] = 'Login - Administration Home';
