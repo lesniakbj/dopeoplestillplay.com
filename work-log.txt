@@ -9,6 +9,7 @@ Database:
 	- [Added data to game_genre and game_sub_genre]
 	- [Added a user to user_user]
 	- [Added column to user_email_list, date_added]
+	- [Added 4 game data providers, URL's to API's, and keys when needed]
 
 On home:
 	- Cycle through "flavor text" under the images; create flavor text to cycle through
