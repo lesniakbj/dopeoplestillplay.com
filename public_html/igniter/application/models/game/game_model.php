@@ -38,17 +38,16 @@ class Game_model extends CI_Model {
 		$this->load->database();
 	}
 	
-	public function selectAllGameData($orderBy) {
+	public function selectAllGameData($orderByString) {
 		if(! isset($orderBy)) {
-			$orderBy = 'title DESC';
+			$orderByString = 'title DESC';
 		}
 		
 		// Setup and run the query, results get put into $queryResults
-		$this
-		->db
+		$this->db
 		->select('*')
 		->from('game_game')
-		->order_by($orderBy);
+		->order_by($orderByString);
 		
 		$queryResults = $this->db->query();
 		
