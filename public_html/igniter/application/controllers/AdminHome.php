@@ -24,7 +24,7 @@ class AdminHome extends CI_Controller {
 		$this->form_validation->set_rules('admin-password', 'Password', 'trim|required');
 		
 		if ($this->form_validation->run() == FALSE) {
-			$this->displayLoginPage();
+			$this->displayLoginPage("Form Validation Failed!");
 		}
 		else {
 			// The form passed validation, get the data from the form, and then check to 
@@ -34,7 +34,7 @@ class AdminHome extends CI_Controller {
 				// Start a session and check that session on home page view
 				$this->displayAdminHome();
 			} else {
-				$this->displayLoginPage();
+				$this->displayLoginPage("Incorrect Login!");
 			}
 		}
 	}
@@ -49,18 +49,24 @@ class AdminHome extends CI_Controller {
 		return ($uname == 'lesniakbj' && $pw == 'Fgoal1313_') ? TRUE : FALSE;
 	}
 	
-	private function displayLoginPage() {
+	private function displayLoginPage($message = NULL) {
 		$data['title'] = 'Login - Administration Home';
 		$data['css'] = 'statics/admin_home.css';
+		if(isset($message)) {
+			$data['failure_message'] = $message;
+		}
 	
 		$this->load->view('templates/header', $data);
 		$this->load->view('statics/admin/admin_home', $data);
 		$this->load->view('templates/footer', $data);
 	}
 	
-	private function displayAdminHome() {
+	private function displayAdminHome($message = NULL) {
 		$data['title'] = 'Welcome - Administration Home';
 		$data['css'] = 'statics/admin/admin_home.css';
+		if(isset($message)) {
+			$data['failure_message'] = $message;
+		}
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/footer', $data);

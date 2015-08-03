@@ -3,6 +3,9 @@
 	$this->load->helper('form');
 	// Displays any validation errors on the forms.
 	echo '<div class="form-error">'.validation_errors().'</div>';
+	if(isset($failure_message)) { 
+		echo '<div class="other-errors">'.$failure_message.'</div>';
+	}
 	
 	$formAttrs = array(
 		'action' => 'https://www.admin.dopeoplestillplay.com/admin/login',
