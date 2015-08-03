@@ -46,7 +46,8 @@ class AdminHome extends CI_Controller {
 		// To Do: Add AdminLogin_model and log login attempts
 		// 		  this will require expanding out to an IF statement 
 		//		  OR caching the result.
-		return ($uname == 'lesniakbj' && $pw == 'Fgoal1313_') ? TRUE : FALSE;
+		
+		//return ($uname == 'lesniakbj' && $pw == 'Fgoal1313_') ? TRUE : FALSE;
 	}
 	
 	private function displayLoginPage($message = NULL) {

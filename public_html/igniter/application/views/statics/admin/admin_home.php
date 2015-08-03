@@ -19,15 +19,15 @@
 	echo '<div class="row form-group">';
 	echo 		'<div class="four columns">&nbsp;</div>';
 	echo		'<div class="four columns">';
-	echo			'<label "for="admin-username">Admin Username:</label>';
+	echo 			form_label('Admin Username:', 'admin-username');
 	
 	$userAttrs = array(
-              'name'        => 'admin-username',
-              'id'          => 'admin-username',
-              'value'       => set_value('admin-username'),
-              'maxlength'   => '100',
-            );
-	echo form_input($userAttrs);
+	  'name'        => 'admin-username',
+	  'id'          => 'admin-username',
+	  'value'       => set_value('admin-username'),
+	  'maxlength'   => '100',
+	);
+	echo 			form_input($userAttrs);
 	echo		'</div>';
 	echo		'<div class="four columns">&nbsp;</div>';
 	echo	'</div>';
@@ -35,7 +35,7 @@
 	echo '<div class="row form-group">';
 	echo		'<div class="four columns">&nbsp;</div>';
 	echo		'<div class="four columns">';
-	echo			'<label for="admin-password">Admin Password:</label>';
+	echo 			form_label('Admin Password:', 'admin-password');
 				
 	$pwAttrs = array(
               'name'        => 'admin-password',
@@ -43,7 +43,7 @@
               'value'       => set_value('admin-password'),
               'maxlength'   => '100',
             );
-	echo form_password($pwAttrs);
+	echo 			form_password($pwAttrs);
 	echo 		'</div>';
 	echo		'<div class="four columns">&nbsp;</div>';
 	echo 	'</div>';
