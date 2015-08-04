@@ -24,6 +24,11 @@
   - Controller:
     - Add a new method (new-home?) to serve the actual home page.
     - Begin construction on the look & feel of the actual home page.
+  - Add:
+    - Data Feed Management (Schedule job running, view jobs, recieve all data, view status of data feeds, view most recent data)
+    - 
+    - Viewing game data
+    - Adding new data to certain tables (user, other tables)...
 
 ****
 
