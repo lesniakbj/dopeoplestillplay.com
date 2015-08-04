@@ -33,9 +33,14 @@ class AdminHome extends CI_Controller {
 		else {
 			// The form passed validation, get the data from the form, and then check to 
 			// see if the credentials are correct.
-			$isAdmin = $this->checkAdminStatus($this->input->post());
+			$uname = $this->input->post('admin-username');
+			$pw = $this->input->post('admin-password');
+			$ipAddr = $_SERVER['REMOTE_ADDR'];
+			
+			$isAdmin = $this->checkAdminStatus($uname, $pw, $ipAddr);
 			if($isAdmin == TRUE) {
 				// Start a session and check that session on home page view
+				$this->startAdminSession($uname, $pw, $ipAddr);
 				$this->displayAdminHome();
 			} else {
 				$this->displayLoginPage("Incorrect Login!");
@@ -43,18 +48,15 @@ class AdminHome extends CI_Controller {
 		}
 	}
 	
-	private function checkAdminStatus($postData) {
-		$uname = $postData['admin-username'];
-		$pw = $postData['admin-password'];
-		
-		// To Do: Add AdminLogin_model and log login attempts
-		// 		  this will require expanding out to an IF statement 
-		//		  OR caching the result.
+	private function checkAdminStatus($uname, $pw, $logIP) {
 		$result = ($uname == 'lesniakbj' && $pw == 'Fgoal1313_') ? TRUE : FALSE;
 		// Date autofilled by DB (Column Default)
-		$logIP = $this->input->ip_address();
 		$this->admin_model->logAttemptToDB($uname, $pw, $logIP, $result);
 		return $result;
+	}
+	
+	private function startAdminSession($uname, $pw, $ipAddr) {
+		return TRUE;
 	}
 	
 	private function displayLoginPage($message = NULL) {
