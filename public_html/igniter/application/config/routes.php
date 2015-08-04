@@ -73,14 +73,14 @@ $route['translate_uri_dashes'] = FALSE;
 
 switch ( $_SERVER['HTTP_HOST'] ) {
 	case 'admin.dopeoplestillplay.com':
-		$route['default_controller'] = "admin/AdminHome";
+		$route['default_controller'] = "AdminHome";
 		
 		// Default admin routes
-		$route['admin/login'] = 'admin/AdminHome/login';
-		$route['admin/home'] = 'admin/AdminHome/home';
-		$route['admin/logout'] = 'admin/AdminHome/logout';
+		$route['admin/login'] = 'AdminHome/login';
+		$route['admin/home'] = 'AdminHome/home';
+		$route['admin/logout'] = 'AdminHome/logout';
 		
-		$route['(:any)'] = 'admin/AdminHome';
+		$route['(:any)'] = 'AdminHome';
 		break;
 	case 'm.dopeoplestillplay.com':
 		$route['default_controller'] = "MobileHome";
@@ -91,18 +91,18 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		$route['forms/handle/(:any)'] = 'FormHandler/handle/$1';
 		
 		// Admin Redirects
-		$route['admin'] = 'admin/AdminHome/redirect';
-		$route['admin/(:any)'] = 'admin/AdminHome/redirect';
+		$route['admin'] = 'AdminHome/redirect';
+		$route['admin/(:any)'] = 'AdminHome/redirect';
 		
 		// Forum Redirects
-		$route['forums'] = 'forums/ForumsHome/redirect';
-		$route['forums/(:any)'] = 'forums/ForumsHome/redirect';
-		$route['forum'] = 'forums/ForumsHome/redirect';
-		$route['forum/(:any)'] = 'forums/ForumsHome/redirect';
+		$route['forums'] = 'ForumsHome/redirect';
+		$route['forums/(:any)'] = 'ForumsHome/redirect';
+		$route['forum'] = 'ForumsHome/redirect';
+		$route['forum/(:any)'] = 'ForumsHome/redirect';
 		
 		// Mobile Redirects
-		$route['mobile'] = 'mobile/MobileHome/redirect';
-		$route['mobile/(:any)'] = 'mobile/MobileHome/redirect';
+		$route['mobile'] = 'MobileHome/redirect';
+		$route['mobile/(:any)'] = 'MobileHome/redirect';
 		
 		$route['(:any)'] = 'Home';
 	break;
