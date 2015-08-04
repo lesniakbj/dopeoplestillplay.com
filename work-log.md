@@ -1,3 +1,4 @@
+```
 1. Database:
   - Add game genres XX
   - Add game sub genres XX
@@ -12,6 +13,7 @@
   - [Added a user to user_user]
   - [Added column to user_email_list, date_added]
   - [Added 4 game data providers, URL's to API's, and keys when needed]
+```
 
 2. On home:
   - Cycle through "flavor text" under the images; create flavor text to cycle through
