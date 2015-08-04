@@ -1,6 +1,6 @@
 <?
 	if($this->session->userdata('logged-in') == FALSE) {
-		//$this->output->set_header('url=/');
+		show_error('Forbidden content. Please login to view this content.', 403, '403 Forbidden Content');
 	} else {
 ?>
 	<section class="header">
