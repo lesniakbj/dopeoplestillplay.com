@@ -7,6 +7,7 @@ class AdminHome extends CI_Controller {
 		
 		$this->load->helper('form');
 		$this->load->helper('url');
+		$this->load->helper('html');
 		
 		$this->load->library('form_validation');
 		$this->load->library('session');	
