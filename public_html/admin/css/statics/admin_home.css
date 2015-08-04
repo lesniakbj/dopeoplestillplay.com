@@ -6,10 +6,20 @@
 	margin-top: 4rem;
 }
 
-.container.banner-text {
+.container.tool-area {
+	/* Style overwrites */
+	max-width: 960px;
+	width: 95%;
+	
 	text-align: center;
 	min-height: 600px;
 	border: 1px solid #CFCFCF;
+}
+
+.tool-banner {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;      
 }
 
 .form-group {
