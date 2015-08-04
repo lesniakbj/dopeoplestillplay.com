@@ -2,7 +2,7 @@
 	// Check the sessions to see if we are already logged-in,
 	// if we are redirect to admin_home
 	if($this->session->userdata('logged-in') == TRUE) {
-		$url = 'http://admin.dopeoplestillplay.com/admin/home';
+		$url = 'http://admin.dopeoplestillplay.com/home';
 		$perm = FALSE;
 		if(!headers_sent()) {
 			//header('Location:'.$url, true, ($perm === TRUE) ? 301 : 302);
@@ -20,7 +20,7 @@
 	}
 	
 	$formAttrs = array(
-		'action' => 'https://www.admin.dopeoplestillplay.com/admin/login',
+		'action' => 'https://www.admin.dopeoplestillplay.com/login',
 		'class'  => '', 
 		'id' 	 => 'admin-login', 
 		'name'	 => 'admin-login',

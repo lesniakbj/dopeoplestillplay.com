@@ -71,6 +71,7 @@ class AdminHome extends CI_Controller {
 		return $isAdmin;
 	}
 	
+	// TODO: Consolidate these views and have them chosen by a new class (AdminViewChooser)
 	private function startAdminSession($uname, $pw, $ipAddr) {
 		$adminSessionData = array(
 			'admin-username' => $uname,

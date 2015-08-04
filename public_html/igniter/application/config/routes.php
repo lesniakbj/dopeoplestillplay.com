@@ -76,9 +76,9 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		$route['default_controller'] = 'AdminHome/index';
 		
 		// Default admin routes
-		$route['admin/login'] = 'AdminHome/login';
-		$route['admin/home'] = 'AdminHome/home';
-		$route['admin/logout'] = 'AdminHome/logout';
+		$route['login'] = 'AdminHome/login';
+		$route['home'] = 'AdminHome/home';
+		$route['logout'] = 'AdminHome/logout';
 		
 		$route['(:any)'] = 'AdminHome/index';
 		break;
