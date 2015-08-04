@@ -40,6 +40,7 @@
     - Add data to existing tables. 
     - Remove data from the system (add an is_delted flag to the base data)
   - Add following functions:
+    - View/Clear error logs
     - Data Feed Management (Schedule job running, view jobs, recieve all data, view status of data feeds, view most recent data)
     - Data Delete Utility
     - Viewing game data
