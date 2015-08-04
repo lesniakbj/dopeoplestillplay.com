@@ -13,6 +13,7 @@
   - ~~[Added a user to user_user]~~
   - ~~[Added column to user_email_list, date_added]~~
   - ~~[Added 4 game data providers, URL's to API's, and keys when needed]~~
+  - ~~[Created better IP tracking in Admin Login attempt]~~
   
 ****
 
