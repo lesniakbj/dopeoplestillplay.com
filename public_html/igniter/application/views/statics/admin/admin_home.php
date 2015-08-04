@@ -1,5 +1,5 @@
 <?
-	if($this->session->userdata('logged-in') == FALSE {
+	if($this->session->userdata('logged-in') == FALSE) {
 		$this->output->set_header('url=/');
 	} else {
 ?>
