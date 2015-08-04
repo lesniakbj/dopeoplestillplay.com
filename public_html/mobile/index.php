@@ -152,7 +152,7 @@ switch (ENVIRONMENT)
  */
 	// The directory name, relative to the "controllers" folder.  Leave blank
 	// if your controller is not in a sub-folder within the "controllers" folder
-	// $routing['directory'] = '';
+	$routing['directory'] = 'mobile';
 
 	// The controller class file name.  Example:  mycontroller
 	// $routing['controller'] = '';
