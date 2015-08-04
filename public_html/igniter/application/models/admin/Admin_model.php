@@ -11,7 +11,7 @@ class Admin_model extends CI_Model {
 			'admin_username' => $uname,
 			'admin_pw_hash' => md5($pw)
 		);
-		$this-db->from('admin_authorized_user')
+		$this->db->from('admin_authorized_user')
 				->where($loginAttemptData);
 		//print_r($querySuccess);
 	}
