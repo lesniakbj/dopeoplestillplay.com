@@ -5,7 +5,7 @@
 		$url = 'http://admin.dopeoplestillplay.com/admin/home';
 		$perm = FALSE;
 		if(!headers_sent()) {
-			header('Location:'.$url, true, ($perm === TRUE) ? 301 : 302);
+			//header('Location:'.$url, true, ($perm === TRUE) ? 301 : 302);
 		}		
 		die();
 	}
