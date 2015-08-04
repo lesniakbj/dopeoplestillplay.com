@@ -27,7 +27,7 @@
 		'value'  => set_value('admin-login'),
 		'method' => 'post'
 	);
-	echo form_open('admin/login', $formAttrs);
+	echo form_open('login', $formAttrs);
 	echo '<div class="row form-group">';
 	echo 		'<div class="four columns">&nbsp;</div>';
 	echo		'<div class="four columns">';
