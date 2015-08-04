@@ -73,14 +73,14 @@ $route['translate_uri_dashes'] = FALSE;
 
 switch ( $_SERVER['HTTP_HOST'] ) {
 	case 'admin.dopeoplestillplay.com':
-		$route['default_controller'] = "AdminHome";
+		$route['default_controller'] = "admin/AdminHome";
 		
 		// Default admin routes
-		$route['admin/login'] = 'AdminHome/login';
-		$route['admin/home'] = 'AdminHome/home';
-		$route['admin/logout'] = 'AdminHome/logout';
+		$route['admin/login'] = 'admin/AdminHome/login';
+		$route['admin/home'] = 'admin/AdminHome/home';
+		$route['admin/logout'] = 'admin/AdminHome/logout';
 		
-		$route['(:any)'] = 'AdminHome';
+		$route['(:any)'] = 'admin/AdminHome';
 		break;
 	case 'm.dopeoplestillplay.com':
 		$route['default_controller'] = "MobileHome";
