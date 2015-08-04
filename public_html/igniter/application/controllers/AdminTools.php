@@ -9,16 +9,16 @@ class AdminTools extends CI_Controller {
 	
 	public function dataTools($toolName) {
 		if($toolName == 'home') {
-			$this->loadDataToolView();
+			$this->loadDataToolsView();
 		}
 	}
 	
-	private function loadDataToolView() {
+	private function loadDataToolsView() {
 		$data['title'] = 'Data Tools';
 		$data['css'] = 'statics/admin_home.css';
 		
 		$this->load->view('templates/header', $data);
-		//$this->load->view('statics/admin/admin_home', $data);
+		$this->load->view('templates/admin/admin_nav_bar', $data);
 		$this->load->view('templates/footer', $data);
 	}
 	
