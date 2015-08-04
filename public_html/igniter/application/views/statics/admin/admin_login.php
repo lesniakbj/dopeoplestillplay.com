@@ -9,9 +9,7 @@
 		}		
 		die();
 	}
-
-	// Loads the form helper class to generate forms
-	$this->load->helper('form');
+	
 	// Displays any validation/authentication errors on the forms.
 	if(isset($failure_message)) { 
 		if($failure_type == "auth") {
