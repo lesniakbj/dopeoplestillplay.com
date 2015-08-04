@@ -2,7 +2,7 @@
 	// Check the sessions to see if we are already logged-in,
 	// if we are redirect to admin_home
 	if($this->session->userdata('logged-in') == TRUE) {
-		$url = 'http://forums.dopeoplestillplay.com/admin/home';
+		$url = 'http://admin.dopeoplestillplay.com/admin/home';
 		$perm = FALSE;
 		if(!headers_sent()) {
 			header('Location:'.$url, true, ($perm === TRUE) ? 301 : 302);
