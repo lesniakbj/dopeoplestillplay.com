@@ -34,7 +34,7 @@ class Game_model extends CI_Model {
 	var $averageRecentPlayercount 		= '';	// SteamSpy - players_2weeks
 	var $averageRecentPlaytime 		= '';	// SteamSpy - average_2weeks
 	var $mediaRecentPlaytime 		= '';	// SteamSpy - median_2weeks
-	var $lastConcurrentUsers 		= '';
+	var $lastConcurrentUsers 		= '';	// SteamSpy - ccu
 	
 	public function __construct() {
 		parent::__construct();
