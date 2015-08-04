@@ -15,7 +15,7 @@ class Admin_model extends CI_Model {
 		$this->db->select('COUNT(*)');
 		$this->db->from('admin_authorized_user');
 		$this->db->where($loginAttemptData);
-		$query = $this->$db->get();
+		$query = $this->db->get();
 		
 		return ($query->num_rows() > 0) ? TRUE : FALSE;
 	}
