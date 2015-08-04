@@ -49,14 +49,18 @@ class AdminHome extends CI_Controller {
 	}
 	
 	private function checkAdminStatus($uname, $pw, $logIP) {
-		$result = ($uname == 'lesniakbj' && $pw == 'Fgoal1313_') ? TRUE : FALSE;
-		// Date autofilled by DB (Column Default)
-		$this->admin_model->logAttemptToDB($uname, $pw, $logIP, $result);
-		return $result;
+		$isAdmin = $this->admin_model->checkIsAdmin($uname, $pw);
+		$this->admin_model->logAttemptToDB($uname, $pw, $logIP, $isAdmin);
+		return $isAdmin;
 	}
 	
 	private function startAdminSession($uname, $pw, $ipAddr) {
-		return TRUE;
+		$adminSessionData = array (
+			'admin-username' = $uname,
+			'admin-ip' 		 = $ipAddr
+		);
+		
+		$this-session->set_userdata($)
 	}
 	
 	private function displayLoginPage($message = NULL) {

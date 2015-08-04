@@ -6,6 +6,18 @@ class Admin_model extends CI_Model {
 		$this->load->database();
 	}
 	
+	public function checkIsAdmin($uname, $pw) {
+		$loginAttemptData = array (
+			'admin_username' => $uname,
+			'admin_pw_hash' => md5($pw)
+		);
+		$querySuccess = $this-db
+							->select('*')
+							->from('admin_authorized_user')
+							->where($loginAttemptData);
+		print_r($querySuccess);
+	}
+	
 	public function logAttemptToDB($username, $password, $ipAddress, $success) {
 		// For inserting the IPv4 Address, use PHP function inet_pton
 		// as IP Addresses are stored as 4 Byte Ints.
