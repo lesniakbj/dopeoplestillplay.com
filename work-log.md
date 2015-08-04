@@ -1,6 +1,6 @@
-
+```
 1. Database:
-  - ~~Add game genres~~
+  - <del>Add game genres</del>
   - ~~Add game sub genres~~
   - ~~Create a user_user table = id, username, salt, hashed_pw, last_visit~~
   - Create game_game table = id, game_name, year_released, description
@@ -13,6 +13,7 @@
   - ~~[Added a user to user_user]~~
   - ~~[Added column to user_email_list, date_added]~~
   - ~~[Added 4 game data providers, URL's to API's, and keys when needed]~~
+```
 
 ```
 2. On home:
