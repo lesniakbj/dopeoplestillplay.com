@@ -12,7 +12,6 @@ class Admin_model extends CI_Model {
 			'admin_pw_hash' => md5($pw)
 		);
 		
-		$this->db->select('COUNT(*)');
 		$this->db->from('admin_authorized_user');
 		$this->db->where($loginAttemptData);
 		$query = $this->db->get();
