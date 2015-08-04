@@ -25,13 +25,13 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 */
 class Game_model extends CI_Model {
 	// Table: game_game
-	var $gameTitle   				= '';	// SteamSpy - Name, Steam - Title, 
-	var $appId 						= ''; 	// SteamSpy - appid, Steam - appid
-	var $description 				= ''; 	// Steam (most likely)
+	var $gameTitle   			= '';	// SteamSpy - Name, Steam - Title, 
+	var $appId 				= ''; 	// SteamSpy - appid, Steam - appid
+	var $description 			= ''; 	// Steam (most likely)
 	
 	// Table: game_stats
-    var $totalOwners 				= '';	// SteamSpy - owners
-	var $averageRecentPlayercount 	= '';	// SteamSpy - players_2weeks
+    	var $totalOwners 			= '';	// SteamSpy - owners
+	var $averageRecentPlayercount 		= '';	// SteamSpy - players_2weeks
 	var $averageRecentPlaytime 		= '';	// SteamSpy - average_2weeks
 	var $mediaRecentPlaytime 		= '';	// SteamSpy - median_2weeks
 	var $lastConcurrentUsers 		= '';
@@ -47,10 +47,8 @@ class Game_model extends CI_Model {
 		}
 		
 		// Setup and run the query, results get put into $queryResults
-		$this->db
-		->select('*')
-		->from('game_game')
-		->order_by($orderByString);
+		$this->db->from('game_game')
+			 ->order_by($orderByString);
 		
 		$queryResults = $this->db->query();
 		
