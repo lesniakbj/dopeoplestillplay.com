@@ -60,7 +60,7 @@ class AdminHome extends CI_Controller {
 			'admin-ip' 		 => $ipAddr
 		);
 		
-		$this-session->set_userdata();
+		//$this-session->set_userdata();
 	}
 	
 	private function displayLoginPage($message = NULL) {
