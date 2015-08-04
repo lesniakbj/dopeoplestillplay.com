@@ -80,7 +80,7 @@ class AdminHome extends CI_Controller {
 	
 	private function displayAdminHome($message = NULL) {
 		$data['title'] = 'Welcome - Administration Home';
-		$data['css'] = 'statics/admin/admin_home.css';
+		$data['css'] = 'statics/admin_home.css';
 		if(isset($message)) {
 			$data['failure_message'] = $message;
 		}
