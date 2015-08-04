@@ -28,14 +28,21 @@
 ****
 
 - Admin:
-  - Create login for admin
+  - ~~Create login for admin~~
+  - Google: admin page design, look @ images
   - Display entered data
   - Enter new data
+  - ~~/admin redirects~~
   - Left side nav with following items:
     - View list of all database tables - click to view data on the table
     - Create new tables
     - Add data to existing tables. 
     - Remove data from the system (add an is_delted flag to the base data)
+  - Add following functions:
+    - Data Feed Management (Schedule job running, view jobs, recieve all data, view status of data feeds, view most recent data)
+    - Data Delete Utility
+    - Viewing game data
+    - Adding new data to certain tables (user, other tables)...
 
 ****
 
@@ -48,11 +55,13 @@
 
 - Forum:
   - Overclock.net style news section with most recently commented topics
-  - forum.dopeoplestillplay.com
+  - ~~forum.dopeoplestillplay.com~~
+  - ~~/forums redirects~~
 
 ****
 
 - Login:
+  - ~~Handle login sessions (admin)~~
   - Handle login sessions
   - Handle user input
     - On input, check if user exists, if not generate a salt and hash salt + password
@@ -63,6 +72,7 @@
 
 - Rewrites:
   - Figure out how to force http:// to https:// while not breaking image/resource paths
+  - ~~Handle redirects to subdomain through controller if not able to MOD_REWRITE~~
 
 ****
 
