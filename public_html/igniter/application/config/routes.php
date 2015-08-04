@@ -88,9 +88,15 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		$route['translate_uri_dashes'] = FALSE;
 		
 		$route['forms/handle/(:any)'] = 'FormHandler/handle/$1';
+		
+		$route['admin'] = 'AdminHome/redirect';
 		$route['admin/(:any)'] = 'AdminHome/redirect';
+		
+		$route['forums'] = 'ForumsHome/redirect';
 		$route['forums/(:any)'] = 'ForumsHome/redirect';
+		$route['forum'] = 'ForumsHome/redirect';
 		$route['forum/(:any)'] = 'ForumsHome/redirect';
+		
 		$route['(:any)'] = 'Home';
 	break;
 }
