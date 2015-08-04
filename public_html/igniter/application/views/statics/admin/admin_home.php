@@ -4,7 +4,8 @@
 	} else {
 ?>
 	<section class="header">
-		<h4 class="title">And on the homepage...</h4>	
+		<h4 class="title">And on the homepage...</h4>
+		<a href="/admin/logout">Logout</a>
 	</section>
 <?
 	} // End session check
