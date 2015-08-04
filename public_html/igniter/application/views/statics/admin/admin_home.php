@@ -1,6 +1,6 @@
 <?
 	if($this->session->userdata('logged-in') == FALSE) {
-		show_404();
+		show_error('Forbidden', 403);
 	} else {
 ?>
 	<section class="header">
