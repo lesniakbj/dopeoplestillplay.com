@@ -58,7 +58,7 @@ class AdminHome extends CI_Controller {
 		$this->displayAdminHome();
 	}
 	
-	public function redirect($url = 'http://admin.dopeoplestillplay.com', $perm = TRUE) {
+	public function redirect($url = 'http://admin.dopeoplestillplay.com', $perm = FALSE) {
 		if(!headers_sent()) {
 			header('Location:'.$url, true, ($perm === TRUE) ? 301 : 302);
 		}		
