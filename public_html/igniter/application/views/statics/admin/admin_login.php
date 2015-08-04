@@ -1,4 +1,10 @@
 <?
+	// Check the sessions to see if we are already logged-in,
+	// if we are redirect to admin_home
+	if($this->session->userdata('logged-in') == TRUE) {
+		$this->redirect();
+	}
+
 	// Loads the form helper class to generate forms
 	$this->load->helper('form');
 	// Displays any validation/authentication errors on the forms.
