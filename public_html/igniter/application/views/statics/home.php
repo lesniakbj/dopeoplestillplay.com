@@ -1,5 +1,5 @@
 <?
-	include_once('resources/Strings.php'); 
+	include_once(FCPATH.'resources/Strings.php'); 
 	$rsString = new ResourceStrings();
 ?>
 <section class="header">

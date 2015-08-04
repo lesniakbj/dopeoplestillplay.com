@@ -85,6 +85,9 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 	case 'm.dopeoplestillplay.com':
 		$route['default_controller'] = "MobileHome";
 		break;
+	case 'forums.dopeoplestillplay.com':
+		$route['default_controller'] = "ForumsHome";
+		break;
 	default:	
 		$route['default_controller'] = 'Home';
 		
