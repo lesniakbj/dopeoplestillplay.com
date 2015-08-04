@@ -80,7 +80,7 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		$route['admin/home'] = 'AdminHome/home';
 		$route['admin/logout'] = 'AdminHome/logout';
 		
-		$route['(:any)'] = 'AdminHome';
+		$route['(:any)'] = 'AdminHome/index';
 		break;
 	case 'm.dopeoplestillplay.com':
 		$route['default_controller'] = "MobileHome";
