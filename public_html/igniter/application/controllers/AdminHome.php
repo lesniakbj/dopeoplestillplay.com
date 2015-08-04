@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class AdminHome extends CI_Controller {
 	public function __construct() {
@@ -18,9 +18,9 @@ class AdminHome extends CI_Controller {
 		$data['title'] = 'Login - Administration Home';
 		$data['css'] = 'statics/admin_home.css';
 		
-		$this->load->view('templates/header', $data);
-		$this->load->view('statics/admin/admin_login', $data);
-		$this->load->view('templates/footer', $data);
+		$this->load->view('/templates/header', $data);
+		$this->load->view('/statics/admin/admin_login', $data);
+		$this->load->view('/templates/footer', $data);
 	}
 	
 	public function login() {
