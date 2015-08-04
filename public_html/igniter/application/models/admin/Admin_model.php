@@ -11,11 +11,10 @@ class Admin_model extends CI_Model {
 			'admin_username' => $uname,
 			'admin_pw_hash' => md5($pw)
 		);
-		$querySuccess = $this-db
-							->select('*')
+		$querySuccess = $this-db->select('*')
 							->from('admin_authorized_user')
 							->where($loginAttemptData);
-		print_r($querySuccess);
+		//print_r($querySuccess);
 	}
 	
 	public function logAttemptToDB($username, $password, $ipAddress, $success) {
@@ -27,8 +26,7 @@ class Admin_model extends CI_Model {
 			'ip_address'		=> inet_pton($ipAddress),
 			'was_successful'	=> $success
 		);
-		$querySuccess = $this->db
-							->insert('log_admin_login', $loginAttemptData);
+		$querySuccess = $this->db->insert('log_admin_login', $loginAttemptData);
 		
 		return ($querySuccess  == 1) ? TRUE : FALSE;
 	}
