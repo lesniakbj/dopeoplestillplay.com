@@ -15,6 +15,7 @@
   - [Added 4 game data providers, URL's to API's, and keys when needed]
 ```
 
+```
 2. On home:
   - Cycle through "flavor text" under the images; create flavor text to cycle through
   - Add more images to cycle through for the bottom images
@@ -23,7 +24,9 @@
   - Controller:
     - Add a new method (new-home?) to serve the actual home page.
     - Begin construction on the look & feel of the actual home page.
+```
 
+```
 3. Admin:
   - Create login for admin
   - Display entered data
@@ -33,32 +36,45 @@
     - Create new tables
     - Add data to existing tables. 
     - Remove data from the system (add an is_delted flag to the base data)
-	
+```
+
+```
 4. Images:
   - game-banner instead of game-images
   - game-slot instead of game-image
   - game-img -> game-img
-	
+```
+
+```
 5. Forum:
   - Overclock.net style news section with most recently commented topics
   - forum.dopeoplestillplay.com
-	
+```
+
+```
 6. Login:
   - Handle login sessions
   - Handle user input
     - On input, check if user exists, if not generate a salt and hash salt + password
     - If exists, grab the salt, hash and check against hashed_pw
   - If no user, state can't find user/email/password combination.
-	
+```
+
+```
 7. Rewrites:
   - Figure out how to force http:// to https:// while not breaking image/resource paths
-	
+```
+
+```
 8. Stats:
   - Scrape data from steam website on game stats
   - Every hr? Every 1/2 hr? ()
   - API: https://www.mashape.com/lesniakbj/applications/do-people-still-play
-	
+```
+
+```
 9. .htaccess:
   - Current root .htaccess no longer redirects to subdomains when the index.php .htaccess is present within the root of the subdomain; fix this.
+```
 	  
 	
