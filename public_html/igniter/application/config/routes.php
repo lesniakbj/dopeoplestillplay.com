@@ -91,8 +91,8 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		$route['forms/handle/(:any)'] = 'FormHandler/handle/$1';
 		
 		// Admin Redirects
-		$route['admin'] = 'AdminHome/redirect';
-		$route['admin/(:any)'] = 'AdminHome/redirect';
+		$route['admin'] = 'admin/AdminHome/redirect';
+		$route['admin/(:any)'] = 'admin/AdminHome/redirect';
 		
 		// Forum Redirects
 		$route['forums'] = 'ForumsHome/redirect';
