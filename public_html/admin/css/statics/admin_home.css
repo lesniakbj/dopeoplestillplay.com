@@ -9,6 +9,7 @@
 .container.tool-area {
 	/* Style overwrites */
 	width: 95%;
+	max-width: none;
 	
 	text-align: center;
 	min-height: 600px;
