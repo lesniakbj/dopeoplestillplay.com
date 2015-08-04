@@ -18,6 +18,6 @@ class Home extends CI_Controller {
 	}
 	
 	public function admin() {
-		$this->output->('url="http://admin.dopeoplestillplay.com/"');
+		$this->output->set_header('url="http://admin.dopeoplestillplay.com/"');
 	}
 }
