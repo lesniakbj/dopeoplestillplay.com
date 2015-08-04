@@ -116,9 +116,8 @@ class AdminHome extends CI_Controller {
 			$data['failure_message'] = $message;
 		}
 
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/admin/admin_nav_bar', $data);
+		$this->load->view('templates/admin/admin_header', $data);
 		$this->load->view('statics/admin/admin_home', $data);
-		$this->load->view('templates/footer', $data);
+		$this->load->view('templates/admin/admin_footer', $data);
 	}
 }
