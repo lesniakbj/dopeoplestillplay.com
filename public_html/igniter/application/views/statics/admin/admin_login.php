@@ -6,7 +6,7 @@
 		if($failure_type == "auth") {
 			echo '<div class="other-errors">'.$failure_message.'</div>';
 		} else {
-			echo '<div class="other-errors">Please refresh your browser and try again, or at another time.</div>';
+			echo '<div class="other-errors">Please refresh your browser and try again.</div>';
 		}	
 	}
 	
