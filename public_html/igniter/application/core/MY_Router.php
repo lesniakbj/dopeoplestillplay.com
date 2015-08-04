@@ -11,7 +11,7 @@ Class MY_Router extends CI_Router{
     }
 
     function _validate_request($segments) {
-        if (file_exists(APPPATH.'controllers/'.$segments[0].EXT)) {
+        if (file_exists(APPPATH.'controllers/'.$segments[0].'.php')) {
             return $segments;
         }
 
@@ -37,14 +37,14 @@ Class MY_Router extends CI_Router{
             /* ----------- END ------------ */
 
             if (count($segments) > 0) {
-				if ( ! file_exists(APPPATH.'controllers/'.$this->fetch_directory().'/'.$segments[0].EXT)) {
+				if ( ! file_exists(APPPATH.'controllers/'.$this->fetch_directory().'/'.$segments[0].'.php')) {
                     show_404($this->fetch_directory().$segments[0]);
                 }
             } else {
                 $this->set_class($this->default_controller);
                 $this->set_method('index');
 
-                if ( ! file_exists(APPPATH.'controllers/'.$this->fetch_directory().'/' .$this->default_controller.EXT)) {
+                if ( ! file_exists(APPPATH.'controllers/'.$this->fetch_directory().'/' .$this->default_controller.'.php')) {
                     $this->directory = '';
                     return array();
                 }
