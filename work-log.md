@@ -32,6 +32,7 @@
   - Google: admin page design, look @ images
   - Display entered data
   - Enter new data
+  - Move AdminHome to subfolder and change all routes to be in /admin
   - ~~/admin redirects~~
   - Left side nav with following items:
     - View list of all database tables - click to view data on the table
