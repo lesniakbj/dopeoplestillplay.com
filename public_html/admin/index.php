@@ -98,7 +98,7 @@ switch (ENVIRONMENT)
  * Include the path if the folder is not in the same directory
  * as this file.
  */
-	$system_path = '/home/dopelsha/public_html/igniter/system';
+	$system_path = 'igniter/system';
 
 /*
  *---------------------------------------------------------------
@@ -113,7 +113,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = '/home/dopelsha/public_html/igniter/application';
+	$application_folder = 'igniter/application';
 
 /*
  *---------------------------------------------------------------
@@ -152,7 +152,7 @@ switch (ENVIRONMENT)
  */
 	// The directory name, relative to the "controllers" folder.  Leave blank
 	// if your controller is not in a sub-folder within the "controllers" folder
-	//$routing['directory'] = '';
+	// $routing['directory'] = '';
 
 	// The controller class file name.  Example:  mycontroller
 	// $routing['controller'] = '';
