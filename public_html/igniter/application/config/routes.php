@@ -75,8 +75,11 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 	case 'admin.dopeoplestillplay.com':
 		$route['default_controller'] = "AdminHome";
 		
+		// Default admin routes
 		$route['admin/login'] = 'AdminHome/login';
 		$route['admin/home'] = 'AdminHome/home';
+		$route['admin/logout'] = 'AdminHome/logout';
+		
 		$route['(:any)'] = 'AdminHome';
 		break;
 	case 'm.dopeoplestillplay.com':
