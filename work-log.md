@@ -1,6 +1,6 @@
 ```
 1. Database:
-  - ~~Add game genres~~
+  ~~Add game genres~~
   - ~~Add game sub genres~~
   - ~~Create a user_user table = id, username, salt, hashed_pw, last_visit~~
   - Create game_game table = id, game_name, year_released, description
