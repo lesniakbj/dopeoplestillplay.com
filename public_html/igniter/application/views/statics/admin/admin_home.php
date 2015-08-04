@@ -3,7 +3,7 @@
 		show_error('Forbidden content. Please login to view this content.', 403, '403 Forbidden Content');
 	} else {		
 		$navMenu = array(
-			anchor('/tools/data', 'Data Feeds', 'title="Data Feeds"'),
+			anchor('/tools/data/home', 'Data Feeds', 'title="Data Feeds"'),
 			anchor('/tools/database', 'Database Tasks', 'title="Database"'),
 			anchor('/tools/logs', 'Logs', 'title="Logs"'),
 			anchor('/logout', 'Logout', 'title="Logout"')
