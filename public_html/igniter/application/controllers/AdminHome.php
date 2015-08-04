@@ -55,12 +55,12 @@ class AdminHome extends CI_Controller {
 	}
 	
 	private function startAdminSession($uname, $pw, $ipAddr) {
-		$adminSessionData = array (
+		$adminSessionData = array(
 			'admin-username' = $uname,
 			'admin-ip' 		 = $ipAddr
 		);
 		
-		$this-session->set_userdata($)
+		$this-session->set_userdata();
 	}
 	
 	private function displayLoginPage($message = NULL) {
