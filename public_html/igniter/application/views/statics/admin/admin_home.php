@@ -3,9 +3,9 @@
 		show_error('Forbidden content. Please login to view this content.', 403, '403 Forbidden Content');
 	} else {		
 ?>
-	<section class="container">
+	<div class="container">
 		<h4>Down here will be a banner until a new tool is chosen</h4>
-	</section>
+	</div>
 <?		
 	} // End session check
 ?>
