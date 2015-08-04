@@ -58,7 +58,8 @@ class AdminHome extends CI_Controller {
 		$adminSessionData = array(
 			'admin-username' => $uname,
 			'admin-pw-hash'  => md5($pw),
-			'admin-ip' 		 => $ipAddr
+			'admin-ip' 		 => $ipAddr,
+			'logged-in'		 => TRUE
 		);
 		
 		$this->session->set_userdata($adminSessionData);

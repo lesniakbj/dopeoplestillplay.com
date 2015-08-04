@@ -5,7 +5,10 @@ class FormHandler extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
+		
 		$this->load->helper('form');
+		$this->load->helper('url');
+		
 		$this->load->model('email/email_model');
 	}
 
@@ -35,7 +38,6 @@ class FormHandler extends CI_Controller {
 		}
 		
 		// After showing the confirmation/failure page, redirect back the home page.
-		$this->load->helper('url');
 		$this->output->set_header('refresh:5;url=/');
 	}
 	
