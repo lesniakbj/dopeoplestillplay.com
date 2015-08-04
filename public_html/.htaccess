@@ -1,8 +1,10 @@
 RewriteEngine on
-RewriteCond $1 !^(index\.php|images|css|resources|forums|admin|mobile|robots\.txt)
+RewriteCond $1 !^(index\.php|images|css|resources|forums|forum|admin|mobile|robots\.txt)
 RewriteRule ^(.*)$ /index.php/$1 [L]
 RewriteCond %{REQUEST_URI} ^/forums(.*)
 RewriteRule ^forums(.*)$ http://forums.dopeoplestillplay.com$1 [R=301,L]
+RewriteCond %{REQUEST_URI} ^/forum(.*)
+RewriteRule ^forum(.*)$ http://forums.dopeoplestillplay.com$1 [R=301,L]
 RewriteCond %{REQUEST_URI} ^/admin(.*)
 RewriteRule ^admin(.*)$ http://admin.dopeoplestillplay.com$1 [R=301,L]
 RewriteCond %{REQUEST_URI} ^/mobile(.*)
