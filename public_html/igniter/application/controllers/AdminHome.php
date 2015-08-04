@@ -53,6 +53,13 @@ class AdminHome extends CI_Controller {
 		$this->displayAdminHome();
 	}
 	
+	public function redirect($url = 'http://admin.dopeoplestillplay.com', $perm = TRUE) {
+		if(!headers_sent()) {
+			header('Location:'.$url, true, ($perm === TRUE) ? 301 : 302);
+		}		
+		die();
+	}
+	
 	private function checkAdminStatus($uname, $pw, $logIP) {
 		$isAdmin = $this->admin_model->checkIsAdmin($uname, $pw);
 		$this->admin_model->logAttemptToDB($uname, $pw, $logIP, $isAdmin);
