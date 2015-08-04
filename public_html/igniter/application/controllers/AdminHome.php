@@ -49,6 +49,11 @@ class AdminHome extends CI_Controller {
 		}
 	}
 	
+	public function logout() {
+		$this->session->sess_destroy();
+		$this->redirect();
+	}
+	
 	public function home() {
 		$this->displayAdminHome();
 	}
