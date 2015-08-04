@@ -16,10 +16,6 @@ class Admin_model extends CI_Model {
 		$this->db->where($loginAttemptData);
 		$query = $this->db->get();
 		
-		print_r($query->num_rows());
-		foreach($query->result() as $row) {
-			print_r($row);
-		}
 		return ($query->num_rows() > 0) ? TRUE : FALSE;
 	}
 	
