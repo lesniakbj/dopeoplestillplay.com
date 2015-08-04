@@ -1,5 +1,5 @@
 
-1. Database:
+- Database:
   - <del>Add game genres</del>
   - ~~Add game sub genres~~
   - ~~Create a user_user table = id, username, salt, hashed_pw, last_visit~~
@@ -16,7 +16,7 @@
   
 ****
 
-2. On home:
+- On home:
   - Cycle through "flavor text" under the images; create flavor text to cycle through
   - Add more images to cycle through for the bottom images
   - Controller receives data from GameModel with text and images from the model
@@ -27,7 +27,7 @@
 
 ****
 
-3. Admin:
+- Admin:
   - Create login for admin
   - Display entered data
   - Enter new data
@@ -39,20 +39,20 @@
 
 ****
 
-4. Images:
+- Images:
   - game-banner instead of game-images
   - game-slot instead of game-image
   - game-img -> game-img
 
 ****
 
-5. Forum:
+- Forum:
   - Overclock.net style news section with most recently commented topics
   - forum.dopeoplestillplay.com
 
 ****
 
-6. Login:
+- Login:
   - Handle login sessions
   - Handle user input
     - On input, check if user exists, if not generate a salt and hash salt + password
@@ -61,19 +61,19 @@
 
 ****
 
-7. Rewrites:
+- Rewrites:
   - Figure out how to force http:// to https:// while not breaking image/resource paths
 
 ****
 
-8. Stats:
+- Stats:
   - Scrape data from steam website on game stats
   - Every hr? Every 1/2 hr? ()
   - API: https://www.mashape.com/lesniakbj/applications/do-people-still-play
 
 ****
 
-9. .htaccess:
+- .htaccess:
   - Current root .htaccess no longer redirects to subdomains when the index.php .htaccess is present within the root of the subdomain; fix this.
 	  
 	
