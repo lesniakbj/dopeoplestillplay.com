@@ -29,7 +29,7 @@ class AdminHome extends CI_Controller {
 		$this->form_validation->set_rules('admin-password', 'Password', 'trim|required');
 		
 		if ($this->form_validation->run() == FALSE) {
-			$this->displayLoginPage("Form Validation Failed!");
+			$this->displayLoginPage("Form Validation Failed!", "form");
 		}
 		else {
 			// The form passed validation, get the data from the form, and then check to 
@@ -44,7 +44,7 @@ class AdminHome extends CI_Controller {
 				$this->startAdminSession($uname, $pw, $ipAddr);
 				$this->displayAdminHome();
 			} else {
-				$this->displayLoginPage("Incorrect Login!");
+				$this->displayLoginPage("Incorrect Login!", "auth");
 			}
 		}
 	}
@@ -66,11 +66,12 @@ class AdminHome extends CI_Controller {
 		$this->session->set_userdata($adminSessionData);
 	}
 	
-	private function displayLoginPage($message = NULL) {
+	private function displayLoginPage($message = NULL, $failureType = NULL) {
 		$data['title'] = 'Login - Administration Home';
 		$data['css'] = 'statics/admin_home.css';
 		if(isset($message)) {
 			$data['failure_message'] = $message;
+			$data['failure_type'] = $failureType;
 		}
 	
 		$this->load->view('templates/header', $data);

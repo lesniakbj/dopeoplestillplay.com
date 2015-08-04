@@ -1,10 +1,13 @@
 <?
 	// Loads the form helper class to generate forms
 	$this->load->helper('form');
-	// Displays any validation errors on the forms.
-	echo '<div class="form-error">'.validation_errors().'</div>';
+	// Displays any validation/authentication errors on the forms.
 	if(isset($failure_message)) { 
-		echo '<div class="other-errors">'.$failure_message.'</div>';
+		if($failure_type == "auth") {
+			echo '<div class="other-errors">'.$failure_message.'</div>';
+		} else {
+			echo '<div class="other-errors">Please refresh your browser and try again, or at another time.</div>';
+		}	
 	}
 	
 	$formAttrs = array(
