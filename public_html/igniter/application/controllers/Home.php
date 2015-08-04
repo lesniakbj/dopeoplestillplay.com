@@ -16,8 +16,4 @@ class Home extends CI_Controller {
 		$this->load->view('statics/home', $data);
 		$this->load->view('templates/footer', $data);
 	}
-	
-	public function admin() {
-		$this->output->set_header('url=admin.dopeoplestillplay.com');
-	}
 }

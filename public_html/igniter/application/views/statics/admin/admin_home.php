@@ -1,6 +1,6 @@
 <?
 	if($this->session->userdata('logged-in') == FALSE {
-		$this->output->set_header('url="http://admin.dopeoplestillplay.com/"');
+		$this->output->set_header('url=/');
 	} else {
 ?>
 	<section class="header">
