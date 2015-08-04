@@ -11,12 +11,13 @@ class Admin_model extends CI_Model {
 			'admin_username' => $uname,
 			'admin_pw_hash' => md5($pw)
 		);
-		$queryResults = $this->db->from('admin_authorized_user')
-								 ->where($loginAttemptData)
-								 ->get();
 		
+		$this->db->select('COUNT(*)');
+		$this->db->from('admin_authorized_user');
+		$this->db->where($loginAttemptData);
+		$query = $this->$db->get();
 		
-		print_r($queryResults);
+		return ($query->num_rows() > 0) ? TRUE : FALSE;
 	}
 	
 	public function logAttemptToDB($username, $password, $ipAddress, $success) {
