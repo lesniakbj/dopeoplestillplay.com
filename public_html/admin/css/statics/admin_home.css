@@ -6,8 +6,10 @@
 	margin-top: 4rem;
 }
 
-.banner-text {
+.container.banner-text {
 	text-align: center;
+	min-height: 600px;
+	border: 1px solid #CFCFCF;
 }
 
 .form-group {
