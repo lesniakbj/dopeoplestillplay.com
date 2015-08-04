@@ -1,18 +1,18 @@
 ```
 1. Database:
-  - Add game genres XX
-  - Add game sub genres XX
-  - Create a user_user table = id, username, salt, hashed_pw, last_visit XX
+  - ~~Add game genres~~
+  - ~~Add game sub genres~~
+  - ~~Create a user_user table = id, username, salt, hashed_pw, last_visit~~
   - Create game_game table = id, game_name, year_released, description
-  - Add some seed data to the table XX
+  - ~~Add some seed data to the table~~
   - Come up with a process for backing up the email list each night, or at least throw away useless emails.
   - Schedule a job to run each night to do the following:
     - Scrape data from the various data_providers
     - Email the contact@dopeoplestillplay.com with an updated list of emails added that day.
-  - [Added data to game_genre and game_sub_genre]
-  - [Added a user to user_user]
-  - [Added column to user_email_list, date_added]
-  - [Added 4 game data providers, URL's to API's, and keys when needed]
+  - ~~[Added data to game_genre and game_sub_genre]~~
+  - ~~[Added a user to user_user]~~
+  - ~~[Added column to user_email_list, date_added]~~
+  - ~~[Added 4 game data providers, URL's to API's, and keys when needed]~~
 ```
 
 ```
