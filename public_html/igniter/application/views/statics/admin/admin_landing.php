@@ -4,8 +4,9 @@
 	} else {
 ?>
 	<section class="header">
-		<h4 class="title">And on the homepage...</h4>
+		<h4 class="title">You are successfully logged in!</h4>
 	</section>
 <?
+		$this->output->set_header('refresh:5;url=/admin/home');
 	} // End session check
 ?>

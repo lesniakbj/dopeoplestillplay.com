@@ -42,7 +42,7 @@ class AdminHome extends CI_Controller {
 			if($isAdmin == TRUE) {
 				// Start a session and check that session on home page view
 				$this->startAdminSession($uname, $pw, $ipAddr);
-				$this->output->set_header('url=/admin/home');
+				$this->displayAdminLanding();
 			} else {
 				$this->displayLoginPage("Incorrect Login!", "auth");
 			}
@@ -80,6 +80,18 @@ class AdminHome extends CI_Controller {
 	
 		$this->load->view('templates/header', $data);
 		$this->load->view('statics/admin/admin_login', $data);
+		$this->load->view('templates/footer', $data);
+	}
+	
+	private function displayAdminLanding($message = NULL) {
+		$data['title'] = 'Welcome - Administration Home';
+		$data['css'] = 'statics/admin_home.css';
+		if(isset($message)) {
+			$data['failure_message'] = $message;
+		}
+
+		$this->load->view('templates/header', $data);
+		$this->load->view('statics/admin/admin_landing', $data);
 		$this->load->view('templates/footer', $data);
 	}
 	
