@@ -26,7 +26,7 @@
     - Begin construction on the look & feel of the actual home page.
   - Add:
     - Data Feed Management (Schedule job running, view jobs, recieve all data, view status of data feeds, view most recent data)
-    - 
+    - Data Delete Utility
     - Viewing game data
     - Adding new data to certain tables (user, other tables)...
 
