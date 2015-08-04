@@ -5,6 +5,7 @@
  * Add functionality : read into more than one sub-folder
  *
  */
+ /*
 Class MY_Router extends CI_Router{
     function MY_Router() {
         parent::__construct();
@@ -19,7 +20,7 @@ Class MY_Router extends CI_Router{
             $this->set_directory($segments[0]);
             $segments = array_slice($segments, 1);
 
-            /* ----------- ADDED CODE ------------ */
+            /* ----------- ADDED CODE ------------ 
             while(count($segments) > 0 && is_dir(APPPATH.'controllers/'.$this->directory.$segments[0])) {
                 // Set the directory and remove it from the segment array
 				//$this->set_directory($this->directory . $segments[0]);
@@ -34,7 +35,7 @@ Class MY_Router extends CI_Router{
             if (substr($this->directory, -1, 1) != '/')
                 $this->directory = $this->directory . '/';
 
-            /* ----------- END ------------ */
+            /* ----------- END ------------ 
 
             if (count($segments) > 0) {
 				if ( ! file_exists(APPPATH.'controllers/'.$this->fetch_directory().'/'.$segments[0].'.php')) {
@@ -54,3 +55,4 @@ Class MY_Router extends CI_Router{
         show_404($segments[0]);
     }
 }
+*/
