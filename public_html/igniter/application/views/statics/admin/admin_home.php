@@ -1,6 +1,6 @@
 <?
 	if($this->session->userdata('logged-in') == FALSE) {
-		$this->output->set_header('url=/');
+		//$this->output->set_header('url=/');
 	} else {
 ?>
 	<section class="header">
