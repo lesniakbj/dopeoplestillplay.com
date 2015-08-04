@@ -18,7 +18,7 @@ class AdminHome extends CI_Controller {
 		$data['css'] = 'statics/admin_home.css';
 		
 		$this->load->view('templates/header', $data);
-		$this->load->view('statics/admin/admin_home', $data);
+		$this->load->view('statics/admin/admin_login', $data);
 		$this->load->view('templates/footer', $data);
 	}
 	
@@ -57,10 +57,11 @@ class AdminHome extends CI_Controller {
 	private function startAdminSession($uname, $pw, $ipAddr) {
 		$adminSessionData = array(
 			'admin-username' => $uname,
+			'admin-pw-hash'  => md5($pw),
 			'admin-ip' 		 => $ipAddr
 		);
 		
-		//$this-session->set_userdata();
+		$this-session->set_userdata($adminSessionData);
 	}
 	
 	private function displayLoginPage($message = NULL) {
@@ -71,7 +72,7 @@ class AdminHome extends CI_Controller {
 		}
 	
 		$this->load->view('templates/header', $data);
-		$this->load->view('statics/admin/admin_home', $data);
+		$this->load->view('statics/admin/admin_login', $data);
 		$this->load->view('templates/footer', $data);
 	}
 	
@@ -83,6 +84,7 @@ class AdminHome extends CI_Controller {
 		}
 		
 		$this->load->view('templates/header', $data);
+		$this->load->view('templates/admin/admin_home', $data);
 		$this->load->view('templates/footer', $data);
 	}
 }
