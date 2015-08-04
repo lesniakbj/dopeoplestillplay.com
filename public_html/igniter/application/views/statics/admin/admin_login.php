@@ -2,7 +2,12 @@
 	// Check the sessions to see if we are already logged-in,
 	// if we are redirect to admin_home
 	if($this->session->userdata('logged-in') == TRUE) {
-		$this->redirect();
+		$url = http://forums.dopeoplestillplay.com/admin/home;
+		$perm = false;
+		if(!headers_sent()) {
+			header('Location:'.$url, true, ($perm === TRUE) ? 301 : 302);
+		}		
+		die();
 	}
 
 	// Loads the form helper class to generate forms
