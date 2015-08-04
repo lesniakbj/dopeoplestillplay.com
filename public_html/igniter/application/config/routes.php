@@ -76,6 +76,7 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		$route['translate_uri_dashes'] = FALSE;
 		
 		$route['admin/login'] = 'AdminHome/login';
+		$route['admin/home'] = 'AdminHome/home';
 		$route['(:any)'] = 'AdminHome';
 		break;
 	case 'm.dopeoplestillplay.com':
