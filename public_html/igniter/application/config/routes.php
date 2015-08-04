@@ -68,12 +68,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |			In handle($formName) = check form submitted
 |
 */
-// Acommidate mobile subdomain routing.
+$route['404_override'] = '';
+$route['translate_uri_dashes'] = FALSE;
+
 switch ( $_SERVER['HTTP_HOST'] ) {
 	case 'admin.dopeoplestillplay.com':
 		$route['default_controller'] = "AdminHome";
-		$route['404_override'] = '';
-		$route['translate_uri_dashes'] = FALSE;
 		
 		$route['admin/login'] = 'AdminHome/login';
 		$route['admin/home'] = 'AdminHome/home';
@@ -82,20 +82,24 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 	case 'm.dopeoplestillplay.com':
 		$route['default_controller'] = "MobileHome";
 		break;
-	default:
+	default:	
 		$route['default_controller'] = 'Home';
-		$route['404_override'] = '';
-		$route['translate_uri_dashes'] = FALSE;
 		
 		$route['forms/handle/(:any)'] = 'FormHandler/handle/$1';
 		
+		// Admin Redirects
 		$route['admin'] = 'AdminHome/redirect';
 		$route['admin/(:any)'] = 'AdminHome/redirect';
 		
+		// Forum Redirects
 		$route['forums'] = 'ForumsHome/redirect';
 		$route['forums/(:any)'] = 'ForumsHome/redirect';
 		$route['forum'] = 'ForumsHome/redirect';
 		$route['forum/(:any)'] = 'ForumsHome/redirect';
+		
+		// Mobile Redirects
+		$route['mobile'] = 'MobileHome/redirect';
+		$route['mobile/(:any)'] = 'MobileHome/redirect';
 		
 		$route['(:any)'] = 'Home';
 	break;
