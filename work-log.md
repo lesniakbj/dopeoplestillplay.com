@@ -20,12 +20,10 @@
 ****
 
 - Admin:
-  - ~~Create login for admin~~
   - Google: admin page design, look @ images
   - Display entered data
   - Enter new data
   - Move AdminHome to subfolder and change all routes to be in /admin
-  - ~~/admin redirects~~
   - Left side nav with following items:
     - View list of all database tables - click to view data on the table
     - Create new tables
@@ -54,13 +52,10 @@
 
 - Forum:
   - Overclock.net style news section with most recently commented topics
-  - ~~forum.dopeoplestillplay.com~~
-  - ~~/forums redirects~~
 
 ****
 
 - Login:
-  - ~~Handle login sessions (admin)~~
   - Handle login sessions
   - Handle user input
     - On input, check if user exists, if not generate a salt and hash salt + password
@@ -71,7 +66,6 @@
 
 - Rewrites:
   - Figure out how to force http:// to https:// while not breaking image/resource paths
-  - ~~Handle redirects to subdomain through controller if not able to MOD_REWRITE~~
 
 ****
 
@@ -99,4 +93,17 @@
     - ~~[Added 4 game data providers, URL's to API's, and keys when needed]~~
     - ~~[Created better IP tracking in Admin Login attempt]~~
   
+  - Admin: 
+    - ~~Create login for admin~~
+    - ~~/admin redirects~~
+   
+  - Forum:
+    - ~~forum.dopeoplestillplay.com~~
+    - ~~/forums redirects~~
+   
+  - Login:
+    - ~~Handle login sessions (admin)~~
+   
+  - Rewrites:
+    - ~~Handle redirects to subdomain through controller if not able to MOD_REWRITE~~
   
