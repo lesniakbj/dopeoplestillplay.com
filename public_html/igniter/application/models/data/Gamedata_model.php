@@ -57,7 +57,7 @@ class Gamedata_model extends CI_Model {
 	}
 	
 	public function getGameInformation($dataProvider) {
-		
+		return $dataProvider;
 	}
 	
 	public function selectAllGameData($orderByString) {

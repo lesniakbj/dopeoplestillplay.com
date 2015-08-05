@@ -80,10 +80,13 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		$route['home'] = 'AdminHome/home';
 		$route['logout'] = 'AdminHome/logout';
 		
-		// AdminTools routes
+		// AdminTools tool routes
 		$route['tools/data/(:any)'] = 'AdminTools/dataTools/$1';
 		$route['tools/database/(:any)'] = 'AdminTools/databaseManagement/$1';
 		$route['tools/logs/(:any)'] = 'AdminTools/manageLogs/$1';
+		
+		// AdminTools function routes
+		$route['tools/datatools/(:any)'] = 'AdminTools/dataScrapeTool/$1';
 		
 		$route['(:any)'] = 'AdminHome/index';
 		break;

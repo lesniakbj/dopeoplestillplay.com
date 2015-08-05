@@ -20,11 +20,14 @@ class AdminTools extends CI_Controller {
 			case 'home':
 				$this->loadDataToolsView();
 				break;
-				
 			default:
 				$this->loadDataToolsView();
 				break;
 		}
+	}
+	
+	public function dataScrapeTool($dataProvider) {
+		$this->gamedata_model->getGameInformation($dataProvider);
 	}
 	
 	private function loadDataToolsView() {
@@ -32,6 +35,7 @@ class AdminTools extends CI_Controller {
 		$data['css'] = $this->homeCSS;
 		
 		$this->load->view('templates/admin/admin_header', $data);
+		// Add in a list of tools here with routes to /tools/datatools/(function: scrapeData/(:any datascrapeName)
 		$this->load->view('templates/admin/admin_footer', $data);
 	}
 	
