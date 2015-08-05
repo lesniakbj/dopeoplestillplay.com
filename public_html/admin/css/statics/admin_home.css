@@ -8,18 +8,29 @@
 
 .admin-nav-bar {
 	list-style-type: none;
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 ul.admin-nav-bar li {
-	display: inline;
 	float: left;
 }
 
-ul.admin-nav-bar li a {
+ul.admin-nav-bar li a:link, ul.admin-nav-bar li a:visited {
 	display: block;
-    width: 60px;
+    width: 120px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #98bf21;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+ul.admin-nav-bar li a:hover, ul.admin-nav-bar li a:active {
+	background-color: #7A991A;
 }
 
 .container.tool-area {
