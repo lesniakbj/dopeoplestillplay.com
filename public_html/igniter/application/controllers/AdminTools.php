@@ -10,12 +10,20 @@ class AdminTools extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->helper('html');
 		
-		$this->load->library('session');	
+		$this->load->library('session');
+		
+		$this->load->model('data/gamedata_model');
 	}
 	
 	public function dataTools($toolName) {
-		if($toolName == 'home') {
-			$this->loadDataToolsView();
+		switch($toolName) {
+			case 'home':
+				$this->loadDataToolsView();
+				break;
+				
+			default:
+				$this->loadDataToolsView();
+				break;
 		}
 	}
 	

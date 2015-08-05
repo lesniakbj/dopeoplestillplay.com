@@ -36,11 +36,28 @@ class GameData_model extends CI_Model {
 	var $mediaRecentPlaytime 		= '';	// SteamSpy - median_2weeks
 	var $lastConcurrentUsers 		= '';	// SteamSpy - ccu
 	
+	// Table: game_data_feeds_videogameinformation
+	var $websitesScraped			= '';	// Video Game Information - websites
+	var $gameGenres					= '';	// Video Game Information - genres
+	var $gameDeveloper				= '';	// Video Game Information - developer
+	var $gamePlatforms				= '';	// Video Game Information - availablePlatform
+	var $gamePublisher				= '';	// Video Game Information - publisher
+	var $gameReviewScore			= '';	// Video Game Information - averageScore
+	var $gameName					= '';	// Video Game Information - name
+	var $gameRating					= ''; 	// Video Game Information - rating
+	var $ratingReason				= ''; 	// Video Game Information - reasonForRating
+	var $gameThumbnailUrl			= '';	// Video Game Information - thumbnail
+	var $gameReleaseDate			= '';	// Video Game Information - rlsdate
+	
 	public function __construct() {
 		parent::__construct();
 		$this->load->database();
 		
 		require_once '/home/dopelsha/public_html/libs/unirest/src/unirest.php';
+	}
+	
+	public function getGameInformation($dataProvider) {
+		
 	}
 	
 	public function selectAllGameData($orderByString) {
