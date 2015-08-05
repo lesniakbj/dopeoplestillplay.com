@@ -2,6 +2,9 @@
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class AdminHome extends CI_Controller {
+	private $homeCSS = array('statics/admin_home.css');
+	private $homeTitle = 'Home';
+
 	public function __construct() {
 		parent::__construct();
 		
@@ -16,8 +19,8 @@ class AdminHome extends CI_Controller {
 	}
 	
 	public function index() {		
-		$data['title'] = 'Login - Administration Home';
-		$data['css'] = 'statics/admin_home.css';
+		$data['title'] = $homeTitle;
+		$data['css'] = $homeCSS;
 		
 		$this->load->view('/templates/header', $data);
 		$this->load->view('/statics/admin/admin_login', $data);
@@ -72,7 +75,6 @@ class AdminHome extends CI_Controller {
 		return $isAdmin;
 	}
 	
-	// TODO: Consolidate these views and have them chosen by a new class (AdminViewChooser)
 	private function startAdminSession($uname, $pw, $ipAddr) {
 		$adminSessionData = array(
 			'admin-username' => $uname,
@@ -84,9 +86,12 @@ class AdminHome extends CI_Controller {
 		$this->session->set_userdata($adminSessionData);
 	}
 	
+	// TODO: Consolidate these views into 1 function 
+	// and have them chosen by a variable (AdminViewChooser)
 	private function displayLoginPage($message = NULL, $failureType = NULL) {
-		$data['title'] = 'Login - Administration Home';
-		$data['css'] = 'statics/admin_home.css';
+		$data['title'] = 'Login';
+		$data['css'] = $homeCSS;
+		
 		if(isset($message)) {
 			$data['failure_message'] = $message;
 			$data['failure_type'] = $failureType;
@@ -98,8 +103,9 @@ class AdminHome extends CI_Controller {
 	}
 	
 	private function displayAdminLanding($message = NULL) {
-		$data['title'] = 'Welcome - Administration Home';
-		$data['css'] = 'statics/admin_home.css';
+		$data['title'] = 'Redirecting';
+		$data['css'] = $homeCSS;
+		
 		if(isset($message)) {
 			$data['failure_message'] = $message;
 		}
@@ -110,8 +116,9 @@ class AdminHome extends CI_Controller {
 	}
 	
 	private function displayAdminHome($message = NULL) {
-		$data['title'] = 'Welcome - Administration Home';
-		$data['css'] = 'statics/admin_home.css';
+		$data['title'] = $homeTitle;
+		$data['css'] = $homeCSS;
+		
 		if(isset($message)) {
 			$data['failure_message'] = $message;
 		}

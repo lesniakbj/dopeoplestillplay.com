@@ -61,6 +61,5 @@
 	echo 	'</div>';
 	echo 	br(1);
 	echo 	'<input class="button-primary email-button" type="submit" value="Admin Login">';
-	
 	echo form_close();
 ?>
