@@ -46,6 +46,8 @@
     - Data Delete Utility
     - Viewing game data
     - Adding new data to certain tables (user, other tables)...
+  - On each page, replicate the look & feel of the home page
+    - Fill the tool into the .tool-area container.
 
 ****
 
