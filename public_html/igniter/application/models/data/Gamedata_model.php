@@ -87,7 +87,7 @@ class Gamedata_model extends CI_Model {
 				 ->from('game_data_provider')
 				 ->where('url_name = '.$dataProvider);
 		
-		$queryResults = $this->db->query();
+		$queryResults = $this->db->get();
 		if( $queryResults->num_rows() > 0) {
 			return $queryResults->results();
 		}
