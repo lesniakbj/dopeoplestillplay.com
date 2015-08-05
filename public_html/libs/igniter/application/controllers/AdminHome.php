@@ -23,7 +23,7 @@ class AdminHome extends CI_Controller {
 		$data['css'] = $this->homeCSS;
 		
 		$this->load->view('/templates/header', $data);
-		$this->load->view('/statics/admin/admin_login', $data);
+		$this->load->view('/statics/admin_login', $data);
 		$this->load->view('/templates/footer', $data);
 	}
 	
@@ -98,7 +98,7 @@ class AdminHome extends CI_Controller {
 		}
 	
 		$this->load->view('templates/header', $data);
-		$this->load->view('statics/admin/admin_login', $data);
+		$this->load->view('statics/admin_login', $data);
 		$this->load->view('templates/footer', $data);
 	}
 	
@@ -111,7 +111,7 @@ class AdminHome extends CI_Controller {
 		}
 
 		$this->load->view('templates/header', $data);
-		$this->load->view('statics/admin/admin_landing', $data);
+		$this->load->view('statics/admin_landing', $data);
 		$this->load->view('templates/footer', $data);
 	}
 	
@@ -123,8 +123,8 @@ class AdminHome extends CI_Controller {
 			$data['failure_message'] = $message;
 		}
 
-		$this->load->view('templates/admin/admin_header', $data);
-		$this->load->view('statics/admin/admin_home', $data);
-		$this->load->view('templates/admin/admin_footer', $data);
+		$this->load->view('templates/admin_header', $data);
+		$this->load->view('statics/admin_home', $data);
+		$this->load->view('templates/admin_footer', $data);
 	}
 }
