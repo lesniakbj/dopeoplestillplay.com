@@ -85,13 +85,11 @@ class Gamedata_model extends CI_Model {
 		$this->db->select('api_key')
 				 ->from('game_data_provider')
 				 ->where('url_name', $dataProvider)
-				 ->where('key_type', 'TESTING');
-		
+				 ->where('key_type', 'TESTING');		
 		$queryResults = $this->db->get();
+		
 		if( $queryResults->num_rows() > 0) {
-			foreach($queryResults->result() as $row) {
-				var_dump($row->api_key);
-			}
+			return $queryResults->result()->api_key
 		}
 	}
 }
