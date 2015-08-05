@@ -75,10 +75,15 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 	case 'admin.dopeoplestillplay.com':
 		$route['default_controller'] = 'AdminHome/index';
 		
-		// Default admin routes
-		$route['admin/login'] = 'AdminHome/login';
-		$route['admin/home'] = 'AdminHome/home';
-		$route['admin/logout'] = 'AdminHome/logout';
+		// AdminHome routes
+		$route['login'] = 'AdminHome/login';
+		$route['home'] = 'AdminHome/home';
+		$route['logout'] = 'AdminHome/logout';
+		
+		// AdminTools routes
+		$route['tools/data/(:any)'] = 'AdminTools/dataTools/$1';
+		$route['tools/database/(:any)'] = 'AdminTools/databaseManagement/$1';
+		$route['tools/logs/(:any)'] = 'AdminTools/manageLogs/$1';
 		
 		$route['(:any)'] = 'AdminHome/index';
 		break;

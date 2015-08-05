@@ -1,12 +1,11 @@
 <?
 	if($this->session->userdata('logged-in') == FALSE) {
 		show_error('Forbidden content. Please login to view this content.', 403, '403 Forbidden Content');
-	} else {
+	} else {		
 ?>
-	<section class="header">
-		<h4 class="title">And on the homepage...</h4>
-		<a href="/admin/logout">Logout</a>
-	</section>
-<?
+	<div class="container tool-area">
+		<h4 class="tool-banner">Welcome to the Administrator area! Please choose your tool above to continue.</h4>
+	</div>
+<?		
 	} // End session check
 ?>

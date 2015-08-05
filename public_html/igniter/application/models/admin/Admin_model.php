@@ -23,9 +23,9 @@ class Admin_model extends CI_Model {
 		// For inserting the IPv4 Address, use PHP function inet_pton
 		// as IP Addresses are stored as 4 Byte Ints.
 		$loginAttemptData = array(
-			'username'		=> $username,
-			'password'		=> $password,
-			'ip_address'		=> inet_pton($ipAddress),
+			'username'			=> $username,
+			'password'			=> $password,
+			'ip_address'		=> $ipAddress,
 			'was_successful'	=> $success
 		);
 		$querySuccess = $this->db->insert('log_admin_login', $loginAttemptData);

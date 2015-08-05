@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class AdminHome extends CI_Controller {
 	public function __construct() {
@@ -7,6 +7,7 @@ class AdminHome extends CI_Controller {
 		
 		$this->load->helper('form');
 		$this->load->helper('url');
+		$this->load->helper('html');
 		
 		$this->load->library('form_validation');
 		$this->load->library('session');	
@@ -18,9 +19,9 @@ class AdminHome extends CI_Controller {
 		$data['title'] = 'Login - Administration Home';
 		$data['css'] = 'statics/admin_home.css';
 		
-		$this->load->view('templates/header', $data);
-		$this->load->view('statics/admin/admin_login', $data);
-		$this->load->view('templates/footer', $data);
+		$this->load->view('/templates/header', $data);
+		$this->load->view('/statics/admin/admin_login', $data);
+		$this->load->view('/templates/footer', $data);
 	}
 	
 	public function login() {
@@ -71,6 +72,7 @@ class AdminHome extends CI_Controller {
 		return $isAdmin;
 	}
 	
+	// TODO: Consolidate these views and have them chosen by a new class (AdminViewChooser)
 	private function startAdminSession($uname, $pw, $ipAddr) {
 		$adminSessionData = array(
 			'admin-username' => $uname,
@@ -114,8 +116,8 @@ class AdminHome extends CI_Controller {
 			$data['failure_message'] = $message;
 		}
 
-		$this->load->view('templates/header', $data);
+		$this->load->view('templates/admin/admin_header', $data);
 		$this->load->view('statics/admin/admin_home', $data);
-		$this->load->view('templates/footer', $data);
+		$this->load->view('templates/admin/admin_footer', $data);
 	}
 }
