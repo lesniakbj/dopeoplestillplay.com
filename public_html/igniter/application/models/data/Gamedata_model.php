@@ -64,7 +64,6 @@ class Gamedata_model extends CI_Model {
 				// TODO: Grab API keys from the database game_data_provider based on $dataProvider
 				// TODO: Change the request string to inclued the parameters from somewhere else
 				$apiKey = $this->getApiKeyFor($dataProvider);
-				var_dump($apiKey);
 				$response = Unirest\Request::get("https://ahmedakhan-game-review-information-v1.p.mashape.com/api/v1/information?console=xbox+360&game_name=call+of+duty+black+ops",
 					array(
 						"X-Mashape-Key" => $apiKey,
@@ -85,14 +84,14 @@ class Gamedata_model extends CI_Model {
 	private function getApiKeyFor($dataProvider) {
 		$this->db->select('api_key')
 				 ->from('game_data_provider')
-				 ->where('url_name', $dataProvider);
+				 ->where('url_name', $dataProvider)
+				 ->where('key_type', 'TESTING');
 		
 		$queryResults = $this->db->get();
 		if( $queryResults->num_rows() > 0) {
 			foreach($queryResults->result() as $row) {
 				var_dump($row->api_key);
 			}
-			return $queryResults->result();
 		}
 	}
 }
