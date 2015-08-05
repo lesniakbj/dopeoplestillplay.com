@@ -23,15 +23,15 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 					"ccu":292
 |				}
 */
-class Game_model extends CI_Model {
-	// Table: game_game
-	var $gameTitle   			= '';	// SteamSpy - Name, Steam - Title, 
-	var $appId 				= ''; 	// SteamSpy - appid, Steam - appid
-	var $description 			= ''; 	// Steam (most likely)
+class GameData_model extends CI_Model {
+	// Table: game_data_feeds_steam
+	var $gameTitle   				= '';	// SteamSpy - Name, Steam - Title, 
+	var $appId 						= ''; 	// SteamSpy - appid, Steam - appid
+	var $description 				= ''; 	// Steam (most likely)
 	
-	// Table: game_stats
-    	var $totalOwners 			= '';	// SteamSpy - owners
-	var $averageRecentPlayercount 		= '';	// SteamSpy - players_2weeks
+	// Table: game_stats | game_data_feeds_steamspy
+	var $totalOwners 				= '';	// SteamSpy - owners
+	var $averageRecentPlayercount 	= '';	// SteamSpy - players_2weeks
 	var $averageRecentPlaytime 		= '';	// SteamSpy - average_2weeks
 	var $mediaRecentPlaytime 		= '';	// SteamSpy - median_2weeks
 	var $lastConcurrentUsers 		= '';	// SteamSpy - ccu
@@ -39,6 +39,8 @@ class Game_model extends CI_Model {
 	public function __construct() {
 		parent::__construct();
 		$this->load->database();
+		
+		require_once '/home/dopelsha/public_html/libs/unirest/src/unirest.php';
 	}
 	
 	public function selectAllGameData($orderByString) {

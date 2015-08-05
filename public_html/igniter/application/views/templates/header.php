@@ -20,7 +20,7 @@
 	echo meta($meta); 
 	
 	if(!is_null($title))
-		echo '<title>'.$title.'- Do People Still Play?</title>';
+		echo '<title>'.$title.' - Do People Still Play?</title>';
 	else
 		echo '<title>Do People Still Play?</title>';
 	

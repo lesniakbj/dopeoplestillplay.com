@@ -20,7 +20,7 @@
 	echo meta($meta); 
 	
 	if(!is_null($title))
-		echo '<title>'.$title.'- Administration</title>';
+		echo '<title>'.$title.' - Administration</title>';
 	else
 		echo '<title>Administration</title>';
 		
