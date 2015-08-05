@@ -13,7 +13,6 @@
   - Add more images to cycle through for the bottom images
   - Controller receives data from GameModel with text and images from the model
   - Model loops through 3 received images and text and displays them in place
-  - Loop through CSS to add multiple CSS strings to a page if needed.
   - Controller:
     - Add a new method (new-home?) to serve the actual home page.
     - Begin construction on the look & feel of the actual home page.
@@ -103,6 +102,9 @@
   - Admin: 
     - ~~Create login for admin~~
     - ~~/admin redirects~~
+	
+  - Home:
+    - ~~Loop through CSS to add multiple CSS strings to a page if needed.~~
    
   - Forum:
     - ~~forum.dopeoplestillplay.com~~
