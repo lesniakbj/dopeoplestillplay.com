@@ -53,7 +53,7 @@ class Gamedata_model extends CI_Model {
 		parent::__construct();
 		$this->load->database();
 		
-		require_once '/home/dopelsha/public_html/libs/unirest/src/unirest.php';
+		require_once '/home/dopelsha/public_html/libs/unirest/src/Unirest.php';
 	}
 	
 	public function getGameInformation($dataProvider) {
