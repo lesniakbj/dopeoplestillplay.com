@@ -67,7 +67,7 @@ class Gamedata_model extends CI_Model {
 				var_dump($apiKey);
 				$response = Unirest\Request::get("https://ahmedakhan-game-review-information-v1.p.mashape.com/api/v1/information?console=xbox+360&game_name=call+of+duty+black+ops",
 					array(
-						"X-Mashape-Key" => "bkGYyf0bIEmshUzOP5tc8HqEByPzp1EFgDhjsngSuYPIRFqHus",
+						"X-Mashape-Key" => $apiKey,
 						"Accept" => "application/json"
 					)
 				);
@@ -89,7 +89,7 @@ class Gamedata_model extends CI_Model {
 		
 		$queryResults = $this->db->get();
 		if( $queryResults->num_rows() > 0) {
-			return $queryResults->result();
+			return $queryResults->result()['api_key'];
 		}
 	}
 }
