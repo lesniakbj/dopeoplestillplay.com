@@ -11,15 +11,12 @@
 	width: 95%;
 	max-width: none;
 	
-	text-align: center;
+	display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+	
 	min-height: 600px;
 	border: 1px solid #CFCFCF;
-}
-
-.tool-banner {
-	display: inline-block;
-	vertical-align: middle;
-	line-height: normal;      
 }
 
 .form-group {
