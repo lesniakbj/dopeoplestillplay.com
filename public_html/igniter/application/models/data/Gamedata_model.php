@@ -69,18 +69,20 @@ class Gamedata_model extends CI_Model {
 						"X-Mashape-Key" => $apiKey,
 						"Accept" => "application/json"
 					)
-				);
-				
-				var_dump($response);
+				);				
+				//var_dump($response);
 				break;
 			
 			default:
-				print_r($dataProvider);
+				//print_r($dataProvider);
 				break;
 		}
 		
 	}
 	
+	// Queries the database for the API Key associated with
+	// a game data provider. Uses this key for retrieving data
+	// from various sources. 
 	private function getApiKeyFor($dataProvider) {
 		$this->db->select('api_key')
 				 ->from('game_data_provider')
