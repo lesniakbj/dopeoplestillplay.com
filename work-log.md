@@ -13,6 +13,7 @@
   - Add more images to cycle through for the bottom images
   - Controller receives data from GameModel with text and images from the model
   - Model loops through 3 received images and text and displays them in place
+  - Loop through CSS to add multiple CSS strings to a page if needed.
   - Controller:
     - Add a new method (new-home?) to serve the actual home page.
     - Begin construction on the look & feel of the actual home page.
@@ -79,6 +80,12 @@
 - .htaccess:
   - Current root .htaccess no longer redirects to subdomains when the index.php .htaccess is present within the root of the subdomain; fix this.
   
+****
+
+- Google:
+  - Analytics integration to the main site.
+  - Look @ most common JS functions on websites
+
 ****
 
 - **Completed:**
