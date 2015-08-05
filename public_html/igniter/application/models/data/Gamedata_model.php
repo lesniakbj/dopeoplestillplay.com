@@ -62,6 +62,9 @@ class Gamedata_model extends CI_Model {
 				// TODO: Grab all exisiting games, and update their descriptions based on title
 				// for now, doing a sample scrape of a game.
 				// TODO: Grab API keys from the database game_data_provider based on $dataProvider
+				// TODO: Change the request string to inclued the parameters from somewhere else
+				$apiKey = $this->getApiKeyFor($dataProvider);
+				var_dump($apiKey);
 				$response = Unirest\Request::get("https://ahmedakhan-game-review-information-v1.p.mashape.com/api/v1/information?console=xbox+360&game_name=call+of+duty+black+ops",
 					array(
 						"X-Mashape-Key" => "bkGYyf0bIEmshUzOP5tc8HqEByPzp1EFgDhjsngSuYPIRFqHus",
@@ -69,7 +72,7 @@ class Gamedata_model extends CI_Model {
 					)
 				);
 				
-				print_r($response);
+				var_dump($response);
 				break;
 			
 			default:
@@ -77,6 +80,17 @@ class Gamedata_model extends CI_Model {
 				break;
 		}
 		
+	}
+	
+	private function getApiKeyFor($dataProvider) {
+		$this->db->select('api_key')
+				 ->from('game_data_provider')
+				 ->where('url_name = '.$dataProvider);
+		
+		$queryResults = $this->db->query();
+		if( $queryResults->num_rows() > 0) {
+			return $queryResults->results();
+		}
 	}
 	
 	public function selectAllGameData($orderByString) {
