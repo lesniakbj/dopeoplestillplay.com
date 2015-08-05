@@ -2,6 +2,9 @@
 	// Use an abosulute path here, due to some issues with loading. 
 	include_once(FCPATH.'resources/Strings.php'); 
 	$rsString = new ResourceStrings();
+	
+	$this->load->helper('url');
+	$this->load->helper('html');
 		
 	
 	$meta = array(
