@@ -15,11 +15,11 @@
 
 ul.admin-nav-bar li {
 	float: left;
+	width: 25%;
 }
 
 ul.admin-nav-bar li a:link, ul.admin-nav-bar li a:visited {
 	display: block;
-    width: 120px;
     font-weight: bold;
     color: #FFFFFF;
     background-color: #98bf21;
