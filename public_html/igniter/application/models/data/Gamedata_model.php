@@ -90,7 +90,7 @@ class Gamedata_model extends CI_Model {
 		$queryResults = $this->db->get();
 		if( $queryResults->num_rows() > 0) {
 			foreach($queryResults->result() as $row) {
-				var_dump($row);
+				var_dump($row->api_key);
 			}
 			return $queryResults->result();
 		}
