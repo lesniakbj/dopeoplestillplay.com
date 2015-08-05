@@ -128,7 +128,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$view_folder = '';
+	$view_folder = '/home/dopelsha/public_html/mobile/views';
 
 
 /*
