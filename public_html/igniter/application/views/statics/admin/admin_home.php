@@ -4,7 +4,7 @@
 	} else {		
 ?>
 	<div class="container tool-area">
-		<span class="tool-banner">Welcome to the Administrator area! Please choose your tool above to continue.</span>
+		<h4 class="tool-banner">Welcome to the Administrator area! Please choose your tool above to continue.</h4>
 	</div>
 <?		
 	} // End session check
