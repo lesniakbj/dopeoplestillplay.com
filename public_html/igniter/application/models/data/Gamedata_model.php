@@ -23,7 +23,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 					"ccu":292
 |				}
 */
-class GameData_model extends CI_Model {
+class Gamedata_model extends CI_Model {
 	// Table: game_data_feeds_steam
 	var $gameTitle   				= '';	// SteamSpy - Name, Steam - Title, 
 	var $appId 						= ''; 	// SteamSpy - appid, Steam - appid
