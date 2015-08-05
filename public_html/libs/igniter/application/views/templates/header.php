@@ -3,10 +3,6 @@
 	include_once(FCPATH.'resources/Strings.php'); 
 	$rsString = new ResourceStrings();
 	
-	$this->load->helper('url');
-	$this->load->helper('html');
-		
-	
 	$meta = array(
 		array('name' => 'robots', 'content' => 'no-cache'),
 		array('name' => 'description', 'content' => $rsString::$metaStrings['DESCRIPTION']),
