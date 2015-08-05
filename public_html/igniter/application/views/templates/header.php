@@ -12,9 +12,9 @@
 		array('name' => 'Content-type', 'content' => 'text/html; charset=utf-8', 'type' => 'equiv')
 	);
 
-	echo '<!DOCTYPE html>'
-	echo '<html>'
-    echo 	'<head>'
+	echo '<!DOCTYPE html>';
+	echo '<html>';
+    echo 	'<head>';
 	
 	// Echo all of the meta tags needed by the page, get the data from the controller. 
 	echo meta($meta); 
@@ -47,8 +47,8 @@
 	}
 	
 	// Echo the jQuery Hosted library tags
-	echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>'
-	echo '</head>'
-	echo '<body>'
-	echo	'<div class="container">'
+	echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>';
+	echo '</head>';
+	echo '<body>';
+	echo	'<div class="container">';
 ?>
