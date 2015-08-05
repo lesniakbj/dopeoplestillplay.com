@@ -21,7 +21,7 @@ class AdminTools extends CI_Controller {
 	
 	private function loadDataToolsView() {
 		$data['title'] = 'Data Tools';
-		$data['css'] = $this->homeCss;
+		$data['css'] = $this->homeCSS;
 		
 		$this->load->view('templates/admin/admin_header', $data);
 		$this->load->view('templates/admin/admin_footer', $data);
