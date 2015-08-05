@@ -34,9 +34,9 @@ class AdminTools extends CI_Controller {
 		$data['title'] = 'Data Tools';
 		$data['css'] = $this->homeCSS;
 		
-		$this->load->view('templates/admin/admin_header', $data);
-		$this->load->view('statics/admin/tools/admin_data_tools', $data);
-		$this->load->view('templates/admin/admin_footer', $data);
+		$this->load->view('templates/admin_header', $data);
+		$this->load->view('statics/tools/admin_data_tools', $data);
+		$this->load->view('templates/admin_footer', $data);
 	}
 	
 	public function databaseManagement($action) {
