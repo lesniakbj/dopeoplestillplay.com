@@ -89,7 +89,7 @@ class Gamedata_model extends CI_Model {
 		$queryResults = $this->db->get();
 		
 		if( $queryResults->num_rows() > 0) {
-			return $queryResults->result()->api_key
+			return $queryResults->result()->api_key;
 		}
 	}
 }
