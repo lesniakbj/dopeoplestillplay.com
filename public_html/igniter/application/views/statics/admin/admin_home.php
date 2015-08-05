@@ -4,7 +4,7 @@
 	} else {		
 ?>
 	<div class="container tool-area">
-		<span class="tool-banner"><h4>Down here will be a banner until a new tool is chosen</h4>
+		<span class="tool-banner"><h4>Down here will be a banner until a new tool is chosen</h4></span>
 	</div>
 <?		
 	} // End session check
