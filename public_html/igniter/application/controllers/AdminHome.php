@@ -19,8 +19,8 @@ class AdminHome extends CI_Controller {
 	}
 	
 	public function index() {		
-		$data['title'] = $homeTitle;
-		$data['css'] = $homeCSS;
+		$data['title'] = $this->$homeTitle;
+		$data['css'] = $this->$homeCSS;
 		
 		$this->load->view('/templates/header', $data);
 		$this->load->view('/statics/admin/admin_login', $data);
@@ -90,7 +90,7 @@ class AdminHome extends CI_Controller {
 	// and have them chosen by a variable (AdminViewChooser)
 	private function displayLoginPage($message = NULL, $failureType = NULL) {
 		$data['title'] = 'Login';
-		$data['css'] = $homeCSS;
+		$data['css'] = $this->$homeCSS;
 		
 		if(isset($message)) {
 			$data['failure_message'] = $message;
@@ -104,7 +104,7 @@ class AdminHome extends CI_Controller {
 	
 	private function displayAdminLanding($message = NULL) {
 		$data['title'] = 'Redirecting';
-		$data['css'] = $homeCSS;
+		$data['css'] = $this->$homeCSS;
 		
 		if(isset($message)) {
 			$data['failure_message'] = $message;
@@ -116,8 +116,8 @@ class AdminHome extends CI_Controller {
 	}
 	
 	private function displayAdminHome($message = NULL) {
-		$data['title'] = $homeTitle;
-		$data['css'] = $homeCSS;
+		$data['title'] = $this->$homeTitle;
+		$data['css'] = $this->$homeCSS;
 		
 		if(isset($message)) {
 			$data['failure_message'] = $message;
