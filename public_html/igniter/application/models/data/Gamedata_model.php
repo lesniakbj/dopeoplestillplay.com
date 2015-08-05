@@ -85,34 +85,11 @@ class Gamedata_model extends CI_Model {
 	private function getApiKeyFor($dataProvider) {
 		$this->db->select('api_key')
 				 ->from('game_data_provider')
-				 ->where('url_name = '.$dataProvider);
+				 ->where('url_name', $dataProvider);
 		
 		$queryResults = $this->db->get();
 		if( $queryResults->num_rows() > 0) {
 			return $queryResults->results();
 		}
-	}
-	
-	public function selectAllGameData($orderByString) {
-		if(! isset($orderBy)) {
-			$orderByString = 'title DESC';
-		}
-		
-		// Setup and run the query, results get put into $queryResults
-		$this->db->from('game_game')
-			 ->order_by($orderByString);
-		
-		$queryResults = $this->db->query();
-		
-		if( $queryResults->num_rows() > 0) {
-			return $queryResults->results();
-		}
-		
-		return "Query Failed - No game data!";
-	}
-	
-	public function insertNewGameData() { 
-		// Set the POST/GET data to the class variables
-		// then use that model to insert to the DB (db->insert())
 	}
 }
