@@ -57,7 +57,26 @@ class Gamedata_model extends CI_Model {
 	}
 	
 	public function getGameInformation($dataProvider) {
-		return $dataProvider;
+		switch($dataProvider) {
+			case 'gameinformation':
+				// TODO: Grab all exisiting games, and update their descriptions based on title
+				// for now, doing a sample scrape of a game.
+				// TODO: Grab API keys from the database game_data_provider based on $dataProvider
+				$response = Unirest\Request::get("https://ahmedakhan-game-review-information-v1.p.mashape.com/api/v1/information?console=xbox+360&game_name=call+of+duty+black+ops",
+					array(
+						"X-Mashape-Key" => "bkGYyf0bIEmshUzOP5tc8HqEByPzp1EFgDhjsngSuYPIRFqHus",
+						"Accept" => "application/json"
+					)
+				);
+				
+				print_r($response);
+				break;
+			
+			default:
+				print_r($dataProvider);
+				break;
+		}
+		
 	}
 	
 	public function selectAllGameData($orderByString) {
