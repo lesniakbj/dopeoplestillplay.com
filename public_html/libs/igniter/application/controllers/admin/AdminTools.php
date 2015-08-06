@@ -19,17 +19,6 @@ class AdminTools extends CI_Controller {
 		$this->loadDataToolsView();
 	}
 	
-	public function dataTools($toolName) {
-		switch($toolName) {
-			case 'dataScrapeTool':
-				$this->dataScrapeTool();
-				break;
-			default:
-				$this->loadDataToolsView();
-				break;
-		}
-	}
-	
 	public function dataScrapeTool($dataProvider) {
 		$dataObj = $this->gamedata_model->getGameInformation($dataProvider);	
 		/*
