@@ -4,6 +4,7 @@
 	} else {		
 
 		echo '<div class="container tool-area tools">';
+		echo 	'<div class="tools-header">Admin Data Tools</div>';
 		
 		$toolsMenu = array(
 			anchor('/tools/datatools/all', 'Scrape All Data Feeds', 'title="Scrape Feeds" class="button"'),
@@ -18,10 +19,14 @@
 
 		echo ul($toolsMenu, $toolsAttrs);
 			
-		echo '</div>';
-		
+		echo '</div>';		
 		echo '<div class="container tool-area data-feed">';
-		echo '</div>';
-	
+		echo 	'<div class="tools-header">Data Viewer</div>';
+		echo		'<div class="data-information">';
+						// TODO: Echo any information related to the data scrape here:
+						//		 Where the information came from, how long it took to scrape
+						//		 the URL of the scrape, etc. 
+		echo		'</div>';					
+		echo '</div>';	
 	} // End session check
 ?>

@@ -29,3 +29,12 @@ ul.admin-actions li a {
 	float: right;
 	margin-right: 1%;
 }
+
+.tools-header {
+	position: absolute;
+    color: #000000;
+    background-color: #FFFFFF;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
