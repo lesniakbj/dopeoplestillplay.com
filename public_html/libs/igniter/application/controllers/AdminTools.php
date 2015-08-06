@@ -30,7 +30,48 @@ class AdminTools extends CI_Controller {
 	}
 	
 	public function dataScrapeTool($dataProvider) {
-		$dataObj = $this->gamedata_model->getGameInformation($dataProvider);
+		$dataObj = $this->gamedata_model->getGameInformation($dataProvider);	
+		/*
+		|	On "Error":
+		|	stdClass Object
+		|	(
+		|		[message] => result not found
+		|		[possibleChoices] => Array
+		|			(
+		|				[0] => call of duty black ops iii
+		|				[1] => call of duty black ops
+		|				[2] => call of duty black ops declassified
+		|				[3] => call of duty black ops ii
+		|				[4] => call of duty black ops zombies
+		|				[5] => call of duty black ops -- call of the dead
+		|				[6] => shadow ops red mercury
+		|				[7] => spec ops the line
+		|				[8] => black & white
+		|				[9] => call of duty heroes
+		|			)
+		|
+		|	)
+		|
+		|	On "Success":
+		|	stdClass Object
+		|	(
+		|		[result] => stdClass Object
+		|			(
+		|				[websites] => Array
+		|					(
+		|						[0] => gamesradar
+		|						[1] => ign
+		|						[2] => metacritic
+		|						[3] => gamespot
+		|					)
+		*/
+		// If there is a message, it was a failure
+		if(property_exists($dataObj, 'message') == TRUE) {
+			// Load data failure view
+			return;
+		}
+		
+		
 		$data['dataObj'] = $dataObj;
 				
 		$this->load->view('templates/header');
