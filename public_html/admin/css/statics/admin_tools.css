@@ -6,8 +6,9 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+	text-align: left;
 }
 
 ul.admin-actions li {
-	float: left;
+	margin-bottom: 2rem;
 }
