@@ -77,7 +77,7 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		
 		// AdminHome routes
 		$route['login'] = 'AdminHome/login';
-		$route['home'] = 'AdminHome/home';
+		$route['home'] = 'admin/AdminHome/home';
 		$route['logout'] = 'AdminHome/logout';
 		
 		// AdminTools tool routes
