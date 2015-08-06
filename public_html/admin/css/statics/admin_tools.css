@@ -7,8 +7,13 @@
     padding: 0;
     overflow: hidden;
 	text-align: left;
+	width: 400px;
 }
 
-ul.admin-actions li {
+ul.admin-actions button {
+	width: 100%;
+}
+
+ul.admin-actions button li {
 	margin-bottom: 2rem;
 }
