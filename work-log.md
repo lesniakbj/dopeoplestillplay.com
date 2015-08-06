@@ -54,6 +54,8 @@
 	- Scrape specific data (passed as param, or searched by admin)
   - CSS:
 	- Admin Nav = Horizontal
+	- Figure out a new way to display data, tools should be better aligned
+	- The main tool area should be split in half when there is no specific tool (example, left side datascrape buttons, right side live view of the data scrape)
 
 ****
 
@@ -75,6 +77,7 @@
     - On input, check if user exists, if not generate a salt and hash salt + password
     - If exists, grab the salt, hash and check against hashed_pw
   - If no user, state can't find user/email/password combination.
+  - Ajax?
 
 ****
 
