@@ -56,8 +56,8 @@ class AdminTools extends CI_Controller {
 		|						[3] => gamespot
 		|					)
 		*/
-		// If there is a message, it was a failure
-		if(property_exists($dataObj, 'message') == TRUE) {
+		// If there is a message/the variable isn't set, it was a failure
+		if(isset($dataObj) && (property_exists($dataObj, 'message') == TRUE)) {
 			// Load data failure view
 			return;
 		}
