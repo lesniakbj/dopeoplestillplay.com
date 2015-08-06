@@ -73,7 +73,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 switch ( $_SERVER['HTTP_HOST'] ) {
 	case 'admin.dopeoplestillplay.com':
-		$route['default_controller'] = 'admin/AdminHome/index';
+		$route['default_controller'] = 'admin/AdminHome';
 		
 		// AdminHome routes
 		$route['login'] = 'admin/AdminHome/login';
@@ -81,9 +81,9 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		$route['logout'] = 'admin/AdminHome/logout';
 		
 		// AdminTools tool routes
-		$route['tools/data/([a-z]+)'] = 'AdminTools/dataTools/$1';
-		$route['tools/database/([a-z]+)'] = 'AdminTools/databaseManagement/$1';
-		$route['tools/logs/([a-z]+)'] = 'AdminTools/manageLogs/$1';
+		$route['tools/data/([a-z]+)'] = 'admin/AdminTools/dataTools/$1';
+		$route['tools/database/([a-z]+)'] = 'admin/AdminTools/databaseManagement/$1';
+		$route['tools/logs/([a-z]+)'] = 'admin/AdminTools/manageLogs/$1';
 		
 		// AdminTools function routes
 		$route['tools/datatools/([a-z]+)'] = 'AdminTools/dataScrapeTool/$1';
@@ -91,10 +91,10 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		$route['(:any)'] = 'admin/AdminHome/index';
 		break;
 	case 'm.dopeoplestillplay.com':
-		$route['default_controller'] = "MobileHome";
+		$route['default_controller'] = "mobile/MobileHome";
 		break;
 	case 'forums.dopeoplestillplay.com':
-		$route['default_controller'] = "ForumsHome";
+		$route['default_controller'] = "forums/ForumsHome";
 		break;
 	default:	
 		$route['default_controller'] = 'Home';
@@ -106,14 +106,14 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		$route['admin/(:any)'] = 'admin/AdminHome/redirect';
 		
 		// Forum Redirects
-		$route['forums'] = 'ForumsHome/redirect';
-		$route['forums/(:any)'] = 'ForumsHome/redirect';
-		$route['forum'] = 'ForumsHome/redirect';
-		$route['forum/(:any)'] = 'ForumsHome/redirect';
+		$route['forums'] = 'forums/ForumsHome/redirect';
+		$route['forums/(:any)'] = 'forums/ForumsHome/redirect';
+		$route['forum'] = 'forums/ForumsHome/redirect';
+		$route['forum/(:any)'] = 'forums/ForumsHome/redirect';
 		
 		// Mobile Redirects
-		$route['mobile'] = 'MobileHome/redirect';
-		$route['mobile/(:any)'] = 'MobileHome/redirect';
+		$route['mobile'] = 'mobile/MobileHome/redirect';
+		$route['mobile/(:any)'] = 'mobile/MobileHome/redirect';
 		
 		$route['(:any)'] = 'Home';
 	break;
