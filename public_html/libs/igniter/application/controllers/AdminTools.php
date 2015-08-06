@@ -32,7 +32,7 @@ class AdminTools extends CI_Controller {
 	
 	private function loadDataToolsView() {
 		$data['title'] = 'Data Tools';
-		$data['css'] = $this->homeCSS;
+		$data['css'] = $this->toolsCSS;
 		
 		$this->load->view('templates/admin_header', $data);
 		$this->load->view('statics/tools/admin_data_tools', $data);
