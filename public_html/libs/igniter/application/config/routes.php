@@ -86,7 +86,7 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		$route['tools/logs/([a-z]+)'] = 'admin/AdminTools/manageLogs/$1';
 		
 		// AdminTools function routes
-		$route['tools/datatools/([a-z]+)'] = 'adminAdminTools/dataScrapeTool/$1';
+		$route['tools/datatools/([a-z]+)'] = 'admin/AdminTools/dataScrapeTool/$1';
 		
 		$route['(:any)'] = 'admin/AdminHome/index';
 		break;
