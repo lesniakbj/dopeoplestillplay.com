@@ -1,3 +1,5 @@
 <?
-	echo '<pre>'.$dataObj.'</pre>';
+	echo '<pre>';
+		print_r($dataObj);
+	echo '</pre>';
 ?>
