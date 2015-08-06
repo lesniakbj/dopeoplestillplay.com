@@ -1,0 +1,13 @@
+/*
+	Admin Tools Specific Styling
+*/
+.admin-actions {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul.admin-actions li {
+	float: left;
+}

@@ -2,7 +2,7 @@
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class AdminTools extends CI_Controller {
-	private $homeCSS = array('statics/admin_home.css');
+	private $toolsCSS = array('statics/admin_home.css', 'statics/admin_tools.css');
 
 	public function __construct() {
 		parent::__construct();

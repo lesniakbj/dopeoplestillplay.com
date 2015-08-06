@@ -13,7 +13,7 @@
 		);
 
 		$toolsAttrs = array(
-			'class' => ''
+			'class' => 'admin-actions'
 		);
 
 		echo ul($toolsMenu, $toolsAttrs);

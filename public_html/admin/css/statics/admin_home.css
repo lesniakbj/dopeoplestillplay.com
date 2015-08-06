@@ -44,6 +44,7 @@ ul.admin-nav-bar li a:hover, ul.admin-nav-bar li a:active {
 	width: 95%;
 	max-width: none;
 	
+	/* Main Centering styling */
 	display: flex;
     justify-content: center; /* align horizontal */
     align-items: center; /* align vertical */
@@ -51,6 +52,17 @@ ul.admin-nav-bar li a:hover, ul.admin-nav-bar li a:active {
 	text-align: center;
 	min-height: 600px;
 	border: 1px solid #CFCFCF;
+	
+	/* Cross browswer centering */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
 }
 
 .tool-banner {
@@ -59,9 +71,4 @@ ul.admin-nav-bar li a:hover, ul.admin-nav-bar li a:active {
 
 .form-group {
 	margin-top: -1rem;
-}
-
-.email-button {
-	width: 40%;
-	margin-left: 28.5%;
 }
