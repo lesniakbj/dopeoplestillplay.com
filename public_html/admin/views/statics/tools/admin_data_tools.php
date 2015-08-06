@@ -3,7 +3,7 @@
 		show_error('Forbidden content. Please login to view this content.', 403, '403 Forbidden Content');
 	} else {		
 
-		echo '<div class="container tool-area">';
+		echo '<div class="container tool-area tools">';
 		
 		$toolsMenu = array(
 			anchor('/tools/datatools/all', 'Scrape All Data Feeds', 'title="Scrape Feeds" class="button"'),
@@ -18,6 +18,9 @@
 
 		echo ul($toolsMenu, $toolsAttrs);
 			
+		echo '</div>';
+		
+		echo '<div class="container tool-area data-feed">';
 		echo '</div>';
 	
 	} // End session check

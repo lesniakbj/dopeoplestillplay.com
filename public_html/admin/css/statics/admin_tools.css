@@ -17,3 +17,15 @@ ul.admin-actions li {
 ul.admin-actions li a {
 	width: 100%;
 }
+
+.tools {
+	width: 48%;
+	float: left;
+	margin-left: 1%;
+}
+
+.data-feed {
+	width: 48%;
+	float: right;
+	margin-right: 1%;
+}
