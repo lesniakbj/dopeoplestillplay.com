@@ -20,6 +20,7 @@ class AdminTools extends CI_Controller {
 	}
 	
 	public function dataScrapeTool($dataProvider) {
+		// ToDo: On scrape transform the data into a common data packet
 		$dataObj = $this->gamedata_model->getGameInformation($dataProvider);	
 		/*
 		|	On "Error":
