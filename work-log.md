@@ -34,6 +34,9 @@
 	- Add tools to add news/announcments to the main screen (title, text)
 	- Add 
   - Move AdminHome to subfolder and change all routes to be in /admin
+  - Database Tool:
+    - Look @ data feeds tool, Left Side will be list of tables; right side will be actions able to be taken on the table
+	- Left (list of tables); Right (Add data, Delete Data, Drop Table, View Data, etc..)
   - Top side nav with following items:
     - View list of all database tables - click to view data on the table (database tool)
     - Create new tables (database tool)
