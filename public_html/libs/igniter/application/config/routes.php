@@ -73,12 +73,12 @@ $route['translate_uri_dashes'] = FALSE;
 
 switch ( $_SERVER['HTTP_HOST'] ) {
 	case 'admin.dopeoplestillplay.com':
-		$route['default_controller'] = 'admin/AdminHome';
+		$route['default_controller'] = 'admin/AdminHome/index';
 		
 		// AdminHome routes
-		$route['login'] = 'AdminHome/login';
+		$route['login'] = 'admin/AdminHome/login';
 		$route['home'] = 'admin/AdminHome/home';
-		$route['logout'] = 'AdminHome/logout';
+		$route['logout'] = 'admin/AdminHome/logout';
 		
 		// AdminTools tool routes
 		$route['tools/data/([a-z]+)'] = 'AdminTools/dataTools/$1';
@@ -88,7 +88,7 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		// AdminTools function routes
 		$route['tools/datatools/([a-z]+)'] = 'AdminTools/dataScrapeTool/$1';
 		
-		$route['(:any)'] = 'AdminHome/index';
+		$route['(:any)'] = 'admin/AdminHome/index';
 		break;
 	case 'm.dopeoplestillplay.com':
 		$route['default_controller'] = "MobileHome";
