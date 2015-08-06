@@ -38,6 +38,9 @@
   - On each page, replicate the look & feel of the home page
     - Fill the tool into the .tool-area container.
   - Change admin tool routes to ONLY respect strings, NO numbers
+  - Change each data scrape tool to do the following:
+	- Scrape all data related to the tool
+	- Scrape specific data (passed as param, or searched by admin)
   - CSS:
 	- Admin Nav = Horizontal
 
