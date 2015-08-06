@@ -30,10 +30,11 @@ class AdminTools extends CI_Controller {
 	}
 	
 	public function dataScrapeTool($dataProvider) {
-		$data = $this->gamedata_model->getGameInformation($dataProvider);
-		
+		$dataObj = $this->gamedata_model->getGameInformation($dataProvider);
+		$data['dataObj'] = $dataObj;
+				
 		$this->load->view('templates/header');
-		echo '<pre>'.print_r($data).'</pre>';
+		$this->load->view('errors/view_var', $data);
 		$this->load->view('templates/footer');
 	}
 	
