@@ -19,7 +19,7 @@
 	// Echo all of the meta tags needed by the page, get the data from the controller. 
 	echo meta($meta); 
 	
-	if(!is_null($title))
+	if(isset($title))
 		echo '<title>'.$title.' - Administration</title>';
 	else
 		echo '<title>Administration</title>';
