@@ -10,10 +10,10 @@
 	width: 400px;
 }
 
-ul.admin-actions button {
-	width: 100%;
+ul.admin-actions li {
+	margin-bottom: 3rem;
 }
 
-ul.admin-actions button li {
-	margin-bottom: 2rem;
+ul.admin-actions li  button {
+	width: 100%;
 }
