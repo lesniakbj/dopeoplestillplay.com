@@ -18,13 +18,13 @@ ul.admin-actions li a {
 	width: 100%;
 }
 
-.tools {
+.container.tool-area.tools {
 	width: 48%;
 	float: left;
 	margin-left: 1%;
 }
 
-.data-feed {
+.container.tool-area.data-feed {
 	width: 48%;
 	float: right;
 	margin-right: 1%;
