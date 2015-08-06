@@ -33,7 +33,7 @@ class AdminTools extends CI_Controller {
 		$data = $this->gamedata_model->getGameInformation($dataProvider);
 		
 		$this->load->view('templates/header');
-		print_r($data);
+		echo '<pre>'.print_r($data).'</pre>';
 		$this->load->view('templates/footer');
 	}
 	
