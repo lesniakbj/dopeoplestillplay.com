@@ -13,6 +13,11 @@ class AdminDatabaseTools extends CI_Controller {
 		$this->load->library('session');
 	}
 	
+	public function index() {
+		$this->load->view('templates/admin_header');
+		$this->load->view('templates/admin_footer');
+	}
+	
 	public function databaseManagement($mgmtFunction) {
 		$this->load->view('templates/admin_header');
 		$this->load->view('templates/admin_footer');
