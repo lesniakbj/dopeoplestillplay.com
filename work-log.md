@@ -1,7 +1,9 @@
 
 - Database:
   - Create game_game table = id, game_name, year_released, description
+  - Create a game_data_feed_* tables with data feeds about games
   - Come up with a process for backing up the email list each night, or at least throw away useless emails.
+	- Have a secondary database that the current one is backed up to each night; run as a MySQL job
   - Schedule a job to run each night to do the following:
     - Scrape data from the various data_providers
     - Email the contact@dopeoplestillplay.com with an updated list of emails added that day.
@@ -22,19 +24,28 @@
 - Admin:
   - Google: admin page design, look @ images
   - Display entered data
+	- Display the current data in each table, chosen by the admin
+	- Display a list of tables for the admin to look @
+	- Create an admin_table_exception table with a list of tables that will NOT be delivered to an admin
+	- Display user stats when they are collected
+	- Google Analytics Stats
   - Enter new data
+	- Add tools to allow the admin to alter/add data to tables
+	- Add tools to add news/announcments to the main screen (title, text)
+	- Add 
   - Move AdminHome to subfolder and change all routes to be in /admin
-  - Left side nav with following items:
-    - View list of all database tables - click to view data on the table
-    - Create new tables
-    - Add data to existing tables. 
-    - Remove data from the system (add an is_delted flag to the base data)
+  - Top side nav with following items:
+    - View list of all database tables - click to view data on the table (database tool)
+    - Create new tables (database tool)
+    - Add data to existing tables. (database tool)
+    - Remove data from the system (add an is_delted flag to the base data) (database tool)
+	- Scrape data from all the datasourcese (datatool)
+	- View Logs
   - Add following functions:
     - View/Clear error logs
     - Data Feed Management (Schedule job running, view jobs, recieve all data, view status of data feeds, view most recent data)
-    - Data Delete Utility
+    - Database Utility
     - Viewing game data
-    - Adding new data to certain tables (user, other tables)...
   - On each page, replicate the look & feel of the home page
     - Fill the tool into the .tool-area container.
   - Change admin tool routes to ONLY respect strings, NO numbers
