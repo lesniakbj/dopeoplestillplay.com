@@ -1,3 +1,0 @@
-<?
-	echo '<pre>'.$dataObj.'</pre>';
-?>
