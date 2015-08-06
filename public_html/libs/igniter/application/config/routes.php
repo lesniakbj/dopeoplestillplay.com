@@ -82,7 +82,7 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		
 		// AdminTools tool routes
 		$route['tools/data/([a-z]+)'] = 'admin/AdminTools/dataTools/$1';
-		$route['tools/database/([a-z]+)'] = 'admin/AdminTools/databaseManagement/$1';
+		$route['tools/database/([a-z]+)'] = 'admin/AdminDatabaseTools/databaseManagement/$1';
 		$route['tools/logs/([a-z]+)'] = 'admin/AdminTools/manageLogs/$1';
 		
 		// AdminTools function routes
