@@ -15,11 +15,12 @@ class AdminTools extends CI_Controller {
 		$this->load->model('data/gamedata_model');
 	}
 	
+	public function index() {
+		$this->loadDataToolsView();
+	}
+	
 	public function dataTools($toolName) {
 		switch($toolName) {
-			case 'home':
-				$this->loadDataToolsView();
-				break;
 			case 'dataScrapeTool':
 				$this->dataScrapeTool();
 				break;
@@ -86,13 +87,5 @@ class AdminTools extends CI_Controller {
 		$this->load->view('templates/admin_header', $data);
 		$this->load->view('statics/tools/admin_data_tools', $data);
 		$this->load->view('templates/admin_footer', $data);
-	}
-	
-	public function databaseManagement($action) {
-
-	}
-	
-	public function manageLogs($action) {
-
 	}
 }

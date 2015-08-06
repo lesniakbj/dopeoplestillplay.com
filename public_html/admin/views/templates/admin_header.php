@@ -53,7 +53,7 @@
 	
 	$navMenu = array(
 		anchor('/home', 'Home', 'title="Admin Home"'),
-		anchor('/tools/data/home', 'Data Feeds', 'title="Data Feeds"'),
+		anchor('/tools/data', 'Data Feeds', 'title="Data Feeds"'),
 		anchor('/tools/database', 'Database Tasks', 'title="Database"'),
 		anchor('/tools/logs', 'Logs', 'title="Logs"'),
 		anchor('/logout', 'Logout', 'title="Logout"')
