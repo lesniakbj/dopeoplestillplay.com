@@ -62,9 +62,10 @@ class AdminTools extends CI_Controller {
 			// Load data failure view
 			return;
 		}
+		// Attempt to parse any JSON here
+		$assocArray = json_decode($dataObj, true);
 		
-		$data['dataObj'] = $dataObj;
-		$this->load->view('errors/view_var', $data);
+		print_r($assocArray);
 	}
 	
 	private function loadDataToolsHome() {
