@@ -25,6 +25,7 @@ ul.admin-actions li a {
 }
 
 .container.tool-area.data-feed {
+	all: default;
 	width: 48%;
 	float: right;
 	margin-right: 1%;
