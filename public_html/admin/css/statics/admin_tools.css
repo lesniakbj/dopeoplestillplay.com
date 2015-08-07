@@ -28,6 +28,13 @@ ul.admin-actions li a {
 	width: 48%;
 	float: right;
 	margin-right: 1%;
+	display: block;
+	max-height: 600px;
+	overflow: scroll;	
+}
+
+.data-information pre {
+	overflow: hidden;
 }
 
 .tools-header {
