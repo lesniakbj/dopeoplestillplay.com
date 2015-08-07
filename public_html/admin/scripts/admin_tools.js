@@ -4,9 +4,10 @@ var AdminTools = {
 		$('.button').on('click', function(event) {
 			event.preventDefault();
 			var buttonId = event.target.id;
-			// To do, use the ajax function to scrape the data provider based on button presses
+			
 			switch(buttonId) {
 				case 'info-tool':
+					// Instead of calling the data scrape directly, display a form to enter data we want from the scrape.
 					AdminTools.ajaxGetData("http://admin.dopeoplestillplay.com/tools/datatools/gameinformation");
 					break;
 				default:
