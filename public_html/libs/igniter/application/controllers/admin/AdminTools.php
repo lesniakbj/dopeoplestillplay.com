@@ -3,7 +3,8 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class AdminTools extends CI_Controller {
 	private $toolsCSS = array('statics/admin_home.css', 'statics/admin_tools.css');
-
+	private $toolsJS = array('scripts/admin_tools.js');
+	
 	public function __construct() {
 		parent::__construct();
 		
@@ -16,7 +17,7 @@ class AdminTools extends CI_Controller {
 	}
 	
 	public function index() {
-		$this->loadDataToolsView();
+		$this->loadDataToolsHome();
 	}
 	
 	public function dataScrapeTool($dataProvider) {
@@ -70,9 +71,10 @@ class AdminTools extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 	
-	private function loadDataToolsView() {
+	private function loadDataToolsHome() {
 		$data['title'] = 'Data Tools';
 		$data['css'] = $this->toolsCSS;
+		$data['js'] = $this->toolsJS;
 		
 		$this->load->view('templates/admin_header', $data);
 		$this->load->view('statics/tools/admin_data_tools', $data);

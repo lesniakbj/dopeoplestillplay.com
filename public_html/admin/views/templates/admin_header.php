@@ -48,6 +48,13 @@
 	
 	// Echo the jQuery Hosted library tags
 	echo 	'<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>';
+	
+	if(isset($js) && !is_null($js)) {
+		for($i = 0; $i < count($js); $i++) {			
+			echo '<script src="scripts/'.$js[$i]'" type="text/javascript"></script>';
+		}
+	}
+	
 	echo '</head>';
 	echo '<body>';
 	
