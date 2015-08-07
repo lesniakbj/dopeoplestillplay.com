@@ -7,10 +7,10 @@
 		echo 	'<div class="tools-header">Admin Data Tools</div>';
 		
 		$toolsMenu = array(
-			anchor('/tools/datatools/all', 'Scrape All Data Feeds', 'title="Scrape Feeds" id="all-tools" class="button"'),
-			anchor('/tools/datatools/steam', 'Scrape Steam Data Feed', 'title="Data Feeds" id="steam-tool" class="button"'),
-			anchor('/tools/datatools/steamspy', 'Scrape SteamSpy Data Feed', 'title="Database" id="steamspy-tool" class="button"'),
-			anchor('/tools/datatools/gameinformation', 'Scrape Game Information Data Feed', 'title="Logs" id="info-tool" class="button"'),
+			anchor('/tools/datatools/all', 'Scrape All Data Feeds', 'title="Scrape Feeds" id="all" class="button"'),
+			anchor('/tools/datatools/steam', 'Scrape Steam Data Feed', 'title="Data Feeds" id="steam" class="button"'),
+			anchor('/tools/datatools/steamspy', 'Scrape SteamSpy Data Feed', 'title="Database" id="steamspy" class="button"'),
+			anchor('/tools/datatools/gameinformation', 'Scrape Game Information Data Feed', 'title="Logs" id="gameinformation" class="button"'),
 		);
 
 		$toolsAttrs = array(

@@ -21,6 +21,17 @@ class AdminTools extends CI_Controller {
 	}
 	
 	public function dataScrapeTool($dataProvider) {
+		switch($dataProvider) {
+			case 'gameinformation':
+				$this->loadGameInformationTool();
+				break;
+			default:
+				$this->loadDataToolsHome();
+				break;
+		}
+	
+		// The following will get moved to a separate function
+		/*
 		// ToDo: On scrape transform the data into a common data packet
 		$dataObj = $this->gamedata_model->getGameInformation($dataProvider);	
 
@@ -45,6 +56,11 @@ class AdminTools extends CI_Controller {
 		$this->load->view('errors/view_var', $data);
 		//print_r($assocArray);
 		*/
+	}
+	
+	private function loadGameInformationTool() {		
+		// Load a view here with the dropdown menus for the gameinfo tool
+		$this->load->view('statics/tools/admin_game_information_tool');
 	}
 	
 	private function loadDataToolsHome() {

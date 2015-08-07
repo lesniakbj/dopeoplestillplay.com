@@ -5,26 +5,16 @@ var AdminTools = {
 			event.preventDefault();
 			var buttonId = event.target.id;
 			
-			switch(buttonId) {
-				case 'info-tool':
-					// Instead of calling the data scrape directly, display a form to enter data we want from the scrape.
-					AdminTools.ajaxGetData("http://admin.dopeoplestillplay.com/tools/datatools/gameinformation");
-					break;
-				default:
-					alert('Tool not implemented yet!');
-			}			
+			AdminTools.ajaxLoadTool("http://admin.dopeoplestillplay.com/tools/datatools/" + buttonId);		
 		});
 	},
 	
-	ajaxGetData: function(urlVar) {
+	ajaxLoadTool: function(urlVar) {
 		$.ajax({
   			url: urlVar
 		})
   		.done(function( data ) {
   			$('.data-information').append(data);
-			if ( console && console.log ) {
-				console.log(data);
-			}
   		});
 	}
 
