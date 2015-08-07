@@ -34,9 +34,9 @@ $( document ).ready(function() {
 });
 
 $( document ).ajaxStart(function() {
-  $("#loading-data").show();
+  $('#loading-data').show()
 });
 
-$( document ).ajaxStart(function() {
-  $("#loading-data").hide();
+$( document )..ajaxStop(function() {
+  $('#loading-data').hide();
 });
