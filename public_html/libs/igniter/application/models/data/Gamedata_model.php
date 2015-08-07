@@ -71,9 +71,9 @@ class Gamedata_model extends CI_Model {
 					)
 				);
 				$gameData = $response->raw_body;
-				//$gameData = $response->body;
+				
 				// TODO: Verify the response was valid before returning it to the admin tools controller.
-				return $gameData;//$gameData;
+				return $gameData;
 				break;
 			
 			default:
