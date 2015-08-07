@@ -36,7 +36,7 @@ class AdminTools extends CI_Controller {
 		$dataWebsites = $gameDataArray->websites;
 		
 		foreach ($dataWebsites as $name) {
-			print $name;
+			print $name.'\n';
 		}
 		/*
 		$data['dataObj'] = $assocArray;
