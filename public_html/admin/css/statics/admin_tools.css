@@ -25,12 +25,21 @@ ul.admin-actions li a {
 }
 
 .container.tool-area.data-feed {
-	all: default;
+    display: block;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    min-height: 600px;
+	max-height: 600px;
+    border: 1px solid #CFCFCF;
+    -webkit-flex-align: left;
+    -ms-flex-align: left;
+    -webkit-align-items: left;
+	
 	width: 48%;
 	float: right;
 	margin-right: 1%;
-	display: block;
-	max-height: 600px;
+	
 	overflow: scroll;	
 }
 
