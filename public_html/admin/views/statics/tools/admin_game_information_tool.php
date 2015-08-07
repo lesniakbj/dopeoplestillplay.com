@@ -24,8 +24,8 @@
 			'xboxone'	=> 'Xbox One'		
 		);
 
-		echo form_dropdown('game-platforms', $platOptions, 'pc');
-		echo form_submit('scrape-game-info','Scrape Data');
+		echo form_dropdown('game-platform', $platOptions, 'pc');
+		echo form_submit('submit-scrape-info','Submit');
 		echo form_close();
 	} // End session check
 ?>
