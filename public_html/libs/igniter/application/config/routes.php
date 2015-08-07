@@ -82,13 +82,15 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		
 		// AdminTools tool routes
 		$route['tools/datatools'] = 'admin/AdminTools/index';
-		$route['tools/datatools/([a-z]+)'] = 'admin/AdminTools/dataScrapeTool/$1';
+		$route['tools/datatools/([a-z]+)'] = 'admin/AdminTools/dataScrapeTools/$1';
 		$route['tools/database'] = 'admin/AdminDatabaseTools/index';
 		$route['tools/database/([a-z]+)'] = 'admin/AdminDatabaseTools/databaseManagement/$1';
 		$route['tools/logs/([a-z]+)'] = 'admin/AdminTools/manageLogs/$1';
 		
+		$route['tools/gameinfo'] = 'admin/AdminTools/gameInfoTool';
+		
 		// AdminTools function routes
-		$route['tools/datatools/([a-z]+)'] = 'admin/AdminTools/dataScrapeTool/$1';
+		$route['tools/datatools/([a-z]+)'] = 'admin/AdminTools/dataScrapeTools/$1';
 		
 		$route['(:any)'] = 'admin/AdminHome/index';
 		break;

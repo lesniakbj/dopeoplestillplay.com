@@ -20,7 +20,7 @@ class AdminTools extends CI_Controller {
 		$this->loadDataToolsHome();
 	}
 	
-	public function dataScrapeTool($dataProvider) {
+	public function dataScrapeTools($dataProvider) {
 		switch($dataProvider) {
 			case 'gameinformation':
 				$this->loadGameInformationTool();
@@ -56,6 +56,10 @@ class AdminTools extends CI_Controller {
 		$this->load->view('errors/view_var', $data);
 		//print_r($assocArray);
 		*/
+	}
+	
+	public function gameInfoTool() {
+	
 	}
 	
 	private function loadGameInformationTool() {		
