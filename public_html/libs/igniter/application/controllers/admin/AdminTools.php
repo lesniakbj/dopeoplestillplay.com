@@ -67,7 +67,7 @@ class AdminTools extends CI_Controller {
 		//$gameDataArray = $assocArray->result;
 		
 		foreach ($assocArray as $name) {
-			print_r($name);
+			print_r($name.'\n');
 		}
 		/*
 		$data['dataObj'] = $assocArray;
