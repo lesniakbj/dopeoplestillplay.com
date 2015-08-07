@@ -1,0 +1,16 @@
+.*
+!/.gitignore
+!/.htaccess
+
+www/*
+tmp/*
+var/*
+logs/*
+etc/*
+ssl/*
+myadmin/*
+logs/*
+mail/*
+
+access-logs
+www

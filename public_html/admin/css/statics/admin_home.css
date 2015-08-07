@@ -1,0 +1,74 @@
+/*
+	Admin Home Specific Styling
+*/
+
+.form-group:first-of-type {
+	margin-top: 4rem;
+}
+
+.admin-nav-bar {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul.admin-nav-bar li {
+	float: left;
+	width: 20%;
+}
+
+ul.admin-nav-bar li a:link, ul.admin-nav-bar li a:visited {
+	display: block;
+    color: #FFFFFF;
+	
+	font-weight: bold;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+	white-space: nowrap;
+	
+	background-color: #33C3F0;
+	border-color: #33C3F0;
+}
+
+ul.admin-nav-bar li a:hover, ul.admin-nav-bar li a:active {
+	color: #FFF;
+	background-color: #1EAEDB;
+	border-color: #1EAEDB; 
+}
+
+.container.tool-area {
+	/* Style overwrites */
+	width: 95%;
+	max-width: none;
+	
+	/* Main Centering styling */
+	display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+	
+	text-align: center;
+	min-height: 600px;
+	border: 1px solid #CFCFCF;
+	
+	/* Cross browswer centering */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.tool-banner {
+	text-align: center;
+}
+
+.form-group {
+	margin-top: -1rem;
+}
