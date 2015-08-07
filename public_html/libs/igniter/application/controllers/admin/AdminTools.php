@@ -65,6 +65,7 @@ class AdminTools extends CI_Controller {
 	
 	private function loadGameInformationTool() {		
 		// Load a view here with the dropdown menus for the gameinfo tool
+		// Get list of platforms from databse, send to the view
 		$this->load->view('statics/tools/admin_game_information_tool');
 	}
 	

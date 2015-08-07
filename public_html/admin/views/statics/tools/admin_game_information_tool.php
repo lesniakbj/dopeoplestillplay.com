@@ -13,6 +13,18 @@
 		);
 		
 		echo form_open('tools/gameinfo', $formAttrs);
+		echo form_label('Game Platform:', 'game-platform');
+	
+		// TODO: Change this from static array to list of platforms retrieved from database...
+		$platOptions = array(
+			'pc'  		=> 'PC',
+			'ps3'		=> 'Playstation 3',
+			'ps4'		=> 'Playstation 4',
+			'xbox360' 	=> 'Xbox 360',
+			'xboxone'	=> 'Xbox One'		
+		);
+
+		echo form_dropdown('game-platforms', $platOptions, 'pc');
 		echo form_close();
 	} // End session check
 ?>
