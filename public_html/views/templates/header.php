@@ -50,7 +50,7 @@
 	
 	if(isset($js) && !is_null($js)) {
 		for($i = 0; $i < count($js); $i++) {			
-			echo '<script src="scripts/'.$js[$i]'" type="text/javascript"></script>';
+			echo '<script src="scripts/'.$js[$i].'" type="text/javascript"></script>';
 		}
 	}
 	
