@@ -65,9 +65,9 @@ class AdminTools extends CI_Controller {
 		// Attempt to parse any JSON here
 		$assocArray = json_decode($dataObj);
 		//$gameDataArray = $assocArray->result;
-		
+		print_r(get_object_vars($assocArray));
 		foreach ($assocArray as $name) {
-			print_r(get_object_vars($assocArray));
+			
 		}
 		/*
 		$data['dataObj'] = $assocArray;
