@@ -5,9 +5,13 @@ var AdminTools = {
 			event.preventDefault();
 			var buttonId = event.target.id;
 			// To do, use the ajax function to scrape the data provider based on button presses
-			
-			AdminTools.ajaxGetData("http://admin.dopeoplestillplay.com/tools/datatools/gameinformation");
-			alert(buttonId);
+			switch(buttonId) {
+				case 'game-info':
+					AdminTools.ajaxGetData("http://admin.dopeoplestillplay.com/tools/datatools/gameinformation");
+					break;
+				default:
+					alert('Tool not implemented yet!');
+			}			
 		});
 	},
 	
@@ -17,8 +21,8 @@ var AdminTools = {
 		})
   		.done(function( data ) {
   			$('.data-information').append(data);
-    			if ( console && console.log ) {
-      				console.log( "Sample of data:", data);
+			if ( console && console.log ) {
+				console.log(data);
 			}
   		});
 	}
