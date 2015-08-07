@@ -32,3 +32,11 @@ var AdminTools = {
 $( document ).ready(function() {
     AdminTools.redirectLinks();
 });
+
+$( document ).ajaxStart(function() {
+  $("#loading-data").show();
+});
+
+$( document ).ajaxStart(function() {
+  $("#loading-data").hide();
+});

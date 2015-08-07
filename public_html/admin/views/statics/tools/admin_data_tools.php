@@ -23,6 +23,7 @@
 		echo '<div class="container tool-area data-feed">';
 		echo 	'<div class="tools-header">Data Viewer</div>';
 		echo		'<div class="data-information">';
+		echo			'<img src="/images/ajax-loader.gif" alt="Fetching Data..." id="loading-data">';
 		echo		'</div>';					
 		echo '</div>';	
 	} // End session check
