@@ -6,7 +6,7 @@ var AdminTools = {
 			var buttonId = event.target.id;
 			// To do, use the ajax function to scrape the data provider based on button presses
 			switch(buttonId) {
-				case 'game-info':
+				case 'info-tool':
 					AdminTools.ajaxGetData("http://admin.dopeoplestillplay.com/tools/datatools/gameinformation");
 					break;
 				default:
