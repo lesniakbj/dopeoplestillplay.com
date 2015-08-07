@@ -37,6 +37,8 @@
   - Data Tool:
     - Make it so the datascrape is done with an AJAX call into the DataViewer
 	- Load the response of the AJAX call in the data viewer along with relevant call information
+	- Have the right side be the tool options (example: DataInformation has options for platform/game combo (form) / scrape all data from database games (button))
+	  - The AJAX call will call controller method that returns a single view. On .done() the ajax call injects the view into the right side. 
   - Database Tool:
     - Look @ data feeds tool, Left Side will be list of tables; right side will be actions able to be taken on the table
 	- Left (list of tables); Right (Add data, Delete Data, Drop Table, View Data, etc..)
