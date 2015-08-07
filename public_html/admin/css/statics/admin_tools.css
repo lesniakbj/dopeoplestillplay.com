@@ -1,0 +1,71 @@
+/*
+	Admin Tools Specific Styling
+*/
+.admin-actions {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	text-align: left;
+	width: 400px;
+}
+
+ul.admin-actions li {
+	margin-bottom: 3rem;
+}
+
+ul.admin-actions li a {
+	width: 100%;
+}
+
+.container.tool-area.tools {
+	width: 48%;
+	float: left;
+	margin-left: 1%;
+}
+
+.container.tool-area.data-feed {
+    display: block;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    min-height: 600px;
+	max-height: 600px;
+    border: 1px solid #CFCFCF;
+    -webkit-flex-align: left;
+    -ms-flex-align: left;
+    -webkit-align-items: left;
+	
+	width: 48%;
+	float: right;
+	margin-right: 1%;
+	
+	overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.data-information {
+	/* This is needed to realign the top of the div */
+	margin-top: 2.5rem;
+}
+
+.data-information pre {
+	overflow: hidden;
+}
+
+.tools-header {
+	position: absolute;
+    color: #000000;
+    background-color: #FFFFFF;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+	text-align: center;
+}
+
+#loading-data {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+	display: none;
+}

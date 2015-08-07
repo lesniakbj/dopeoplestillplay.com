@@ -98,7 +98,7 @@ switch (ENVIRONMENT)
  * Include the path if the folder is not in the same directory
  * as this file.
  */
-	$system_path = 'igniter/system';
+	$system_path = '/home/dopelsha/public_html/libs/igniter/system';
 
 /*
  *---------------------------------------------------------------
@@ -113,7 +113,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = 'igniter/application';
+	$application_folder = '/home/dopelsha/public_html/libs/igniter/application';
 
 /*
  *---------------------------------------------------------------
@@ -128,7 +128,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$view_folder = '';
+	$view_folder = '/home/dopelsha/public_html/mobile/views';
 
 
 /*
