@@ -62,3 +62,9 @@ ul.admin-actions li a {
     left: 0px;
 	text-align: center;
 }
+
+#loading-data {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+}
