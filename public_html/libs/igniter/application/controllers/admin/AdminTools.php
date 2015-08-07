@@ -64,10 +64,11 @@ class AdminTools extends CI_Controller {
 		}
 		// Attempt to parse any JSON here
 		$assocArray = json_decode($dataObj, true);
-		
+		$data['data'] = $assocArray;
 		// Since we are running this as an AJAX call, either pass a load->view back,
 		// or just echo/print the variable back to the script.
-		print_r($assocArray);
+		$this->load->view('errors/view_var', $data);
+		//print_r($assocArray);
 	}
 	
 	private function loadDataToolsHome() {

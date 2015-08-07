@@ -7,6 +7,7 @@
   - Schedule a job to run each night to do the following:
     - Scrape data from the various data_providers
     - Email the contact@dopeoplestillplay.com with an updated list of emails added that day.
+  - Look at the data feeds for ideas on table structure, game_game will most likely include Rating as well.
   
 ****
 
