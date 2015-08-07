@@ -9,6 +9,10 @@
     - Email the contact@dopeoplestillplay.com with an updated list of emails added that day.
   - Look at the data feeds for ideas on table structure, game_game will most likely include Rating as well.
   
+  - [Added game_platform and game_available_platforms tables]
+  - [Populated game_platform with current & next gen platforms]
+  - Once game table is created, add FK to game_available_platforms
+  
 ****
 
 - On home:
