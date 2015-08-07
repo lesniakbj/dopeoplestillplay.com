@@ -25,7 +25,7 @@
 		);
 
 		echo form_dropdown('game-platforms', $platOptions, 'pc');
-		echo form_button('scrape-game-info','Scrape Data');
+		echo form_submit('scrape-game-info','Scrape Data');
 		echo form_close();
 	} // End session check
 ?>
