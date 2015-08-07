@@ -60,7 +60,8 @@ class AdminTools extends CI_Controller {
 	}
 	
 	public function gameInfoTool() {
-	
+		$dataArray = $this->input->post();
+		print_r($dataArray);
 	}
 	
 	private function loadGameInformationTool() {		
