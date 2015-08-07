@@ -1,6 +1,7 @@
 .*
 !/.gitignore
 !/.htaccess
+!/.travis.yml
 
 www/*
 tmp/*
