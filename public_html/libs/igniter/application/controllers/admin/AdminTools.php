@@ -26,7 +26,7 @@ class AdminTools extends CI_Controller {
 				$this->loadGameInformationTool();
 				break;
 			default:
-				$this->loadDataToolsHome();
+				echo 'Tool not found!';
 				break;
 		}
 	
