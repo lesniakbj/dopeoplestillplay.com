@@ -8,8 +8,8 @@
     - Scrape data from the various data_providers
     - Email the contact@dopeoplestillplay.com with an updated list of emails added that day.
   - Look at the data feeds for ideas on table structure, game_game will most likely include Rating as well.
-  - Create game_us_rating table for US game ratings (id, rating, min_user_age)
-  - Create game_us_rating_descriptors for US game ratings
+  - Create game_us_rating table for US game ratings (id, rating, min_user_age, description) 
+  - Create game_us_rating_descriptors for US game ratings (id, rating_descriptor, description)
   
   - [Added game_platform and game_available_platforms tables]
   - [Populated game_platform with current & next gen platforms]
