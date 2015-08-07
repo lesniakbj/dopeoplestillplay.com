@@ -67,4 +67,5 @@ ul.admin-actions li a {
 	position: absolute;
     top: 50%;
     left: 50%;
+	display: none;
 }
