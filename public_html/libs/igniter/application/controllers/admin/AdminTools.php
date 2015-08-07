@@ -63,12 +63,7 @@ class AdminTools extends CI_Controller {
 			return;
 		}
 		
-		
-		$data['dataObj'] = $dataObj;
-				
-		$this->load->view('templates/header');
-		$this->load->view('errors/view_var', $data);
-		$this->load->view('templates/footer');
+		return $dataObj;
 	}
 	
 	private function loadDataToolsHome() {
