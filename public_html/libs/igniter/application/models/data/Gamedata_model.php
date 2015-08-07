@@ -70,9 +70,9 @@ class Gamedata_model extends CI_Model {
 						"Accept" => "application/json"
 					)
 				);				
-				$gameData = $response->body;
+				//$gameData = $response->body;
 				// TODO: Verify the response was valid before returning it to the admin tools controller.
-				return $gameData;
+				return $response;//$gameData;
 				break;
 			
 			default:
