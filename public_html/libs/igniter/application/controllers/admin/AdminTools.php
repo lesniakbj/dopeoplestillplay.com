@@ -24,7 +24,7 @@ class AdminTools extends CI_Controller {
 	public function dataScrapeTools($dataProvider) {
 		switch($dataProvider) {
 			case 'gameinformation':
-				$platforms = $this-gamedata_model->getSupportedPlatforms();
+				$platforms = $this->gamedata_model->getSupportedPlatforms();
 				$this->loadGameInformationTool($platforms);
 				break;
 			default:
