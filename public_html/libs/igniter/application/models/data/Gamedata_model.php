@@ -89,7 +89,7 @@ class Gamedata_model extends CI_Model {
 		$queryResults = $this->db->get();
 		
 		foreach($queryResults->result_array() as $row) {
-			$platforms[$row['platform_short_name']] = $row['platform_long_name'];
+			$platforms[$row['platform_short_name']] = $row['platform_full_name'];
 		}
 		
 		return $platforms;
