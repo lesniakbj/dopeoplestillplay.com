@@ -24,7 +24,8 @@ class AdminTools extends CI_Controller {
 	public function dataScrapeTools($dataProvider) {
 		switch($dataProvider) {
 			case 'gameinformation':
-				$this->loadGameInformationTool();
+				$platforms = $this-gamedata_model->getSupportedPlatforms();
+				$this->loadGameInformationTool($platforms);
 				break;
 			default:
 				echo 'Tool not found!';
@@ -59,8 +60,7 @@ class AdminTools extends CI_Controller {
 		*/
 	}
 	
-	public function runTool($toolInfo) {
-		// Ignore the $toolInfo parameter and get the POST variables
+	public function runGameInformationTool() {
 		$postedData = $this->input->post();
 		print_r($postedData);
 	}
@@ -70,10 +70,11 @@ class AdminTools extends CI_Controller {
 		print_r($dataArray);
 	}
 	
-	private function loadGameInformationTool() {		
+	private function loadGameInformationTool($platforms) {		
 		// Load a view here with the dropdown menus for the gameinfo tool
 		// Get list of platforms from databse, send to the view
-		$this->load->view('statics/tools/admin_game_information_tool');
+		$data['platforms'] = $platforms;
+		$this->load->view('statics/tools/admin_game_information_tool', $data);
 	}
 	
 	private function loadDataToolsHome() {

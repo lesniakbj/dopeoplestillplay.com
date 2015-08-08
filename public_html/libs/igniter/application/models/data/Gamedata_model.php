@@ -83,6 +83,18 @@ class Gamedata_model extends CI_Model {
 		
 	}
 	
+	public function getSupportedPlatforms() {
+		$this->db->select('platform_full_name, platform_short_name')
+				 ->from('game_platform');
+		$queryResults = $this->db->get();
+		
+		foreach($queryResults->result_array() as $row) {
+			$platforms[$row['platform_short_name']] = $row['platform_long_name'];
+		}
+		
+		return $platforms;
+	}
+	
 	// Queries the database for the API Key associated with
 	// a game data provider. Uses this key for retrieving data
 	// from various sources. 
