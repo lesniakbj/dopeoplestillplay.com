@@ -59,6 +59,12 @@ class AdminTools extends CI_Controller {
 		*/
 	}
 	
+	public function runTool($toolInfo) {
+		// Ignore the $toolInfo parameter and get the POST variables
+		$postedData = $this->input->post();
+		print_r($postedData);
+	}
+	
 	public function gameInfoTool() {
 		$dataArray = $this->input->post();
 		print_r($dataArray);

@@ -73,22 +73,23 @@ $route['translate_uri_dashes'] = FALSE;
 
 switch ( $_SERVER['HTTP_HOST'] ) {
 	case 'admin.dopeoplestillplay.com':
-		$route['default_controller'] = 'admin/AdminHome';
+		$route['default_controller'] 			= 'admin/AdminHome';
 		
 		// AdminHome routes
-		$route['login'] = 'admin/AdminHome/login';
-		$route['home'] = 'admin/AdminHome/home';
-		$route['logout'] = 'admin/AdminHome/logout';
+		$route['login'] 						= 'admin/AdminHome/login';
+		$route['home'] 							= 'admin/AdminHome/home';
+		$route['logout'] 						= 'admin/AdminHome/logout';
 		
 		// AdminTools tool routes
-		$route['tools/datatools'] = 'admin/AdminTools/index';
-		$route['tools/datatools/([a-z]+)'] = 'admin/AdminTools/dataScrapeTools/$1';
-		$route['tools/database'] = 'admin/AdminDatabaseTools/index';
-		$route['tools/database/([a-z]+)'] = 'admin/AdminDatabaseTools/databaseManagement/$1';
-		$route['tools/logs/([a-z]+)'] = 'admin/AdminTools/manageLogs/$1';
+		$route['tools/datatools'] 				= 'admin/AdminTools/index';
+		$route['tools/datatools/([a-z]+)'] 		= 'admin/AdminTools/dataScrapeTools/$1';
+		$route['tools/database'] 				= 'admin/AdminDatabaseTools/index';
+		$route['tools/database/([a-z]+)'] 		= 'admin/AdminDatabaseTools/databaseManagement/$1';
+		$route['tools/logs/([a-z]+)'] 			= 'admin/AdminTools/manageLogs/$1';
 		
 		// AdminTools tool submission routes
-		$route['tools/gameinfo'] = 'admin/AdminTools/gameInfoTool';
+		$route['tools/gameinfo'] 				= 'admin/AdminTools/gameInfoTool';
+		$route['tools/gameinfo/([a-z]+)'] 		= 'admin/AdminTools/runTool/$1';
 		
 		// AdminTools function routes
 		$route['tools/datatools/([a-z]+)'] = 'admin/AdminTools/dataScrapeTools/$1';

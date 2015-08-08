@@ -4,7 +4,7 @@
 	} else {		
 	
 		$formAttrs = array(
-			'action' => 'https://www.admin.dopeoplestillplay.com/login',
+			'action' => 'https://www.admin.dopeoplestillplay.com/tools/gameinfo/submit',
 			'class'  => '', 
 			'id' 	 => 'gameinformation-tool', 
 			'name'	 => 'gameinformation-tool',
