@@ -14,6 +14,7 @@ var AdminTools = {
   			url: urlVar
 		})
   		.done(function( data ) {
+			$('.data-information').empty();
   			$('.data-information').append(data);
   		});
 	}
