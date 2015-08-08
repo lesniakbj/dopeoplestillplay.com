@@ -13,7 +13,7 @@
 		);
 		
 		// Platforms is passed in from the controller
-		echo form_open('tools/gameinfo', $formAttrs);
+		echo form_open('tools/gameinfo/submit', $formAttrs);
 		echo form_label('Game Platform:', 'game-platform');
 		echo form_dropdown('game-platform', $platforms, 'pc');
 		echo form_submit('submit-scrape-info','Submit');
