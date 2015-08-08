@@ -63,6 +63,11 @@ ul.admin-actions li a {
 	text-align: center;
 }
 
+form#gaminformation-tool {
+	margin-left: 3rem;
+    margin-top: 4rem;
+}
+
 #loading-data {
 	position: absolute;
     top: 50%;
