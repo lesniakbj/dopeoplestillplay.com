@@ -60,15 +60,6 @@ class AdminTools extends CI_Controller {
 		*/
 	}
 	
-	public function runGameInformationTool() {
-		$postedData = $this->input->post();
-		print_r($postedData);
-	}
-	
-	public function gameInfoTool() {
-		$dataArray = $this->input->post();
-		print_r($dataArray);
-	}
 	
 	private function loadGameInformationTool($platforms) {		
 		// Load a view here with the dropdown menus for the gameinfo tool

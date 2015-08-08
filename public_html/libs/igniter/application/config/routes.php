@@ -89,7 +89,7 @@ switch ( $_SERVER['HTTP_HOST'] ) {
 		
 		// AdminTools tool submission routes
 		$route['tools/gameinfo'] 				= 'admin/AdminTools/gameInfoTool';
-		$route['tools/gameinfo/submit'] 		= 'admin/AdminTools/runGameInformationTool';
+		$route['tools/gameinfo/submit'] 		= 'admin/AdminToolsRunner/runGameInformationTool';
 		
 		// AdminTools function routes
 		$route['tools/datatools/([a-z]+)'] = 'admin/AdminTools/dataScrapeTools/$1';
