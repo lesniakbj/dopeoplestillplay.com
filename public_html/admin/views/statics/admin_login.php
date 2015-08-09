@@ -60,6 +60,6 @@
 	echo		'<div class="four columns">&nbsp;</div>';
 	echo 	'</div>';
 	echo 	br(1);
-	echo 	'<input class="button-primary email-button" type="submit" value="Admin Login">';
+	echo 	'<input class="button-primary login-button" type="submit" value="Admin Login">';
 	echo form_close();
 ?>

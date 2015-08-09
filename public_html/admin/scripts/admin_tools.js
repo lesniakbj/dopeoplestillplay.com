@@ -14,8 +14,8 @@ var AdminTools = {
   			url: urlVar
 		})
   		.done(function( data ) {
-			$('.data-information').empty();
-  			$('.data-information').append(data);
+			$('.data-tool').empty();
+  			$('.data-tool').append(data);
   		});
 	}
 
@@ -26,9 +26,9 @@ $( document ).ready(function() {
 });
 
 $( document ).ajaxStart(function() {
-  $('#loading-data').show();
+  $('.loading-overlay').show();
 });
 
 $( document ).ajaxStop(function() {
-  $('#loading-data').hide();
+  $('.loading-overlay').hide();
 });

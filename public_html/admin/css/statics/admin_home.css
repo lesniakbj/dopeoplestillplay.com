@@ -13,6 +13,10 @@
     overflow: hidden;
 }
 
+input.button-primary.email-button {
+    margin-left: 38.5%;
+}
+
 ul.admin-nav-bar li {
 	float: left;
 	width: 20%;
