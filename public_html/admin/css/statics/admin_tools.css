@@ -63,6 +63,10 @@ ul.admin-actions li a {
 	text-align: center;
 }
 
+.data-tool {
+	overflow-x: scroll;
+}
+
 form#gameinformation-tool {
 	margin-left: 3rem;
     margin-top: 4rem;
