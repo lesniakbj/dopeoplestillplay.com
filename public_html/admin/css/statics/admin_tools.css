@@ -64,7 +64,7 @@ ul.admin-actions li a {
 }
 
 .data-tool {
-	overflow-x: scroll;
+	/*overflow-x: scroll;*/
 }
 
 form#gameinformation-tool {
@@ -74,7 +74,8 @@ form#gameinformation-tool {
 
 .loading-overlay {
 	min-height: 600px;
-	min-width: 600px;	
+	min-width: 600px;
+	display: none;
 }
 
 #loading-data {
