@@ -85,6 +85,19 @@ form#gameinformation-tool {
     line-height: 1.2;
 }
 
+#database-tools h2 a{
+	font-size: 18px;
+    background: url("sprite.png") 15px 13px no-repeat;
+    display: block;
+    padding: 9px;
+    padding-left: 32px;
+    margin: 0;
+    color: #628066;
+    text-decoration: none;
+    font-weight: normal;
+    border-bottom: 1px solid #628066;
+}
+
 .loading-overlay {
 	min-height: 600px;
 	min-width: 600px;
