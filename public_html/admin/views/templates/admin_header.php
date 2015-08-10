@@ -48,6 +48,7 @@
 	
 	// Echo the jQuery Hosted library tags
 	echo 	'<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>';
+	echo	'<script type="text/javascript" src="scripts/jquery.collapse.js"></script>';
 	
 	if(isset($js) && !is_null($js)) {
 		for($i = 0; $i < count($js); $i++) {			
