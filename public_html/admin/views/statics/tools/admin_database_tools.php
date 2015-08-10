@@ -3,7 +3,7 @@
 		show_error('Forbidden content. Please login to view this content.', 403, '403 Forbidden Content');
 	}	
 ?>
-<div class="container tools">
+<div class="container database tools">
 	<div class="tools-header">Admin Database Tools</div>
 	<div id="database-tools" data-collapse="accordion">
 		<h2>Tables</h2>

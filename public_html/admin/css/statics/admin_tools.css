@@ -67,6 +67,12 @@ ul.admin-actions li a {
 	/*overflow-x: scroll;*/
 }
 
+.container.database {
+	width: 48%;
+    float: left;
+    margin-left: 1%;
+}
+
 form#gameinformation-tool {
 	margin-left: 3rem;
     margin-top: 4rem;
