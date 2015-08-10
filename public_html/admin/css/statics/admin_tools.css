@@ -80,6 +80,11 @@ form#gameinformation-tool {
     margin-bottom: 20px;
 }
 
+#database-tools h2 {
+	font: 24px/28px 'Asap', sans-serif;
+    line-height: 1.2;
+}
+
 .loading-overlay {
 	min-height: 600px;
 	min-width: 600px;
