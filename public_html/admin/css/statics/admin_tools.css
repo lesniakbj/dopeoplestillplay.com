@@ -71,6 +71,10 @@ ul.admin-actions li a {
 	width: 48%;
     float: left;
     margin-left: 1%;
+    max-width: none;
+    text-align: left;
+    min-height: 600px;
+    border: 1px solid #CFCFCF;
 }
 
 form#gameinformation-tool {
