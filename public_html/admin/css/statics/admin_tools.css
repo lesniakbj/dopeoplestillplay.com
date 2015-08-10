@@ -98,6 +98,17 @@ form#gameinformation-tool {
     border-bottom: 1px solid #628066;
 }
 
+#database-tools h2 + ul {
+	padding: 10px;
+    background: #fff;
+    margin: 0;
+}
+
+#database-tools h2 + ul li {
+	margin: 10px 20px;
+    list-style-type: circle;
+}
+
 .loading-overlay {
 	min-height: 600px;
 	min-width: 600px;
