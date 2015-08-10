@@ -73,29 +73,40 @@ form#gameinformation-tool {
 }
 
 #database-tools {
-	background: #B0E5B8;
-    border: 1px solid #628066;
-    border-width: 0 1px 0px 0;
-    overflow: hidden;
-    margin-bottom: 20px;
+	width: 300px;
+    margin: 50px auto;
 }
 
 #database-tools h2 {
-	font: 24px/28px 'Asap', sans-serif;
-    line-height: 1.2;
+	background-color: #ccc;
+    margin: 0px;
 }
 
 #database-tools h2 a{
-	font-size: 18px;
-    background: url("sprite.png") 15px 13px no-repeat;
+	color: #fff;
+    line-height: 42px;
     display: block;
-    padding: 9px;
-    padding-left: 32px;
-    margin: 0;
-    color: #628066;
-    text-decoration: none;
-    font-weight: normal;
-    border-bottom: 1px solid #628066;
+    font-size: 12pt;
+    width: 100%;
+    text-indent: 10px;
+	
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    border-left: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-top: 1px solid rgba(250, 250, 250, .2);
+}
+
+#accordion h2:first-of-type {
+    background-color: #fa9300;
+    background-image: -moz-linear-gradient(top,  #fa9300 0%, #dc621e 100%); /* FF3.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fa9300), color-stop(100%,#dc621e)); /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top,  #fa9300 0%,#dc621e 100%); /* Chrome10+,Safari5.1+ */
+    background-image: -o-linear-gradient(top,  #fa9300 0%,#dc621e 100%); /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(top,  #fa9300 0%,#dc621e 100%); /* IE10+ */
+    background-image: linear-gradient(to bottom,  #fa9300 0%,#dc621e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa9300', endColorstr='#dc621e',GradientType=0 ); /* IE6-9 */
 }
 
 #database-tools h2 + ul {
