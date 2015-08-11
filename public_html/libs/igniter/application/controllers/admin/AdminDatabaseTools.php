@@ -31,7 +31,20 @@ class AdminDatabaseTools extends CI_Controller {
 		$this->load->view('templates/admin_footer');
 	}
 	
-	private function cleanTablePrefixes($tables, $prefixToClean){
-		return 1;
+	private function cleanTablePrefixes($tables){
+		foreach($tables AS $schema => $tablesInSchema) {
+			foreach($tablesInSchema AS $key => $table) {
+				$tableName = $table['table_name'];
+				$tablePrefix = $table['prefix'];
+				
+				$table['table_name'] = removePrefix($tableName, $tablePrefix);
+			}
+		}
+		
+		return $tables;
+	}
+	
+	private function removePrefix($string, $prefix) {
+		return substr($string, strlen($prefix));
 	}
 }
