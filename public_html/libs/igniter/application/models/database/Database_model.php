@@ -10,10 +10,10 @@ class Database_model extends CI_Model {
 		$schemas = $this->getDatabaseSchemas();
 		
 		for($i = 0; $i < count($schemas); $i++) {
-			$schemaName = $schemas[$i];
+			//$schemaName = $schemas[$i];
 		}
 		
-		print('<pre>'.$schemaName.'</pre>');
+		print('<pre>'.$schemas.'</pre>');
 	}
 	
 	private function getDatabaseSchemas() {
