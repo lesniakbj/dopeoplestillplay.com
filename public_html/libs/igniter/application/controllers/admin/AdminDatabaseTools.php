@@ -36,9 +36,10 @@ class AdminDatabaseTools extends CI_Controller {
 			$prefix = strtolower($schema.'_');
 			foreach($tablesInSchema AS $key => $table) {
 				$table['table_name'] = $this->removePrefix($table['table_name'], $prefix);
+				print_r($table);
 			}
 		}
-		print_r($table);
+		
 		return $tables;
 	}
 	
