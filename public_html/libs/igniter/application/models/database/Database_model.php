@@ -7,6 +7,16 @@ class Database_model extends CI_Model {
 	}
 	
 	public function getAllDatabaseTables() {
+		$schemas = $this->getDatabaseSchemas();
+		
+		for($i = 0; i < count($schemas); $i++) {
+			$schemaName = $schemas[$i];
+		}
+		
+		print($schemaName);
+	}
+	
+	private function getDatabaseSchemas() {
 		$this->db->select('schema_name, schema_prefix')
 				 ->from('log_table_schemas');
 		$queryResults = $this->db->get();	
@@ -17,8 +27,8 @@ class Database_model extends CI_Model {
 			$schemaPrefix = $results[$i]['schema_prefix'];
 			
 			$dbSchemas[$schemaName] = $schemaPrefix;
-		}
-		print_r($dbSchemas);
+		}		
+		return $dbSchemas;
 	}
 	
 	// Queries the database for the API Key associated with
