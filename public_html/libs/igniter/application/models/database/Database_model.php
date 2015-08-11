@@ -33,8 +33,8 @@ class Database_model extends CI_Model {
 	
 	private function getTablesInSchema($shcemaPrefix) {
 		$tables = $this->db->select('SHOW TABLES')
-						   ->where('WHERE 1 NOT IN (SELECT table_name FROM admin_db_table_exclusions)');
-						   ->like(1, $shcemaPrefix, 'after');
+						   ->where('1 NOT IN (SELECT table_name FROM admin_db_table_exclusions)');
+						   ->like('Tables_in_dopelsha_dev_website', $shcemaPrefix, 'after');
 						   
 		echo('<pre>');
 		print_r($tables);
