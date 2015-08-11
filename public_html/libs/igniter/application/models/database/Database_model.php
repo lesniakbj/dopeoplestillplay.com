@@ -14,9 +14,7 @@ class Database_model extends CI_Model {
 			$tables[$name] = $this->getTablesInSchema($prefix);
 		}
 		
-		echo('<pre>');
-		print_r($tables);
-		echo('</pre>');
+		return $tables;
 	}
 	
 	private function getDatabaseSchemas() {

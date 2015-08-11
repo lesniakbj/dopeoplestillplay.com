@@ -18,11 +18,11 @@ class AdminDatabaseTools extends CI_Controller {
 		$data['title'] = 'Database Manager';
 		$data['css'] = $this->toolsCSS;
 		
+		$data['tables'] = $this->database_model->getAllDatabaseTables();
+		
 		$this->load->view('templates/admin_header', $data);
 		$this->load->view('statics/tools/admin_database_tools', $data);
 		$this->load->view('templates/admin_footer', $data);
-		
-		$this->database_model->getAllDatabaseTables();
 	}
 	
 	public function databaseManagement($mgmtFunction) {
