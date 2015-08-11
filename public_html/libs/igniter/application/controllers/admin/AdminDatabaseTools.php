@@ -38,7 +38,7 @@ class AdminDatabaseTools extends CI_Controller {
 				$table['table_name'] = $this->removePrefix($table['table_name'], $prefix);
 			}
 		}
-		
+		print_r($table);
 		return $tables;
 	}
 	
