@@ -10,7 +10,7 @@
 	foreach($tables AS $schema => $tablesInSchema) {
 		echo '<h2>'.$schema.'</h2>';
 		echo '<ul>';
-		foreach($tablesInSchema AS $table) {
+		foreach($tablesInSchema AS $key => $table) {
 			print_r($table);
 		}
 		echo '</ul>';
