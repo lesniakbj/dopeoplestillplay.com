@@ -9,7 +9,7 @@ class Database_model extends CI_Model {
 	public function getAllDatabaseTables() {
 		$schemas = $this->getDatabaseSchemas();
 		
-		for($i = 0; i < count($schemas); $i++) {
+		for($i = 0; $i < count($schemas); $i++) {
 			$schemaName = $schemas[$i];
 		}
 		
