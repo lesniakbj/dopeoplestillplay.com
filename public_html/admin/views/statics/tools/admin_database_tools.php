@@ -8,6 +8,9 @@
 	<div id="database-tools" data-collapse="accordion">
 <?
 	foreach($tables AS $schema => $tablesInSchema) {
+		if(empty($tablesInSchema)) {
+			continue;
+		}		
 		echo '<h2>'.$schema.'</h2>';
 		echo '<ul>';
 		foreach($tablesInSchema AS $key => $table) {
