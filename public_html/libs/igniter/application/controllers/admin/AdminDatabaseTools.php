@@ -11,7 +11,7 @@ class AdminDatabaseTools extends CI_Controller {
 		
 		$this->load->library('session');
 		
-		$this->load->model('database_model');
+		$this->load->model('database/database_model');
 	}
 	
 	public function index() {
