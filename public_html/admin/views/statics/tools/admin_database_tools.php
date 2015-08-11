@@ -12,7 +12,7 @@
 		echo '<ul>';
 		foreach($tablesInSchema AS $key => $table) {
 			echo('<pre>');
-			print_r($table);
+			print_r($table['table_name']);
 			echo('</pre>');
 		}
 		echo '</ul>';
