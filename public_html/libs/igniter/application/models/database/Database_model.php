@@ -35,7 +35,7 @@ class Database_model extends CI_Model {
 		$this->db->select('table_name')
 		         ->from('information_schema.tables')
 				 ->where('table_type = "Base Table"')
-			     ->where('1 NOT IN (SELECT table_name FROM admin_table_exclusions)')
+			     ->where('table_name NOT IN (SELECT table_name FROM admin_table_exclusions)')
 			     ->like('table_name', $shcemaPrefix, 'after');
 		$queryResults = $this->db->get();
 		$tables = $queryResults->result_array();
