@@ -35,7 +35,7 @@ class AdminDatabaseTools extends CI_Controller {
 		foreach($tables AS $schema => $tablesInSchema) {
 			foreach($tablesInSchema AS $key => $table) {
 				$tableName = $table['table_name'];
-				$tablePrefix = $table['prefix'];
+				$tablePrefix = $key['prefix'];
 				
 				$table['table_name'] = removePrefix($tableName, $tablePrefix);
 			}
