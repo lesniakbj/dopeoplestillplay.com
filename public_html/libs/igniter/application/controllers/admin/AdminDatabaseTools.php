@@ -31,5 +31,7 @@ class AdminDatabaseTools extends CI_Controller {
 		$this->load->view('templates/admin_footer');
 	}
 	
-	private function cleanTablePrefixes($tables, $prefixToClean)
+	private function cleanTablePrefixes($tables, $prefixToClean){
+		return 1;
+	}
 }
