@@ -33,13 +33,9 @@ class AdminDatabaseTools extends CI_Controller {
 	
 	private function cleanTablePrefixes($tables){
 		foreach($tables AS $schema => $tablesInSchema) {
-			echo '<pre>';
-			print_r($tablesInSchema);
-			echo '</pre>';
-			foreach($tablesInSchema AS $table) {
-				echo '<pre>';
-				print_r($table);
-				echo '</pre>';
+			$prefix = strtolower($schema.'_');
+			foreach($tablesInSchema AS $key => $table) {
+				$table['table_name'] = $this->removePrefix($table['table_name'], $prefix);
 			}
 		}
 		
