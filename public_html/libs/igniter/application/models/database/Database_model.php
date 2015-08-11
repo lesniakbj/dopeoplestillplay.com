@@ -11,9 +11,12 @@ class Database_model extends CI_Model {
 		
 		foreach($schemas AS $name => $prefix) {
 			// Get list of tables that belong to that prefix
-			$this->getTablesInSchema($prefix);
-			//$tables[$name] = $this->getTablesInSchema($prefix);
+			$tables[$name] = $this->getTablesInSchema($prefix);
 		}
+		
+		echo('<pre>');
+		print_r($tables);
+		echo('</pre>');
 	}
 	
 	private function getDatabaseSchemas() {
@@ -40,8 +43,6 @@ class Database_model extends CI_Model {
 		$queryResults = $this->db->get();
 		$tables = $queryResults->result_array();
 		
-		echo('<pre>');
-		print_r($tables);
-		echo('</pre>');
+		return $tables;
 	}
 }
