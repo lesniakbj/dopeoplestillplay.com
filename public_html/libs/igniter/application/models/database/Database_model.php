@@ -13,9 +13,9 @@ class Database_model extends CI_Model {
 		$results = $queryResults->result_array();
 		
 		for($i = 0; $i < count($results); $i++) {
-			$schema[$i['schema_name']] = $i['schema_prefix'];
+			print_r($results[$i]);
 		}
-		print_r($schema);
+		//print_r($schema);
 	}
 	
 	// Queries the database for the API Key associated with
