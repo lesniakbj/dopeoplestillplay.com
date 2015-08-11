@@ -10,12 +10,10 @@ class Database_model extends CI_Model {
 		$schemas = $this->getDatabaseSchemas();
 		
 		foreach($schemas AS $name => $prefix) {
-			echo $prefix;
+			// Get list of tables that belong to that prefix
+			$this->getTablesInSchema($prefix);
+			//$tables[$name] = $this->getTablesInSchema($prefix);
 		}
-		
-		echo('<pre>');
-		print_r($schemas);
-		echo('</pre>');
 	}
 	
 	private function getDatabaseSchemas() {
@@ -33,22 +31,13 @@ class Database_model extends CI_Model {
 		return $dbSchemas;
 	}
 	
-	// Queries the database for the API Key associated with
-	// a game data provider. Uses this key for retrieving data
-	// from various sources. 
-	private function getApiKeyFor($dataProvider) {
-		$this->db->select('api_key')
-				 ->from('game_data_provider')
-				 ->where('url_name', $dataProvider)
-				 ->where('key_type', 'TESTING');		
-		$queryResults = $this->db->get();
-		
-		if( $queryResults->num_rows() > 0) {
-			foreach($queryResults->result_array() as $row) {
-				$apiKey = $row['api_key'];
-			}
-		}
-		
-		return $apiKey;
+	private function getTablesInSchema($shcemaPrefix) {
+		$tables = $this->db->select('SHOW TABLES')
+						   ->where('WHERE 1 NOT IN (SELECT table_name FROM admin_db_table_exclusions)');
+						   ->like(1, $shcemaPrefix, 'after');
+						   
+		echo('<pre>');
+		print_r($tables);
+		echo('</pre>');
 	}
 }
