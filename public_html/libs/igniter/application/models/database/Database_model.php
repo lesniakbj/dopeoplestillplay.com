@@ -13,7 +13,7 @@ class Database_model extends CI_Model {
 			//$schemaName = $schemas[$i];
 		}
 		
-		print('<pre>'.$schemas.'</pre>');
+		print_r('<pre>'.$schemas.'</pre>');
 	}
 	
 	private function getDatabaseSchemas() {
