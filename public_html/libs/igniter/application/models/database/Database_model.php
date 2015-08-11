@@ -14,9 +14,6 @@ class Database_model extends CI_Model {
 			array_push($tables[$name], array('prefix' => $prefix));
 		}
 		
-		echo '<pre>';
-		print_r($tables);
-		echo '</pre>';
 		return $tables;
 	}
 	
