@@ -10,6 +10,8 @@ class Database_model extends CI_Model {
 		$schemas = $this->getDatabaseSchemas();		
 		foreach($schemas AS $name => $prefix) {
 			// Get list of tables that belong to that DB prefix
+			// ... essentially using the prefix like SQL Server's
+			// schema name spaces
 			$tables[$name] = $this->getTablesInSchema($prefix);
 		}
 		

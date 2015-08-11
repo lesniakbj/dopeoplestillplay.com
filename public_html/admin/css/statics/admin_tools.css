@@ -88,12 +88,22 @@ form#gameinformation-tool {
 }
 
 #database-tools h2 {
-	background-color: #ccc;
+    background-color: #ccc;
     margin: 0px;
+    background-color: transparent;
+    border: 1px solid #bbb;
+}
+
+#database-tools h2:first-of-type {
+    border-radius: 4px 4px 0px 0px;
+}
+
+#database-tools h2:last-of-type {
+    border-radius: 0px 0px 4px 4px;
 }
 
 #database-tools h2 a{
-	color: #fff;
+	color: #33C3F0;
     line-height: 42px;
     display: block;
     font-size: 12pt;
