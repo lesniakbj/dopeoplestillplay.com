@@ -18,7 +18,8 @@ class AdminDatabaseTools extends CI_Controller {
 		$data['title'] = 'Database Manager';
 		$data['css'] = $this->toolsCSS;
 		
-		$data['tables'] = $this->database_model->getAllDatabaseTables();
+		$tables = $this->database_model->getAllDatabaseTables();
+		$data['tables'] = $this->cleanTablePrefixes($tables);
 		
 		$this->load->view('templates/admin_header', $data);
 		$this->load->view('statics/tools/admin_database_tools', $data);
@@ -29,4 +30,6 @@ class AdminDatabaseTools extends CI_Controller {
 		$this->load->view('templates/admin_header');
 		$this->load->view('templates/admin_footer');
 	}
+	
+	private function cleanTablePrefixes($tables, $prefixToClean)
 }
