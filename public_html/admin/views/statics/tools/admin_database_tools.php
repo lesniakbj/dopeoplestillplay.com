@@ -11,7 +11,7 @@
 		echo '<h2>'.$schema.'</h2>';
 		echo '<ul>';
 		foreach($tablesInSchema AS $table) {
-			echo '<li>'.$table.'</li>';
+			print_r($table);
 		}
 		echo '</ul>';
 	}
