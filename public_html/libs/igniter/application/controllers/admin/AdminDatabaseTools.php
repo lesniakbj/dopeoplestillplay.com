@@ -1,6 +1,5 @@
 <?php
 if (!defined('BASEPATH')) exit('No direct script access allowed');
-
 class AdminDatabaseTools extends CI_Controller {
 	private $toolsCSS = array('statics/admin_home.css', 'statics/admin_tools.css');
 
@@ -11,6 +10,8 @@ class AdminDatabaseTools extends CI_Controller {
 		$this->load->helper('html');
 		
 		$this->load->library('session');
+		
+		$this->load->model('database_model');
 	}
 	
 	public function index() {
@@ -20,6 +21,8 @@ class AdminDatabaseTools extends CI_Controller {
 		$this->load->view('templates/admin_header', $data);
 		$this->load->view('statics/tools/admin_database_tools', $data);
 		$this->load->view('templates/admin_footer', $data);
+		
+		$this->database_model->getAllDatabaseTables();
 	}
 	
 	public function databaseManagement($mgmtFunction) {
