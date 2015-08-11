@@ -12,7 +12,7 @@ class Database_model extends CI_Model {
 		$queryResults = $this->db->get();	
 		$results = $queryResults->result_array();
 		
-		for($i = 0; i < $results.size(); $i++) {
+		for($i = 0; $i < $results.size(); $i++) {
 			$schema[$i['schema_name']] = $i['schema_prefix'];
 		}
 		print_r($schema);
