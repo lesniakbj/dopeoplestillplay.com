@@ -36,6 +36,11 @@ class AdminDatabaseTools extends CI_Controller {
 			echo '<pre>';
 			print_r($tablesInSchema);
 			echo '</pre>';
+			foreach($tablesInSchema AS $table) {
+				echo '<pre>';
+				print_r($table);
+				echo '</pre>';
+			}
 		}
 		
 		return $tables;
