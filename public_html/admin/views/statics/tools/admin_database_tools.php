@@ -6,15 +6,16 @@
 <div class="container database tools">
 	<div class="tools-header">Admin Database Tools</div>
 	<div id="database-tools" data-collapse="accordion">
-		<h2>Tables</h2>
-		<!-- echo tables here -->
-		<ul>
-			<li>Tables</li>
-		</ul>
-		<h2>Functions</h2>
-		<ul>
-			<li>Functions</li>
-		</ul>
+<?
+	foreach($tables AS $schema => $tablesInSchema) {
+		echo '<h2>'.$schema.'</h2>';
+		echo '<ul>';
+		foreach($tablesInSchema AS $table) {
+			echo '<li>'.$table.'</li>';
+		}
+		echo '</ul>';
+	}
+?>
 	</div>
 </div>
 <div class="container tool-area data-feed">
