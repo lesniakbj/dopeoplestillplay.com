@@ -10,8 +10,8 @@ class Database_model extends CI_Model {
 		$schemas = $this->getDatabaseSchemas();		
 		foreach($schemas AS $name => $prefix) {
 			// Get list of tables that belong to that DB prefix
-			$tables['prefix'] = $prefix;
 			$tables[$name] = $this->getTablesInSchema($prefix);
+			$tables[$name] = array('prefix' => $prefix);
 		}
 		
 		echo '<pre>';
