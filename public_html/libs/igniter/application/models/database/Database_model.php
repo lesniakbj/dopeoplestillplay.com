@@ -11,7 +11,11 @@ class Database_model extends CI_Model {
 				 ->from('log_table_schemas');
 		$queryResults = $this->db->get();	
 		$results = $queryResults->result_array();
-		print_r($results);
+		
+		for($i = 0; i < $results.size(); $i++) {
+			$schema[$i['schema_name']] = $i['schema_prefix'];
+		}
+		print_r($schema);
 	}
 	
 	// Queries the database for the API Key associated with
