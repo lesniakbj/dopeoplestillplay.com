@@ -42,6 +42,7 @@ class Database_model extends CI_Model {
 		$queryResults = $this->db->get();
 		$tables = $queryResults->result_array();
 		
+		print_r($this->db->last_query());
 		return $tables;
 	}
 }
