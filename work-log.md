@@ -15,6 +15,8 @@
   - [Populated game_platform with current & next gen platforms]
   - [Added tables to table_exclusions]
   - [Changed table names to be more succinct] 
+  - [Added datafeeds to schema table]
+  - [Added steamspy and gameinformation datafeeds]
   
   - Once game table is created, add FK to game_available_platforms
   
