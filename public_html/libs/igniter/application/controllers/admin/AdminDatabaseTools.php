@@ -2,6 +2,7 @@
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 class AdminDatabaseTools extends CI_Controller {
 	private $toolsCSS = array('statics/admin_home.css', 'statics/admin_tools.css');
+	private $toolsJS = array('/scripts/admin_tools.js');
 
 	public function __construct() {
 		parent::__construct();
@@ -17,6 +18,7 @@ class AdminDatabaseTools extends CI_Controller {
 	public function index() {
 		$data['title'] = 'Database Manager';
 		$data['css'] = $this->toolsCSS;
+		$data['js'] = $this->toolsJS;
 		
 		$tables = $this->database_model->getAllDatabaseTables();
 		$data['tables'] = $this->cleanTablePrefixes($tables);

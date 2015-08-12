@@ -47,6 +47,7 @@ ul.admin-nav-bar li a:hover, ul.admin-nav-bar li a:active {
 	/* Style overwrites */
 	width: 95%;
 	max-width: none;
+	height: 90vh;
 	
 	/* Main Centering styling */
 	display: flex;

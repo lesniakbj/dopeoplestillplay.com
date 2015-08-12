@@ -30,7 +30,6 @@ ul.admin-actions li a {
     align-items: left;
     text-align: left;
     min-height: 600px;
-	max-height: 600px;
     border: 1px solid #CFCFCF;
     -webkit-flex-align: left;
     -ms-flex-align: left;
@@ -67,16 +66,6 @@ ul.admin-actions li a {
 	/*overflow-x: scroll;*/
 }
 
-.container.database {
-	width: 48%;
-    float: left;
-    margin-left: 1%;
-    max-width: none;
-    text-align: left;
-    min-height: 600px;
-    border: 1px solid #CFCFCF;
-}
-
 form#gameinformation-tool {
 	margin-left: 3rem;
     margin-top: 4rem;
@@ -85,6 +74,7 @@ form#gameinformation-tool {
 #database-tools {
 	width: 400px;
     margin: 50px auto;
+    text-align: left;
 }
 
 #database-tools h2 {
@@ -137,7 +127,7 @@ form#gameinformation-tool {
 
 #database-tools h2 + ul li {
 	margin: 10px 20px;
-    list-style-type: circle;
+    list-style: none;
 }
 
 .loading-overlay {

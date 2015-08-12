@@ -9,6 +9,12 @@ var AdminTools = {
 		});
 	},
 	
+	createAccordionObjects: function() {
+		new jQueryCollapse($(".db-item"), {
+			query: 'li.db-table-name'
+		});
+	},
+	
 	ajaxLoadTool: function(urlVar) {
 		$.ajax({
   			url: urlVar
@@ -23,6 +29,7 @@ var AdminTools = {
 
 $( document ).ready(function() {
     AdminTools.redirectLinks();
+    AdminTools.createAccordionObjects();
 });
 
 $( document ).ajaxStart(function() {
