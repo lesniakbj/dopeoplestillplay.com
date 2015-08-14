@@ -1,7 +1,6 @@
 
 - Database:
   - Create game_game table = id, game_name, year_released, description
-  - Create a game_data_feed_* tables with data feeds about games
   - Come up with a process for backing up the email list each night, or at least throw away useless emails.
 	- Have a secondary database that the current one is backed up to each night; run as a MySQL job
   - Schedule a job to run each night to do the following:
@@ -136,6 +135,7 @@
     - ~~[Changed table names to be more succinct] ~~
     - ~~[Added datafeeds to schema table]~~
     - ~~[Added steamspy and gameinformation datafeeds]~~
+	- ~~Create a game_data_feed_* tables with data feeds about games~~
   
   - Admin: 
     - ~~Create login for admin~~
