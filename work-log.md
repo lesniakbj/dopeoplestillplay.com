@@ -14,6 +14,7 @@
   - [Added game_platform and game_available_platforms tables]
   - [Populated game_platform with current & next gen platforms]
   - Once game table is created, add FK to game_available_platforms
+  - Thoughts...
   
 ****
 
