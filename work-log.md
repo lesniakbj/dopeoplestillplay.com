@@ -11,8 +11,6 @@
   - Create game_us_rating table for US game ratings (id, rating, min_user_age, description) 
   - Create game_us_rating_descriptors for US game ratings (id, rating_descriptor, description)
   
-  - [Added game_platform and game_available_platforms tables]
-  - [Populated game_platform with current & next gen platforms]
   - Once game table is created, add FK to game_available_platforms
   - Thoughts...
   
@@ -132,6 +130,12 @@
     - ~~[Added column to user_email_list, date_added]~~
     - ~~[Added 4 game data providers, URL's to API's, and keys when needed]~~
     - ~~[Created better IP tracking in Admin Login attempt]~~
+	- ~~[Added game_platform and game_available_platforms tables]~~
+    - ~~[Populated game_platform with current & next gen platforms]~~
+    - ~~[Added tables to table_exclusions]~~
+    - ~~[Changed table names to be more succinct] ~~
+    - ~~[Added datafeeds to schema table]~~
+    - ~~[Added steamspy and gameinformation datafeeds]~~
   
   - Admin: 
     - ~~Create login for admin~~
