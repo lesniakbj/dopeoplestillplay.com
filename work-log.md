@@ -11,6 +11,7 @@
   - Create game_us_rating_descriptors for US game ratings (id, rating_descriptor, description)
   
   - Once game table is created, add FK to game_available_platforms
+  - Added DB tables...
   - Thoughts...
   
 ****
